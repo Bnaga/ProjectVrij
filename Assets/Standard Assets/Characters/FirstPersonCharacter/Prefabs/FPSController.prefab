@@ -8,6 +8,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 400000}
+  - component: {fileID: 114120305147381812}
   - component: {fileID: 14300000}
   - component: {fileID: 11400000}
   - component: {fileID: 5400000}
@@ -31,7 +32,7 @@ GameObject:
   - component: {fileID: 2000000}
   - component: {fileID: 8100000}
   - component: {fileID: 12474086}
-  - component: {fileID: 114868834573135280}
+  - component: {fileID: 114269831576641104}
   m_Layer: 0
   m_Name: FirstPersonCharacter
   m_TagString: MainCamera
@@ -341,6 +342,35 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}
   m_IsPrefabParent: 1
+--- !u!114 &114120305147381812
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0781da4a4a8082c4e83760645614c4ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterListener: {fileID: 0}
+  playbackDevice: {fileID: 0}
+  microphone: {fileID: 0}
+  playbackSounds: []
+--- !u!114 &114269831576641104
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0aa04a7405ed14ba5410547d1b8d29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  testClip: {fileID: 0}
+  receivedSounds: []
+  playbackDevice: 1
 --- !u!114 &114720756408685232
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -352,17 +382,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90702405cd5f43a49809185135c6cfcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  microphoneListener: {fileID: 0}
   characterListener: {fileID: 8100000}
-  playbackSource: {fileID: 8200000}
---- !u!114 &114868834573135280
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bbe2ac84b86608439861700de43f854, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  playbackDevice: {fileID: 0}
+  microphone: {fileID: 0}
+  microphoneListener: {fileID: 0}
+  audioRecorder: {fileID: 0}
+  microphoneCommunication: {fileID: 0}
+  audioRecording: {fileID: 0}
+  playbackSounds: []
+  recordingState: 0

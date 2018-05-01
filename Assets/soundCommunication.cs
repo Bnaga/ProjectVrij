@@ -11,6 +11,7 @@ public class soundCommunication : MonoBehaviour {
 	private AudioSource audioSource;
 	[HideInInspector]
 	public List <AudioClip> receivedSounds = new List<AudioClip>();
+	public bool playbackDevice;
 
 	void Start () {
 
@@ -47,13 +48,19 @@ public class soundCommunication : MonoBehaviour {
 	void OnTriggerEnter (Collider other){
 		soundCommunication sc = other.GetComponent<soundCommunication>();
 		if (!sc || !audioSource.clip) return;
-		sc.ReceiveSound(audioSource.clip);
+		if (!playbackDevice){
+			sc.ReceiveSound(audioSource.clip);
+		}else{
+			foreach (AudioClip a in receivedSounds){
+				sc.ReceiveSound(a);
+			}
+		}
 
 	}
 
 	public void ReceiveSound(AudioClip clip){
-		if (!receivedSounds.Contains(clip)) receivedSounds.Add(clip);
-		Debug.Log(clip.name);
+		if (!playbackDevice && !receivedSounds.Contains(clip)) receivedSounds.Add(clip);
+		//Debug.Log(clip.name);
 	}
 
 }

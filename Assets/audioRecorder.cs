@@ -7,16 +7,18 @@ public class audioRecorder : MonoBehaviour{
 
 
 	const int HEADER_SIZE = 44;
-	private bool recOutput;
+	private bool isRecording;
 	private FileStream fileStream;
 	private int outputRate = 44100;
     private string filepath;
     private string filename = "recording.wav";
     public AudioClip recording;
+    private int maxLength = 2;
+    private float recTimer;
 
 
     public void StartRecording(){
-        recOutput = true;
+        isRecording = true;
         filepath = Path.Combine(Application.persistentDataPath, filename);
         fileStream = CreateEmpty(filepath);
         Debug.Log("rec start");
@@ -25,34 +27,22 @@ public class audioRecorder : MonoBehaviour{
     }
 
     public AudioClip StopRecording(){
-        recOutput = false;
+        if (!isRecording) return recording;
+        isRecording = false;
+        recTimer = 0;
         WriteHeader();
-        //WWW www = new WWW("file:///" + filepath);
         recording = WavUtility.ToAudioClip(filepath);
         Debug.Log("rec stop");
         return recording;
     }
 
 	void Update(){
-		 if(Input.GetKeyDown("r"))
-		{
-		
-			if(recOutput == false)
-			{
-				StartRecording();
-			}
-			else
-			{
-				StopRecording();
-			}
-		}
+        if (isRecording) recTimer+=Time.deltaTime;
+        if (recTimer>maxLength) StopRecording();
 	}
 
 	public void OnAudioFilterRead(float[] data, int channels){
-		 if(recOutput)
-		{
-			ConvertAndWrite(data); //audio data is interlaced
-		}
+		 if(isRecording) ConvertAndWrite(data);
 	}
 
 	public void StartWriting(){
