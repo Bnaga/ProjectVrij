@@ -239,6 +239,7 @@ GameObject:
   - component: {fileID: 207715795}
   - component: {fileID: 207715794}
   - component: {fileID: 207715793}
+  - component: {fileID: 207715796}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -313,6 +314,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 207715791}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &207715796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 207715791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0aa04a7405ed14ba5410547d1b8d29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  testClip: {fileID: 0}
+  receivedSounds: []
+  playbackDevice: 0
 --- !u!1 &283915667
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,7 +522,6 @@ GameObject:
   - component: {fileID: 970542763}
   - component: {fileID: 970542765}
   - component: {fileID: 970542766}
-  - component: {fileID: 970542764}
   m_Layer: 0
   m_Name: microphone
   m_TagString: Untagged
@@ -589,20 +603,6 @@ AudioListener:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 970542758}
   m_Enabled: 0
---- !u!114 &970542764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 970542758}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a0aa04a7405ed14ba5410547d1b8d29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  testClip: {fileID: 0}
-  receivedSounds: []
-  playbackDevice: 0
 --- !u!54 &970542765
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -785,6 +785,11 @@ Prefab:
       propertyPath: playbackDevice
       value: 
       objectReference: {fileID: 860384}
+    - target: {fileID: 114120305147381812, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 2}
+      propertyPath: microphoneCommunication
+      value: 
+      objectReference: {fileID: 207715796}
     m_RemovedComponents:
     - {fileID: 114269831576641104, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
