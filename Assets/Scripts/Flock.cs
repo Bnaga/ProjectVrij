@@ -15,7 +15,7 @@ public class Flock : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        speed = Random.Range(0.2f, 0.5f);
+        speed = Random.Range(1, 2);
 	}
 	
 	// Update is called once per frame
@@ -31,7 +31,7 @@ public class Flock : MonoBehaviour {
         {
             Vector3 direction = Vector3.zero - transform.position;
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), rotationSpeed * Time.deltaTime);
-            speed = Random.Range(0.2f, 0.5f);
+            speed = Random.Range(1, 2);
         }
         else
         {
@@ -50,7 +50,7 @@ public class Flock : MonoBehaviour {
 
         Vector3 vcenter = Vector3.zero;
         Vector3 vavoid = Vector3.zero;
-        float gSpeed = 0.1f;
+        float gSpeed = 1f;
 
         Vector3 goalPos = GlobalFlock.goalPos;
 

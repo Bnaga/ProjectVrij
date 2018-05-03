@@ -5,7 +5,7 @@ using UnityEngine;
 public class GlobalFlock : MonoBehaviour {
 
     public GameObject fish;
-    public static int tankSize = 2;
+    public static int tankSize = 4;
     public static int tankMin = 0;
 
     static int numFish = 15;
