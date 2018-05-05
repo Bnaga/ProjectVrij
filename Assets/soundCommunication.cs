@@ -9,13 +9,18 @@ public class soundCommunication : MonoBehaviour {
 	private bool playing;
 	private float soundTimer;
 	private AudioSource audioSource;
-	[HideInInspector]
+//	[HideInInspector]
 	public List <AudioClip> receivedSounds = new List<AudioClip>();
 	public bool playbackDevice;
 
-	void Start () {
+	void Awake () {
 
-		if (!GetComponent<Rigidbody>()) Debug.Log("No RigidBody on" + gameObject.name);
+		//if (!GetComponent<Rigidbody>()) Debug.Log("No RigidBody on" + gameObject.name);
+		if (!GetComponent<Rigidbody>()){
+			Rigidbody rb = gameObject.AddComponent(typeof(Rigidbody)) as Rigidbody;
+			rb.useGravity=false;
+			rb.isKinematic=true;
+		}
 		
 		if (GetComponent<AudioSource>()){
 			audioSource=GetComponent<AudioSource>();
@@ -47,7 +52,8 @@ public class soundCommunication : MonoBehaviour {
 
 	void OnTriggerEnter (Collider other){
 		soundCommunication sc = other.GetComponent<soundCommunication>();
-		if (!sc || !audioSource.clip) return;
+		if (!sc) return;
+		if (!audioSource.clip) return;
 		if (!playbackDevice){
 			sc.ReceiveSound(audioSource.clip);
 		}else{
