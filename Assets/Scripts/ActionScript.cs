@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Action : ScriptableObject
+public abstract class ActionScript : ScriptableObject
 {
     public abstract void Act(MJStateManager stateManager);
-
 }
