@@ -25,7 +25,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 134262}
   m_LocalRotation: {x: 5.7334734e-17, y: 0.998092, z: -6.4896296e-17, w: -0.061744794}
-  m_LocalPosition: {x: 0, y: 0, z: 0.4}
+  m_LocalPosition: {x: -0.7698219, y: 0.87, z: -0.46632558}
   m_LocalScale: {x: 0.06, y: 0.06, z: 0.06}
   m_Children: []
   m_Father: {fileID: 0}
@@ -54,7 +54,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcc7cc510c20b0b41bb8f7c01e267906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  averageUpdrift: 1.2479515
+  averageUpdrift: 3.8060665
   waterLevel: 5
   mainCamera: {fileID: 0}
   smallBubble: {fileID: 197302, guid: fadc172ca7d6ce64ebebc92b2272f685, type: 2}
