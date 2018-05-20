@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52638b90902110d45bd128dbd6fcaa14, type: 3}
+  m_Name: protofishDictionary
+  m_EditorClassIdentifier: 
+  dictionary:
+  - audio: {fileID: 8300000, guid: 918ee1b51fd32d748a66d520586569ba, type: 3}
+    meaning: Hello!
+    known: 1
+  - audio: {fileID: 8300000, guid: c848d318c783da14d920cdb75f1ee7ac, type: 3}
+    meaning: Wow!
+    known: 1
+  - audio: {fileID: 8300000, guid: 3eefe61359ea80b469796e4eebb3c81b, type: 3}
+    meaning: Amazing.
+    known: 1
+  - audio: {fileID: 8300000, guid: 0f21ac54ede2fb1488c5719b33f0122d, type: 3}
+    meaning: My wife!
+    known: 1
+  - audio: {fileID: 8300000, guid: ab9d0c5c3fa27b34685e9b70737e281a, type: 3}
+    meaning: Looks fishy.
+    known: 1
+  - audio: {fileID: 8300000, guid: aa9e211c83b607f479bd7772eb56a98c, type: 3}
+    meaning: Tired.
+    known: 1
+  - audio: {fileID: 8300000, guid: fdcbdcd5e7d71594bb123666b2bcb779, type: 3}
+    meaning: Get back!
+    known: 1
+  - audio: {fileID: 8300000, guid: 1958d9dc4683f204793b607c688da2d7, type: 3}
+    meaning: Food?
+    known: 1
+  - audio: {fileID: 8300000, guid: e9714160ce34f2b4ab63ff8c27bd68e1, type: 3}
+    meaning: I'm sad.
+    known: 1
+  talkRate: 2

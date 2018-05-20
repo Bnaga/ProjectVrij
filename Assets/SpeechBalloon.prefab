@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 222884346081834462}
   - component: {fileID: 114513266630065424}
   - component: {fileID: 114454404469844710}
+  - component: {fileID: 114062954699919650}
   m_Layer: 0
   m_Name: SpeechBalloon
   m_TagString: Untagged
@@ -72,6 +73,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1898019799143832}
   m_Mesh: {fileID: 0}
+--- !u!114 &114062954699919650
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1898019799143832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d8255251e2d1247906016a03a1440a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 1.36
 --- !u!114 &114454404469844710
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -103,7 +116,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Greetings!
+  m_text: ERROR
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 715b80e429c437e40867928a4e1fc975, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 33db60c37b63f08448ded4b385e74e38, type: 2}
@@ -130,14 +143,14 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 2
+  m_fontSizeBase: 2
   m_fontWeight: 400
   m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMin: 0.02
+  m_fontSizeMax: 1
   m_fontStyle: 0
-  m_textAlignment: 258
+  m_textAlignment: 514
   m_isAlignmentEnumConverted: 1
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -171,7 +184,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0.08023167}
   m_textInfo:
     textComponent: {fileID: 114513266630065424}
-    characterCount: 10
+    characterCount: 5
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -209,15 +222,15 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1898019799143832}
-  m_LocalRotation: {x: 0.12781796, y: 0.86802804, z: 0.38171485, w: -0.29066086}
-  m_LocalPosition: {x: 0, y: 0, z: -0.904}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalRotation: {x: 0.06783456, y: 0.72607684, z: -0.07238635, w: 0.68041986}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 16.621, y: 108.231, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.824, y: 2.028}
+  m_AnchoredPosition: {x: 0, y: 0.2}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}

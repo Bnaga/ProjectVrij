@@ -155,8 +155,7 @@ AudioSource:
   m_GameObject: {fileID: 1904740882503050}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 248799cb4acba48f7b3ee842a80f788c,
-    type: 2}
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -168,7 +167,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 1.01
+  MaxDistance: 2.84
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -184,8 +183,8 @@ AudioSource:
       outSlope: 0
       tangentMode: 0
     - serializedVersion: 2
-      time: 0.75034827
-      value: 0.111303985
+      time: 0.4753849
+      value: 0.3134219
       inSlope: -0.27339834
       outSlope: -0.27339834
       tangentMode: 0
@@ -269,11 +268,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb8628e4209363c4e8682dd37b6d1fac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sounds:
-  - {fileID: 8300000, guid: c848d318c783da14d920cdb75f1ee7ac, type: 3}
-  - {fileID: 8300000, guid: 918ee1b51fd32d748a66d520586569ba, type: 3}
-  - {fileID: 8300000, guid: 0e220b97baa73db4fab6fba879e1b024, type: 3}
-  soundFrequency: 7
+  soundFrequency: 2
+  speechBalloon: {fileID: 1898019799143832, guid: f5094cc7591059649a7571dbc66e22fe,
+    type: 2}
+  fishType: {fileID: 11400000, guid: 648f3cb021db3934ebfbe35f84afde37, type: 2}
 --- !u!114 &114435935399494828
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -348,7 +346,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: 1017585724
+  randomSeed: -1792258618
   InitialModule:
     serializedVersion: 3
     enabled: 1
