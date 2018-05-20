@@ -9,7 +9,10 @@ public class attachController : MonoBehaviour {
 	private FixedJoint FJ;
 	// Use this for initialization
 	void Start () {
-		RB = gameObject.AddComponent(typeof(Rigidbody)) as Rigidbody;
+		RB = GetComponent<Rigidbody>();
+		if (!RB){
+			RB = gameObject.AddComponent(typeof(Rigidbody)) as Rigidbody;
+		}
 		FJ = gameObject.AddComponent(typeof(FixedJoint)) as FixedJoint;
 		FJ.connectedBody = controller.GetComponent<Rigidbody>();
 		
