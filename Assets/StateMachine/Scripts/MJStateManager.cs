@@ -7,6 +7,7 @@ public class MJStateManager : MonoBehaviour {
 
     public Transform eyes;
     public State currentState;
+    public State remainState;
 
     [HideInInspector] public NavMeshAgent navMeshAgent;
 	// Use this for initialization
@@ -26,6 +27,14 @@ public class MJStateManager : MonoBehaviour {
         {
             Gizmos.color = currentState.sceneGizmoColor;
             Gizmos.DrawWireSphere(eyes.position, 0.1f);
+        }
+    }
+
+    public void TransitionToState(State nextState)
+    {
+        if(nextState != remainState)
+        {
+            currentState = nextState;
         }
     }
 }
