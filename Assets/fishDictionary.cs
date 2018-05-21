@@ -6,17 +6,18 @@ using UnityEditor;
 	public class fishDictionary : ScriptableObject {
 	
 	[System.Serializable]
-	public struct word {
+	public class word {
 		public AudioClip audio;
 		public string meaning;
 		[HideInInspector]
 		public bool known;
+		public bool knownFromStart;
  }
 	
 	[Header("Dictionary")]
-	
 	public word[] dictionary;
-	
+
+
 	[Header("General")]
 	public float talkRate;
 

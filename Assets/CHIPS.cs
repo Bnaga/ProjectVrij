@@ -1,14 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CHIPS : MonoBehaviour {
 
 
 	public fishDictionary[] dictionaries;
-	// Use this for initialization
-	void Start () {
-		
+	public TextMeshPro display;
+
+	void Awake () {
+		//reset known words
+		foreach (fishDictionary dict in dictionaries){
+				foreach (fishDictionary.word w in dict.dictionary){
+					w.known = w.knownFromStart;
+				}
+			}
+			updateScreen();
 	}
 	
 	// Update is called once per frame
@@ -17,19 +25,29 @@ public class CHIPS : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other){
-		Debug.Log("hit chips");
 		soundCommunication comms = other.GetComponent<soundCommunication>();
 		if (!comms || !other.GetComponent<AudioListener>()) return;
-		Debug.Log("found comms");
-
+		Debug.Log("UPDATED CHIPS");
 		foreach (AudioClip clip in comms.receivedSounds){
 			foreach (fishDictionary dict in dictionaries){
-				int i =0;
 				foreach (fishDictionary.word w in dict.dictionary){
-					if (w.audio == clip) dict.dictionary[i].known = true;
-					i++;
+					if (w.audio == clip) w.known = true;
+
 				}
 			}
 		}
+
+		updateScreen();
+	}
+
+	void updateScreen(){
+		string text = "Known Words:\n";
+		foreach (fishDictionary dict in dictionaries){
+				foreach (fishDictionary.word w in dict.dictionary){
+					if (w.known) {text+=w.meaning + "\n";}
+					else{text+="????\n";}
+				}
+			}
+			display.SetText(text);
 	}
 }

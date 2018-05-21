@@ -13,30 +13,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dictionary:
   - audio: {fileID: 8300000, guid: 918ee1b51fd32d748a66d520586569ba, type: 3}
-    meaning: Hello!
+    meaning: Greetings!
     known: 1
-  - audio: {fileID: 8300000, guid: c848d318c783da14d920cdb75f1ee7ac, type: 3}
-    meaning: Wow!
+    knownFromStart: 0
+  - audio: {fileID: 8300000, guid: d53053a416c413d40ae35d3b3d2c8277, type: 3}
+    meaning: Nice to meet you.
     known: 1
-  - audio: {fileID: 8300000, guid: 3eefe61359ea80b469796e4eebb3c81b, type: 3}
-    meaning: Amazing.
-    known: 1
-  - audio: {fileID: 8300000, guid: 0f21ac54ede2fb1488c5719b33f0122d, type: 3}
-    meaning: My wife!
-    known: 1
-  - audio: {fileID: 8300000, guid: ab9d0c5c3fa27b34685e9b70737e281a, type: 3}
-    meaning: Looks fishy.
-    known: 1
-  - audio: {fileID: 8300000, guid: aa9e211c83b607f479bd7772eb56a98c, type: 3}
-    meaning: Tired.
-    known: 1
-  - audio: {fileID: 8300000, guid: fdcbdcd5e7d71594bb123666b2bcb779, type: 3}
-    meaning: Get back!
-    known: 1
-  - audio: {fileID: 8300000, guid: 1958d9dc4683f204793b607c688da2d7, type: 3}
-    meaning: Food?
-    known: 1
-  - audio: {fileID: 8300000, guid: e9714160ce34f2b4ab63ff8c27bd68e1, type: 3}
+    knownFromStart: 0
+  - audio: {fileID: 8300000, guid: efee776e88902a74684c56ce2962678f, type: 3}
+    meaning: DANGER!
+    known: 0
+    knownFromStart: 0
+  - audio: {fileID: 8300000, guid: adcc31e02dc74204c80c632b9844b681, type: 3}
     meaning: I'm sad.
     known: 1
+    knownFromStart: 0
+  - audio: {fileID: 8300000, guid: 526033aedfcd8fa4893bd857ca331979, type: 3}
+    meaning: I'm thirsty...
+    known: 1
+    knownFromStart: 0
+  - audio: {fileID: 8300000, guid: e3148a98a2496e64cb8712177bbcde71, type: 3}
+    meaning: Food?
+    known: 0
+    knownFromStart: 0
+  - audio: {fileID: 8300000, guid: 2f800f3498cfcb94a8f6a5f8553d8aef, type: 3}
+    meaning: Get over here!
+    known: 1
+    knownFromStart: 0
+  - audio: {fileID: 8300000, guid: eafd8df4914b6054db2b36a3aa4b4830, type: 3}
+    meaning: LET'S ROCK!
+    known: 1
+    knownFromStart: 0
+  - audio: {fileID: 8300000, guid: 62bdcbc5f3d6b3f43844cc7b849f0448, type: 3}
+    meaning: Nice weather.
+    known: 1
+    knownFromStart: 0
   talkRate: 2
