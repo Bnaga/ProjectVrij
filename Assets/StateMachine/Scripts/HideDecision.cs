@@ -6,6 +6,9 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "PluggableAI/Decisions/Hide")]
 public class HideDecision : Decision
 {
+    float testTimer = 0;
+    float endTimer = 3;
+
     public override bool Decide(MJStateManager stateManager)
     {
         return InHiding(stateManager);
@@ -13,8 +16,10 @@ public class HideDecision : Decision
 
     public bool InHiding(MJStateManager stateManager)
     {
-        if(stateManager.hide)
+        testTimer += Time.deltaTime;
+        if (stateManager.hide && testTimer >= endTimer)
         {
+            testTimer = 0;
             return true;
         }
         return false;

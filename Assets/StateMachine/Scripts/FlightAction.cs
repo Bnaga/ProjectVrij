@@ -14,7 +14,7 @@ public class FlightAction : ActionScript
 
     public override void Act(MJStateManager stateManager)
     {
-        throw new NotImplementedException();
+        Hide(stateManager);
     }
 
     private void Hide(MJStateManager stateManager)
@@ -26,7 +26,7 @@ public class FlightAction : ActionScript
             onDestination = false;
         }
 
-        if (Vector3.Distance(stateManager.transform.position, target) < 4)
+        if (Vector3.Distance(stateManager.transform.position, target) <= .5f)
         {
             stateManager.hide = true;
         }

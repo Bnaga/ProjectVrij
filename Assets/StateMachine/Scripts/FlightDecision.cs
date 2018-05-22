@@ -14,7 +14,7 @@ public class FlightDecision : Decision
     public bool TrackPlayer(MJStateManager stateManager)
     {
         Camera mainCamera = Camera.main;
-        if (Vector3.Distance(mainCamera.transform.position, stateManager.transform.position) <= 20)
+        if (Vector3.Distance(mainCamera.transform.position, stateManager.transform.position) <= 1)
         {
             stateManager.inDanger = true;
             return true;

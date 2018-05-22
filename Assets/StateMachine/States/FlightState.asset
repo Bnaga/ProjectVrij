@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Name: FlightState
   m_EditorClassIdentifier: 
   actions:
-  - {fileID: 0}
-  transistions: []
-  sceneGizmoColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  - {fileID: 11400000, guid: c267ef49e8a6204488031fd057aefb52, type: 2}
+  transistions:
+  - decision: {fileID: 11400000, guid: 814524ca0b1837b468e7e5cb44359c50, type: 2}
+    trueState: {fileID: 11400000, guid: 2ed0b99d1933bf3479353eb42cc4f174, type: 2}
+    falseState: {fileID: 11400000, guid: 97f34bec1e0bdbf46b75ea64fda90f91, type: 2}
+  sceneGizmoColor: {r: 0.9558824, g: 0.077314034, b: 0.077314034, a: 1}
