@@ -52,7 +52,7 @@ public class soundCommunication : MonoBehaviour {
 
 	void OnTriggerEnter (Collider other){
 		soundCommunication sc = other.GetComponent<soundCommunication>();
-		if (!sc) return;
+		if (!sc || !sc.enabled) return;
 		if (!audioSource.clip) return;
 		if (!playbackDevice){
 			sc.ReceiveSound(audioSource.clip);

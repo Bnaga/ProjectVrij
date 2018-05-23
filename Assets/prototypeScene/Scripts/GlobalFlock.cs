@@ -5,10 +5,10 @@ using UnityEngine;
 public class GlobalFlock : MonoBehaviour {
 
     public GameObject fish;
-    public static int tankSize = 4;
+    public static int tankSize = 5;
     public static int tankMin = 0;
 
-    static int numFish = 15;
+    static int numFish = 30;
     public static GameObject[] allFIsh = new GameObject[numFish];
 
     public static Vector3 goalPos = Vector3.zero;
@@ -29,11 +29,21 @@ public class GlobalFlock : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-		if(Random.Range(0,10000) < 50)
-        {
-            goalPos = new Vector3(Random.Range(-tankSize, tankSize),
+		if(Random.Range(0,10000) < 50) newGoal(transform.position);
+
+		
+          
+	}
+
+	public static void newGoal(Vector3 origin){
+		  goalPos = new Vector3(Random.Range(-tankSize, tankSize),
                                   Random.Range(tankMin, tankSize * 2),
                                   Random.Range(-tankSize, tankSize));
-        }
-	}
+								   RaycastHit hit;
+        if (Physics.Raycast(origin,goalPos, out hit)){
+            goalPos = (goalPos + hit.point*9)/10;
+
+	    }
+
+    }
 }
