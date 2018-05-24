@@ -5,10 +5,18 @@ using UnityEngine;
 public class Flock : MonoBehaviour {
 
     public float speed = 0.1f;
-    float rotationSpeed = 4.0f;
+    public float rotationSpeed =2f;
     Vector3 averageHeading;
     Vector3 averagePosition;
     float neighbourDistance = 2.0f;
+	private Rigidbody rb;
+	public float speedscale;
+    private float realSpeed;
+    private int applycounter;
+    private Vector3 goalPos;
+    public Vector3 nullPos;
+
+    bool touching = false;
 
     bool turning = false;
 
@@ -16,35 +24,41 @@ public class Flock : MonoBehaviour {
 	void Start ()
     {
         speed = Random.Range(1, 2);
+        rb = GetComponent<Rigidbody>();
 	}
-	
+
+   
 	// Update is called once per frame
 	void Update ()
     {
+        realSpeed = Mathf.Max(1,Vector3.Magnitude( rb.velocity));
         if (Vector3.Distance(transform.position, Vector3.zero) >= GlobalFlock.tankSize)
         {
             turning = true;
         }
-        else turning = false;
+        else if (!touching) turning = false;
 
         if (turning)
         {
-            Vector3 direction = Vector3.zero - transform.position;
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), rotationSpeed * Time.deltaTime);
+            Vector3 direction = (goalPos+nullPos)/2 - transform.position;
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), rotationSpeed/(realSpeed) * Time.deltaTime);
             speed = Random.Range(1, 2);
         }
         else
         {
-            if (Random.Range(0, 5) < 1)
+            applycounter--;
+            if (applycounter<0)
             {
                 ApplyRules();
             }
         }
-        transform.Translate(0, 0, Time.deltaTime * speed);
+        //transform.Translate(0, 0, Time.deltaTime * speed);
+		rb.AddForce(transform.forward * Time.deltaTime * speed * speedscale);
 	}
 
     void ApplyRules()
     {
+        applycounter = Random.Range(10,20);
         GameObject[] gos;
         gos = GlobalFlock.allFIsh;
 
@@ -52,8 +66,12 @@ public class Flock : MonoBehaviour {
         Vector3 vavoid = Vector3.zero;
         float gSpeed = 1f;
 
-        Vector3 goalPos = GlobalFlock.goalPos;
+        goalPos = GlobalFlock.goalPos;
+        Debug.DrawLine(transform.position,goalPos);
 
+        if (Vector3.Distance(transform.position,goalPos)<1f){
+            //GlobalFlock.newGoal(transform.position);
+        };
         float dist;
 
         int groupSize = 0;
@@ -85,8 +103,19 @@ public class Flock : MonoBehaviour {
             Vector3 direction = (vcenter + vavoid) - transform.position;
             if(direction != Vector3.zero)
             {
-                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), rotationSpeed * Time.deltaTime);
+
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), rotationSpeed/realSpeed * Time.deltaTime);
             }
         }
     }
+
+     void OnTriggerEnter(){
+        touching=true;
+        turning=true;
+    }
+
+    void OnTriggerExit(){
+        touching=false;
+    }
+	
 }
