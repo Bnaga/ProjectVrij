@@ -16,6 +16,7 @@ public class Flock : MonoBehaviour {
     private Vector3 goalPos;
     public Vector3 nullPos;
     private Quaternion turnRot;
+    private Material fishMaterial;
 
     bool touching = false;
 
@@ -26,6 +27,7 @@ public class Flock : MonoBehaviour {
     {
         speed = Random.Range(1, 2);
         rb = GetComponent<Rigidbody>();
+        fishMaterial = GetComponent<Renderer>().material;
 	}
 
    
@@ -33,6 +35,8 @@ public class Flock : MonoBehaviour {
 	void Update ()
     {
         realSpeed = Mathf.Max(1,Vector3.Magnitude( rb.velocity));
+        fishMaterial.SetFloat("_Speed",realSpeed/3+1);
+
         if (Vector3.Distance(transform.position, Vector3.zero) >= GlobalFlock.tankSize)
         {
             turning = true;
@@ -58,12 +62,13 @@ public class Flock : MonoBehaviour {
             }
         }
         //transform.Translate(0, 0, Time.deltaTime * speed);
+
 		rb.AddForce(transform.forward * Time.deltaTime * speed * speedscale);
 	}
 
     void ApplyRules()
     {
-        if (Random.Range(0,5)<1)
+        if (Random.Range(0,9)<1)
             turnRot = Quaternion.Euler(Random.Range(-180,180),Random.Range(-40,40),0);
         applycounter = Random.Range(10,20);
         GameObject[] gos;
