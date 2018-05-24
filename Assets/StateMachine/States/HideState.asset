@@ -9,12 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06881e62d640cdc459cc9a818d5f19eb, type: 3}
-  m_Name: WanderState
+  m_Name: HideState
   m_EditorClassIdentifier: 
   actions:
-  - {fileID: 11400000, guid: a6829c2fa157a9e4ca274938b0c7dc66, type: 2}
+  - {fileID: 11400000, guid: 13fda36c7d2061144b3caaf656f12aad, type: 2}
   transistions:
-  - decision: {fileID: 11400000, guid: 6cef8e4ce6dafcf4aa6aa952db5a8822, type: 2}
-    trueState: {fileID: 11400000, guid: 6cb70a62ac959984f985a34952482568, type: 2}
+  - decision: {fileID: 11400000, guid: 2175ce65ae1821d40beade9d1ac7d8f9, type: 2}
+    trueState: {fileID: 11400000, guid: a115faabba201454784af8ca9a35b8ff, type: 2}
     falseState: {fileID: 11400000, guid: 97f34bec1e0bdbf46b75ea64fda90f91, type: 2}
-  sceneGizmoColor: {r: 0.20134084, g: 0.7205882, b: 0.20492183, a: 1}
+  sceneGizmoColor: {r: 0.034482956, g: 0, b: 1, a: 1}

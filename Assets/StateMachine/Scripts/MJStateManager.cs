@@ -8,6 +8,8 @@ public class MJStateManager : MonoBehaviour {
     public Transform eyes;
     public State currentState;
     public State remainState;
+    public bool hide = false;
+    public bool inDanger = false;
 
     [HideInInspector] public NavMeshAgent navMeshAgent;
 	// Use this for initialization
