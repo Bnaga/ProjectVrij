@@ -15,6 +15,7 @@ public class Flock : MonoBehaviour {
     private int applycounter;
     private Vector3 goalPos;
     public Vector3 nullPos;
+    private Quaternion turnRot;
 
     bool touching = false;
 
@@ -41,11 +42,15 @@ public class Flock : MonoBehaviour {
         if (turning)
         {
             Vector3 direction = (goalPos+nullPos)/2 - transform.position;
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), rotationSpeed/(realSpeed) * Time.deltaTime);
+            Quaternion rot = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), rotationSpeed/(realSpeed) * Time.deltaTime);
+            rb.MoveRotation(rot);
             speed = Random.Range(1, 2);
         }
         else
         {
+            Quaternion rot =  Quaternion.Slerp(transform.rotation, turnRot, rotationSpeed/(realSpeed) * Time.deltaTime);
+            rb.MoveRotation(rot);
+            turnRot = Quaternion.Slerp(Quaternion.identity, turnRot, 1-rotationSpeed/(realSpeed) * Time.deltaTime);
             applycounter--;
             if (applycounter<0)
             {
@@ -58,6 +63,8 @@ public class Flock : MonoBehaviour {
 
     void ApplyRules()
     {
+        if (Random.Range(0,5)<1)
+            turnRot = Quaternion.Euler(Random.Range(-180,180),Random.Range(-40,40),0);
         applycounter = Random.Range(10,20);
         GameObject[] gos;
         gos = GlobalFlock.allFIsh;
