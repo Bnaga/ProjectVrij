@@ -7,7 +7,7 @@ using UnityEngine;
 public class HideAction : ActionScript
 {
     float testTimer = 0;
-    float endTimer = 10;
+    float endTimer = 5;
 
     public override void Act(MJStateManager stateManager)
     {
