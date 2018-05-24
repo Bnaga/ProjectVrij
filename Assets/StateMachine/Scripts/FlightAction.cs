@@ -40,6 +40,7 @@ public class FlightAction : ActionScript
     private Vector3 GetTarget(MJStateManager stateManager)
     {
         houseDistance = 100;
+        houses = GameObject.FindGameObjectsWithTag("House");
         Vector3 currentTarget = Vector3.zero;
         Debug.Log(houses.Length);
         for (int i = 0; i < houses.Length; i++)
