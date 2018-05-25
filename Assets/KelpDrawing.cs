@@ -30,7 +30,7 @@ Jasper Oprel, 2018
 class KelpDrawing : MonoBehaviour
 {
 
-	public GameObject leaf;
+	public GameObject leafObj;
 	public Transform target;
 	public Material material;
 	public float ropeWidth = 0.5f;
@@ -38,6 +38,7 @@ class KelpDrawing : MonoBehaviour
 	public float ropeDrag = 0.1f;
 	public float ropeMass = 0.5f;
 	public int radialSegments = 6;
+	public float jointDamper = 10;
 	public bool startRestrained = true;
 	public bool endRestrained = false;
 	public bool useMeshCollision = false;
@@ -165,6 +166,8 @@ class KelpDrawing : MonoBehaviour
 		sjl.limit = swing1Limit;
 		end.swing1Limit = sjl;
 		
+
+
 		target.parent = transform;
 
 		if(endRestrained)
@@ -187,6 +190,7 @@ class KelpDrawing : MonoBehaviour
 		joints[n].transform.parent = transform;
 
 		Rigidbody rigid = joints[n].AddComponent(typeof(Rigidbody)) as Rigidbody;
+		rigid.useGravity=false;
 		if(!useMeshCollision)
 		{
 			SphereCollider col = joints[n].AddComponent(typeof(SphereCollider)) as SphereCollider;
@@ -199,21 +203,37 @@ class KelpDrawing : MonoBehaviour
 		
 		sjl = ph.lowTwistLimit;
 		sjl.limit = lowTwistLimit;
+		
 		ph.lowTwistLimit = sjl;
 		
 		sjl = ph.highTwistLimit;
 		sjl.limit = highTwistLimit;
+
 		ph.highTwistLimit = sjl;
 		
 		sjl = ph.swing1Limit;
 		sjl.limit = swing1Limit;
 		ph.swing1Limit = sjl;
+
+		SoftJointLimitSpring sjls;
+
+		sjls = ph.swingLimitSpring;
+		sjls.damper = jointDamper;
+		ph.swingLimitSpring=sjls;
+
+		sjls = ph.twistLimitSpring;
+		sjls.damper = jointDamper;
+		ph.twistLimitSpring = sjls;
+
+		
 		//ph.breakForce = ropeBreakForce; <--------------- TODO
 
 		joints[n].transform.position = segmentPos[n];
 
 		rigid.drag = ropeDrag;
 		rigid.mass = ropeMass;
+		rigid.angularDrag = ropeMass;
+		ph.enableProjection=true;
 
 		if(n==0)
 		{     
@@ -221,8 +241,20 @@ class KelpDrawing : MonoBehaviour
 		} 
 		else
 		{
-			ph.connectedBody = joints[n-1].GetComponent<Rigidbody>();   
+			ph.connectedBody = joints[n-1].GetComponent<Rigidbody>(); 
+			
+			float rot = Random.Range(0,360);
+			GameObject leaf = Instantiate(leafObj, joints[n].transform);
+			leaf.transform.rotation = Quaternion.Euler(0,rot,Random.Range(-20,20));
+			leaf = Instantiate(leafObj, joints[n].transform);
+			leaf.transform.rotation = Quaternion.Euler(0,rot+Random.Range(120,240),Random.Range(-20,20));
+			
+			//leaf.transform.position = (joints[n].transform.position + joints[n-1].transform.position)/2; 
+			//leaf.transform.position = Vector3.zero;ee
 		}
-		Instantiate(leaf, joints[n].transform);
+		if (n==segments-1) {
+			rigid.freezeRotation = true;
+		
+		}
 	}
 }
