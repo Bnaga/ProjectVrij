@@ -21,16 +21,22 @@ public class AQUAS_BubbleBehaviour : MonoBehaviour {
 		smallBubbleCount = 0;
 
         smallBubbleBehaviour = smallBubble.GetComponent<AQUAS_SmallBubbleBehaviour>();
+        transform.rotation = Quaternion.Euler(0,Random.Range(0,360),0);
     }
 	
 	// Update is called once per frame
 	void Update () {
 
 		transform.Translate (Vector3.up * Time.deltaTime * averageUpdrift, Space.World);
+       if (transform.localScale.magnitude>.01f)
+        transform.localScale -= Vector3.one *.005f;
+        else{
+            Destroy(this.gameObject);
+        }
 
         SmallBubbleSpawner();
 
-        if (mainCamera.transform.position.y > waterLevel || transform.position.y > waterLevel) 
+        if (transform.position.y > waterLevel) 
         {
             Destroy(this.gameObject);
         }

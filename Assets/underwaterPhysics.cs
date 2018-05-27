@@ -1,0 +1,36 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class underwaterPhysics : MonoBehaviour {
+
+	public int UpdateEveryXFrames = 10;
+	private int updateCounter;
+	private Rigidbody rigidbody;
+	private float density;
+	private Vector3 force;
+
+	// Use this for initialization
+	void Awake () {
+		rigidbody = GetComponent<Rigidbody>();
+
+	}
+	
+	// Update is called once per frame
+	void FixedUpdate () {
+		updateCounter++;
+		if (updateCounter>UpdateEveryXFrames){
+			updateCounter=0;
+			if (Mathf.Abs(rigidbody.velocity.y)>.1f){
+				force += Random.insideUnitSphere * rigidbody.drag;
+				force.y=0;
+				Debug.DrawLine(transform.position,transform.position+force/rigidbody.drag, Color.red);
+			}
+		}
+		if (force.magnitude>1){
+			rigidbody.AddForce(force, ForceMode.Acceleration);
+			force/=2;
+		}
+	}
+
+}
