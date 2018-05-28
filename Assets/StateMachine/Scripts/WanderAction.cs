@@ -37,7 +37,7 @@ public class WanderAction : ActionScript
             onDestination = false;
         }
 
-        if (Vector3.Distance(stateManager.transform.position, mojiDestination) < 5)
+        if (Vector3.Distance(stateManager.transform.position, mojiDestination) < 2f)
         {
             onDestination = true;
         }
