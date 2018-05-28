@@ -46,8 +46,8 @@ public class MicrophoneControllerVR : MonoBehaviour {
 		characterListener.enabled = !isRecording;
 
 		if (rightHand.triggerPressed){
-			playbackDevice.receivedSounds = playbackSounds;
-			playbackDevice.PlaySound(audioRecording);
+			//playbackDevice.receivedSounds = playbackSounds;
+			//playbackDevice.PlaySound(audioRecording);
 		}
 	}
 }
