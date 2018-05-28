@@ -10,6 +10,7 @@ public class MJStateManager : MonoBehaviour {
     public State remainState;
     public bool hide = false;
     public bool inDanger = false;
+    public int curState = 0;
 
     [HideInInspector] public NavMeshAgent navMeshAgent;
 	// Use this for initialization
@@ -37,6 +38,31 @@ public class MJStateManager : MonoBehaviour {
         if(nextState != remainState)
         {
             currentState = nextState;
+        }
+    }
+
+    public void RandomState()
+    {
+        int tempState = Random.Range(0, 100);
+        if(tempState < 80)
+        {
+            curState = 1;
+        }
+        if(tempState >= 80 || tempState <85)
+        {
+            curState = 2;
+        }
+        if (tempState >= 85 || tempState < 90)
+        {
+            curState = 3;
+        }
+        if (tempState >= 90 || tempState < 95)
+        {
+            curState = 4;
+        }
+        if (tempState >= 95 || tempState < 100)
+        {
+            curState = 5;
         }
     }
 }
