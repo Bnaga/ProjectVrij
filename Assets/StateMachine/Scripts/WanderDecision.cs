@@ -1,16 +1,23 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WanderDecision : MonoBehaviour {
+[CreateAssetMenu(menuName = "PluggableAI/Decisions/IdleToWander")]
+public class WanderDecision : Decision
+{
+    public override bool Decide(MJStateManager stateManager)
+    {
+        return CheckCurrentState(stateManager);
+    }
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    private bool CheckCurrentState(MJStateManager stateManager)
+    {
+        if (stateManager.curState == 1)
+        {
+            stateManager.onDestination = true;
+            return true;
+        }
+        else return false;
+    }
 }
