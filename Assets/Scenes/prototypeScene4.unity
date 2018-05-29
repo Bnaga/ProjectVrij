@@ -289,7 +289,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 370519399
+  randomSeed: -123866495
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -4090,7 +4090,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &164358700
 Light:
   m_ObjectHideFlags: 0
@@ -4101,7 +4101,7 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.17
+  m_Intensity: 0.48
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -7567,8 +7567,9 @@ GameObject:
   - component: {fileID: 1092176306}
   - component: {fileID: 1092176305}
   - component: {fileID: 1092176304}
-  - component: {fileID: 1092176303}
   - component: {fileID: 1092176302}
+  - component: {fileID: 1092176307}
+  - component: {fileID: 1092176303}
   m_Layer: 0
   m_Name: Camera (eye)
   m_TagString: MainCamera
@@ -7605,8 +7606,7 @@ MonoBehaviour:
 --- !u!114 &1092176303
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114991306419778970, guid: efd444fe2a993ce4aa7fe91c8845e529,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1092176300}
   m_Enabled: 1
@@ -7743,6 +7743,43 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1092176307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1092176300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f35c02a2c6230584391703bf32006791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_DebugShader: {fileID: 4800000, guid: 91e29ad407521e447a7254f5c1ea9b54, type: 3}
+  m_ShadowmapShader: {fileID: 4800000, guid: 2c4cd42b134f7864fa579350e9cf6896, type: 3}
+  m_InjectLightingAndDensity: {fileID: 7200000, guid: 55812fd61bd54104aa23612fc28bfeb8,
+    type: 3}
+  m_Scatter: {fileID: 7200000, guid: 2a7c01c2354d03a4e9c31096bf130b6a, type: 3}
+  m_ApplyToOpaqueShader: {fileID: 4800000, guid: 6f73df8e11615074dbf62a3a384af521,
+    type: 3}
+  m_BlurShadowmapShader: {fileID: 4800000, guid: 701192b62a7678549918bc87434699fe,
+    type: 3}
+  m_Noise: {fileID: 2800000, guid: 35eb47181d630134c97488476efbda59, type: 3}
+  m_Debug: 0
+  m_Z: 1
+  m_NearClip: 0.2
+  m_FarClipMax: 10
+  m_GlobalDensityMult: 0.4
+  m_ConstantFog: 10
+  m_HeightFogAmount: 76.9
+  m_HeightFogExponent: 2
+  m_HeightFogOffset: 0
+  m_NoiseFogAmount: 0.24
+  m_NoiseFogScale: 0.5
+  m_Wind: {fileID: 0}
+  m_Anisotropy: 0.26
+  m_GlobalIntensityMult: 1
+  m_AmbientLightIntensity: 0.3
+  m_AmbientLightColor: {r: 0.30147058, g: 0.5375254, b: 1, a: 1}
 --- !u!1001 &1093079845
 Prefab:
   m_ObjectHideFlags: 0
@@ -14315,6 +14352,20 @@ Prefab:
     - target: {fileID: 114588539832462862, guid: 068717e2f8162fd428b81943b6e94686,
         type: 2}
       propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114588539832462862, guid: 068717e2f8162fd428b81943b6e94686,
+        type: 2}
+      propertyPath: m_Intensity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1591178194407364, guid: 068717e2f8162fd428b81943b6e94686, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114873765644961988, guid: 068717e2f8162fd428b81943b6e94686,
+        type: 2}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
