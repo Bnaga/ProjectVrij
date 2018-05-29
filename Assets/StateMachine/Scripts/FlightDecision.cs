@@ -17,6 +17,7 @@ public class FlightDecision : Decision
         if (Vector3.Distance(mainCamera.transform.position, stateManager.transform.position) <= 1)
         {
             stateManager.inDanger = true;
+            stateManager.onDestination = true;
             return true;
         }
         else return false;

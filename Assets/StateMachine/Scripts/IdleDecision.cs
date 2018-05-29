@@ -20,6 +20,7 @@ public class IdleDecision : Decision {
         testTimer += Time.deltaTime;
         if (testTimer >= endTimer)
         {
+            stateManager.curState = 0;
             testTimer = 0;
             return true;
         }

@@ -30,18 +30,18 @@ public class WanderAction : ActionScript
 
     private void Wander(MJStateManager stateManager)
     {
-        Debug.Log(onDestination);
+        onDestination = stateManager.onDestination;
         if (onDestination)
         {
             Debug.Log("test6");
-            mojiDestination = RandomNavmeshLocation(2f, stateManager);
+            mojiDestination = RandomNavmeshLocation(.75f, stateManager);
             stateManager.navMeshAgent.SetDestination(mojiDestination);
-            onDestination = false;
+            stateManager.onDestination = false;
         }
 
-        if (Vector3.Distance(stateManager.transform.position, mojiDestination) < 2f)
+        if (Vector3.Distance(stateManager.transform.position, mojiDestination) < .25f)
         {
-            onDestination = true;
+            stateManager.onDestination = true;
         }
 
     }

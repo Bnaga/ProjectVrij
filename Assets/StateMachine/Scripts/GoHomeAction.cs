@@ -3,22 +3,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "PluggableAI/Actions/Flight")]
-public class FlightAction : ActionScript
+
+[CreateAssetMenu(menuName = "PluggableAI/Actions/GoHome")]
+public class GoHomeAction : ActionScript
 {
     private GameObject[] houses;
     private float houseDistance = 100;
     private Vector3 target;
     bool onDestination = true;
     Vector3 mojiDestination;
-    //bool arrived = false;
 
     public override void Act(MJStateManager stateManager)
     {
-        Hide(stateManager);
+        GoHome(stateManager);
     }
 
-    private void Hide(MJStateManager stateManager)
+    private void GoHome(MJStateManager stateManager)
     {
         onDestination = stateManager.onDestination;
         if (onDestination)
@@ -26,13 +26,11 @@ public class FlightAction : ActionScript
             target = GetTarget(stateManager);
             stateManager.navMeshAgent.SetDestination(target);
             stateManager.onDestination = false;
-            //Debug.Log("test");
         }
 
         if (Vector3.Distance(stateManager.transform.position, target) <= .5f)
         {
             stateManager.onDestination = true;
-            stateManager.hide = true;
         }
 
     }
@@ -45,18 +43,15 @@ public class FlightAction : ActionScript
         Debug.Log(houses.Length);
         for (int i = 0; i < houses.Length; i++)
         {
-            
+
             float temphouseDistance = Vector3.Distance(stateManager.transform.position, houses[i].transform.position);
             if (temphouseDistance <= houseDistance)
             {
                 houseDistance = temphouseDistance;
                 Debug.Log(houseDistance);
-                //currentTarget = stateManager.transform.position;
                 currentTarget = houses[i].transform.position;
-                //Debug.Log(houses[i].name);
             }
         }
         return currentTarget;
     }
 }
-

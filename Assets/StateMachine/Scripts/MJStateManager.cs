@@ -20,6 +20,7 @@ public class MJStateManager : MonoBehaviour {
     {
         curState = 0;
         navMeshAgent = GetComponent<NavMeshAgent>();
+        onDestination = true;
 	}
 
     private void Update()
