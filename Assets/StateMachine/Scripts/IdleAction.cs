@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(menuName = "PluggableAI/Actions/Idle")]
 public class IdleAction : ActionScript
 {
 
@@ -14,7 +15,7 @@ public class IdleAction : ActionScript
 
     void RandomState(MJStateManager stateManager)
     {
-        if(UnityEngine.Random.Range(0, 100) <= 10)
+        if(UnityEngine.Random.Range(0, 100) <= 1)
         {
             stateManager.RandomState();
         }

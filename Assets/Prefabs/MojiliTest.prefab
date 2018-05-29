@@ -2161,7 +2161,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1710005133066964}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.085, y: 0.017892, z: -0.0012719}
+  m_LocalPosition: {x: -0.21, y: -0.0009, z: -0.045}
   m_LocalScale: {x: 0.03179971, y: 0.031799708, z: 0.031799708}
   m_Children:
   - {fileID: 4525183985792356}
@@ -2232,7 +2232,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1888273748036036}
-  m_LocalRotation: {x: 0.5326752, y: 0.070340455, z: 0.83613276, w: -0.110415146}
+  m_LocalRotation: {x: 0.53267515, y: 0.07034045, z: 0.83613265, w: -0.11041513}
   m_LocalPosition: {x: 0.000022271464, y: -0.00006150465, z: 0.026027026}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2503,10 +2503,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eyes: {fileID: 4949233347266322}
-  currentState: {fileID: 11400000, guid: a115faabba201454784af8ca9a35b8ff, type: 2}
+  currentState: {fileID: 11400000, guid: b59ffc53f4658bf4095eed75cab3a3fa, type: 2}
   remainState: {fileID: 11400000, guid: 97f34bec1e0bdbf46b75ea64fda90f91, type: 2}
   hide: 0
   inDanger: 0
+  curState: 0
+  tempState: 0
   navMeshAgent: {fileID: 0}
 --- !u!137 &137284413043391332
 SkinnedMeshRenderer:
@@ -2690,7 +2692,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1710005133066964}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.1
   m_Speed: 0.1
   m_Acceleration: 4
   avoidancePriority: 50

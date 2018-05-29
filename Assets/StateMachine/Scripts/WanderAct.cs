@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "PluggableAI/Actions/Wander")]
-public class WanderAction : ActionScript
+[CreateAssetMenu(menuName = "PluggableAI/Actions/Wander2")]
+public class WanderAct : ActionScript
 {
 
     bool onDestination = true;
@@ -30,7 +30,7 @@ public class WanderAction : ActionScript
 
     private void Wander(MJStateManager stateManager)
     {
-        Debug.Log(onDestination);
+        //Debug.Log("test4");
         if (onDestination)
         {
             Debug.Log("test6");
