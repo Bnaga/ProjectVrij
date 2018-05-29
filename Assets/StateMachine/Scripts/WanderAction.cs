@@ -33,7 +33,6 @@ public class WanderAction : ActionScript
         onDestination = stateManager.onDestination;
         if (onDestination)
         {
-            Debug.Log("test6");
             mojiDestination = RandomNavmeshLocation(.75f, stateManager);
             stateManager.navMeshAgent.SetDestination(mojiDestination);
             stateManager.onDestination = false;

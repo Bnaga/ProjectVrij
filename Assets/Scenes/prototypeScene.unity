@@ -448,7 +448,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4685456101184050, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
       propertyPath: m_RootOrder
-      value: 26
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4740754781630934, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
       propertyPath: m_LocalRotation.x
@@ -474,6 +474,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1710005133066964, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
+      propertyPath: m_TagString
+      value: Mojili
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
   m_IsPrefabParent: 0
@@ -489,7 +493,7 @@ GameObject:
   - component: {fileID: 209321735}
   - component: {fileID: 209321734}
   m_Layer: 0
-  m_Name: House
+  m_Name: House4
   m_TagString: House
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1046,6 +1050,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1710005133066964, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
+      propertyPath: m_TagString
+      value: Mojili
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
   m_IsPrefabParent: 0
@@ -1088,26 +1096,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 22
       objectReference: {fileID: 0}
-    - target: {fileID: 4740754781630934, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0.53267515
-      objectReference: {fileID: 0}
-    - target: {fileID: 4740754781630934, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0.07034045
-      objectReference: {fileID: 0}
-    - target: {fileID: 4740754781630934, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.83613265
-      objectReference: {fileID: 0}
-    - target: {fileID: 4740754781630934, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: -0.11041513
-      objectReference: {fileID: 0}
-    - target: {fileID: 1710005133066964, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 114998507770109520, guid: e54ef8c7461ec6e45a66f553a080a8ec,
+        type: 2}
+      propertyPath: currentState
+      value: 
+      objectReference: {fileID: 11400000, guid: b59ffc53f4658bf4095eed75cab3a3fa,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
   m_IsPrefabParent: 0
@@ -1483,7 +1477,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4685456101184050, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
       propertyPath: m_RootOrder
-      value: 27
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 4740754781630934, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1508,6 +1502,10 @@ Prefab:
     - target: {fileID: 1710005133066964, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1710005133066964, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
+      propertyPath: m_TagString
+      value: Mojili
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
@@ -1774,7 +1772,7 @@ GameObject:
   - component: {fileID: 777591608}
   - component: {fileID: 777591607}
   m_Layer: 0
-  m_Name: House
+  m_Name: House3
   m_TagString: House
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1897,7 +1895,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4685456101184050, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
       propertyPath: m_RootOrder
-      value: 30
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 4740754781630934, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1922,6 +1920,10 @@ Prefab:
     - target: {fileID: 1710005133066964, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1710005133066964, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
+      propertyPath: m_TagString
+      value: Mojili
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
@@ -2017,7 +2019,7 @@ GameObject:
   - component: {fileID: 972397192}
   - component: {fileID: 972397191}
   m_Layer: 0
-  m_Name: House
+  m_Name: House6
   m_TagString: House
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2292,7 +2294,7 @@ GameObject:
   - component: {fileID: 1005426131}
   - component: {fileID: 1005426130}
   m_Layer: 0
-  m_Name: House
+  m_Name: HOuse2
   m_TagString: House
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6594,7 +6596,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4685456101184050, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
       propertyPath: m_RootOrder
-      value: 29
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 4740754781630934, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
       propertyPath: m_LocalRotation.x
@@ -6619,6 +6621,10 @@ Prefab:
     - target: {fileID: 1710005133066964, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1710005133066964, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
+      propertyPath: m_TagString
+      value: Mojili
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
@@ -6660,7 +6666,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4685456101184050, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
       propertyPath: m_RootOrder
-      value: 28
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 4740754781630934, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
       propertyPath: m_LocalRotation.x
@@ -6685,6 +6691,10 @@ Prefab:
     - target: {fileID: 1710005133066964, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1710005133066964, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
+      propertyPath: m_TagString
+      value: Mojili
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
@@ -7054,7 +7064,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4685456101184050, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
       propertyPath: m_RootOrder
-      value: 31
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4740754781630934, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
       propertyPath: m_LocalRotation.x
@@ -7079,6 +7089,10 @@ Prefab:
     - target: {fileID: 1710005133066964, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1710005133066964, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
+      propertyPath: m_TagString
+      value: Mojili
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
@@ -7617,7 +7631,7 @@ GameObject:
   - component: {fileID: 1738753186}
   - component: {fileID: 1738753185}
   m_Layer: 0
-  m_Name: House
+  m_Name: House1
   m_TagString: House
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8767,7 +8781,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 487538, guid: 8a59534d302a51d4aad125480950b6e7, type: 2}
       propertyPath: m_RootOrder
-      value: 25
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 11420952, guid: 8a59534d302a51d4aad125480950b6e7, type: 2}
       propertyPath: mainCamera
@@ -8788,7 +8802,7 @@ GameObject:
   - component: {fileID: 2092176602}
   - component: {fileID: 2092176601}
   m_Layer: 0
-  m_Name: House
+  m_Name: House5
   m_TagString: House
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8922,6 +8936,10 @@ Prefab:
     - target: {fileID: 1710005133066964, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1710005133066964, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
+      propertyPath: m_TagString
+      value: Mojili
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}

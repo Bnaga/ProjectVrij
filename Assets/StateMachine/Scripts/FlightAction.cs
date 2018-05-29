@@ -26,10 +26,10 @@ public class FlightAction : ActionScript
             target = GetTarget(stateManager);
             stateManager.navMeshAgent.SetDestination(target);
             stateManager.onDestination = false;
-            //Debug.Log("test");
+            Debug.Log("test");
         }
 
-        if (Vector3.Distance(stateManager.transform.position, target) <= .5f)
+        if (Vector3.Distance(stateManager.transform.position, target) <= .25f)
         {
             stateManager.onDestination = true;
             stateManager.hide = true;
@@ -53,7 +53,7 @@ public class FlightAction : ActionScript
                 Debug.Log(houseDistance);
                 //currentTarget = stateManager.transform.position;
                 currentTarget = houses[i].transform.position;
-                //Debug.Log(houses[i].name);
+                Debug.Log(houses[i].name);
             }
         }
         return currentTarget;

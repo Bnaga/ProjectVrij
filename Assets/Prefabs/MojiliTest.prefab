@@ -970,7 +970,7 @@ GameObject:
   - component: {fileID: 114998507770109520}
   m_Layer: 0
   m_Name: MojiliTest
-  m_TagString: Untagged
+  m_TagString: Mojili
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2503,12 +2503,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eyes: {fileID: 4949233347266322}
-  currentState: {fileID: 11400000, guid: b59ffc53f4658bf4095eed75cab3a3fa, type: 2}
+  currentState: {fileID: 11400000, guid: 72585c22df3c6ea40b26965213a05d7c, type: 2}
   remainState: {fileID: 11400000, guid: 97f34bec1e0bdbf46b75ea64fda90f91, type: 2}
   hide: 0
   inDanger: 0
   curState: 0
   tempState: 0
+  onDestination: 1
   navMeshAgent: {fileID: 0}
 --- !u!137 &137284413043391332
 SkinnedMeshRenderer:
