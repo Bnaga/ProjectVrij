@@ -22,13 +22,13 @@ using UnityEditor;
 
 	[Header("General")]
 	public float talkRate;
-
+	 #if UNITY_EDITOR
 	 [MenuItem("Assets/Create/Fish Dictionary")]
     public static void MakeScriptableObject()
     {
         ScriptableObjectUtility.CreateAsset<fishDictionary>();
     }
-
+	#endif
 	
  
 

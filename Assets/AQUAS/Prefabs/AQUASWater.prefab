@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2368724}
   - component: {fileID: 11489712}
   - component: {fileID: 11419128}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: AQUASWater
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 134676}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.050244, y: 5, z: -0.83254665}
+  m_LocalPosition: {x: 3.050244, y: 6, z: -0.83254665}
   m_LocalScale: {x: 16606.672, y: 16606.672, z: 16606.672}
   m_Children:
   - {fileID: 4244569883371890}
@@ -154,7 +154,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1795933827181984
 GameObject:
   m_ObjectHideFlags: 0

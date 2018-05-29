@@ -34,6 +34,8 @@ public class SteamVR_RenderModel : MonoBehaviour
 	[Tooltip("Update transforms of components at runtime to reflect user action.")]
 	public bool updateDynamically = true;
 
+	
+
 	// Additional controller settings for showing scrollwheel, etc.
 	public RenderModel_ControllerMode_State_t controllerModeState;
 
@@ -42,6 +44,19 @@ public class SteamVR_RenderModel : MonoBehaviour
 
 	// Cached name of this render model for updating component transforms at runtime.
 	public string renderModelName { get; private set; }
+
+
+	[Tooltip("Components that are to be removed after loading.")]
+	public string[] disabledParts;
+
+	void Awake(){
+		SteamVR_DataInput i = GetComponent<SteamVR_DataInput>();
+		if (i){
+			disabledParts = GetComponent<SteamVR_DataInput>().disabledParts;
+		}
+		
+	}
+
 
 	// If someone knows how to keep these from getting cleaned up every time
 	// you exit play mode, let me know.  I've tried marking the RenderModel
@@ -569,9 +584,12 @@ public class SteamVR_RenderModel : MonoBehaviour
 
 				models[componentRenderModelName] = model;
 			}
-
 			t.gameObject.AddComponent<MeshFilter>().mesh = model.mesh;
 			t.gameObject.AddComponent<MeshRenderer>().sharedMaterial = model.material;
+			foreach (string part in disabledParts){
+				if (t.gameObject.name==part) Destroy(t.gameObject);
+			}
+			
 		}
 
 		return true;

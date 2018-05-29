@@ -7,8 +7,8 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Clear Lake
-  m_Shader: {fileID: 4800000, guid: f625f9c13440d4e49bf26284e1c8c132, type: 3}
-  m_ShaderKeywords: _ENABLEREFLECTIONS_ON
+  m_Shader: {fileID: 4800000, guid: 4ffc531a95204d24bb7a78f96062ca76, type: 3}
+  m_ShaderKeywords: _ENABLEREFLECTIONS_ON _USEREFLECTIONS_ON
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -34,7 +34,15 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _DistortionTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FlowMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -58,6 +66,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Normal:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _NormalTexture:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -78,31 +90,42 @@ Material:
         m_Texture: {fileID: 2800000, guid: 16aae366ec986ff4f8a63a5331ee7acb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Texture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _Density: 0.82
+    - _DepthFade: 10
     - _DepthTransparency: 10
     - _DetailNormalMapScale: 1
     - _DistanceTilingFade: 1
+    - _DistanceVisibility: 0
     - _Distortion: 0.15
+    - _DistortionIntensity: 0
+    - _DistortionSpeed: 0
     - _DstBlend: 0
+    - _EmissionIntensity: 0
     - _EnableCustomFog: 0
     - _EnableReflections: 1
     - _Fade: 0.85
+    - _FlowSpeed: 0.1
     - _FoamBlend: 0.5
     - _FoamContrast: 0.318
     - _FoamDistFade: 2.87
     - _FoamDistFalloff: 20.1
     - _FoamIntensity: 10
     - _FoamSpeed: -200
-    - _FoamTiling: 30
+    - _FoamTiling: 48.36
     - _FoamVisibility: 0.547
     - _FogDistance: 1000
     - _FogFade: 1.5
     - _FullTransparency: 0
     - _Gloss: 0.9
     - _Glossiness: 0.5
+    - _Intensity: 24.6
     - _LargeWaveRefraction: 1.53
     - _LargeWavesSpeed: 50
     - _LargeWavesTiling: 1
@@ -116,31 +139,46 @@ Material:
     - _Mode: 0
     - _NormalTiling: 1
     - _OcclusionStrength: 1
+    - _OffsetSmallBigSmall: 1
+    - _OffsetSmallBigSmallBig: 0
     - _Parallax: 0.02
     - _ReflectionIntensity: 0.436
-    - _Refraction: 0.67
+    - _Reflectionintensity: 0.5
+    - _Refraction: 1
     - _RefractionDistance: 10
     - _RefractionFalloff: 1
+    - _Roll: 0.5
+    - _Scale: 0.33
+    - _ShallowDeepBlend: 3.6
     - _ShoreFade: 0.56
     - _ShoreTransparency: 0.5
     - _SmallWaveRrefraction: 1.16
     - _SmallWavesSpeed: 60
     - _SmallWavesTiling: 2
     - _Specular: 1
+    - _Speed: 0
     - _SrcBlend: 1
+    - _Tiling: 1
+    - _Transparency: 0
     - _UVSec: 0
     - _UnderwaterMode: 0
     - _UnderwaterTranspDist: 16.4
     - _UnderwaterTranspFalloff: 0.78
+    - _UseReflections: 1
+    - _UsingLinearColorSpace: 0
+    - _WaterLevel: 22
     - _WaveBlend: 0.77
     - _WaveFade: 1.19
     - _WaveSpeed: 40
+    - _Yaw: 0.5
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _DeepWaterColor: {r: 0.01135381, g: 0.11889393, b: 0.1544118, a: 1}
+    - _DeepWaterColor: {r: 0, g: 0.751724, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissiveColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _FoamColor: {r: 0.3823529, g: 0.3879758, b: 0.3879758, a: 1}
     - _FogColor: {r: 0.8014706, g: 0.8014706, b: 0.8014706, a: 1}
     - _MainColor: {r: 0, g: 1, b: 1, a: 1}
+    - _ShallowWaterColor: {r: 0.44117647, g: 0.95375246, b: 1, a: 1}
     - _SpecularColor: {r: 0.7205882, g: 0.7311851, b: 0.7311851, a: 1}
