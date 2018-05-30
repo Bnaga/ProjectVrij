@@ -29,11 +29,11 @@ public class NeighborAction : ActionScript
             
         }
 
-        if (Vector3.Distance(stateManager.transform.position, target) <= .1f)
+        if (Vector3.Distance(stateManager.transform.position, target) <= .01f)
         {
             stateManager.onDestination = true;
-            stateManager.hide = true;
         }
+        Debug.Log(onDestination);
 
     }
 
@@ -47,7 +47,7 @@ public class NeighborAction : ActionScript
         {
 
             float tempfriendDistance = Vector3.Distance(stateManager.transform.position, mojili[i].transform.position);
-            if (tempfriendDistance <= friendDistance)
+            if (tempfriendDistance <= friendDistance && tempfriendDistance != 0)
             {
                 friendDistance = tempfriendDistance;
                 //currentTarget = new Vector3( mojili[i].transform.position.x, 0, mojili[i].transform.position.z);
