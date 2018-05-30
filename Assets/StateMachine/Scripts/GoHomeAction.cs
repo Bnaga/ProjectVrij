@@ -40,7 +40,7 @@ public class GoHomeAction : ActionScript
         houseDistance = 100;
         houses = GameObject.FindGameObjectsWithTag("House");
         Vector3 currentTarget = Vector3.zero;
-        Debug.Log(houses.Length);
+        //Debug.Log(houses.Length);
         for (int i = 0; i < houses.Length; i++)
         {
 
@@ -48,7 +48,7 @@ public class GoHomeAction : ActionScript
             if (temphouseDistance <= houseDistance)
             {
                 houseDistance = temphouseDistance;
-                Debug.Log(houseDistance);
+                //Debug.Log(houseDistance);
                 currentTarget = new Vector3( houses[i].transform.position.x, 0, houses[i].transform.position.z);
             }
         }
