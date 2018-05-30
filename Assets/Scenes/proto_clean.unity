@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -565,11 +565,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &231015280 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1365040316302540, guid: efd444fe2a993ce4aa7fe91c8845e529,
-    type: 2}
-  m_PrefabInternal: {fileID: 2021770630}
 --- !u!1001 &238976400
 Prefab:
   m_ObjectHideFlags: 0
@@ -1755,11 +1750,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &748126068 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1124311870283942, guid: efd444fe2a993ce4aa7fe91c8845e529,
-    type: 2}
-  m_PrefabInternal: {fileID: 2021770630}
 --- !u!1 &777591606
 GameObject:
   m_ObjectHideFlags: 0
@@ -2630,11 +2620,6 @@ Rigidbody:
   m_PrefabParentObject: {fileID: 54760614785078658, guid: 24691e845539f7f46b300f2cdbd83150,
     type: 2}
   m_PrefabInternal: {fileID: 1598127916}
---- !u!1 &1234501732 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1365250558246542, guid: efd444fe2a993ce4aa7fe91c8845e529,
-    type: 2}
-  m_PrefabInternal: {fileID: 2021770630}
 --- !u!1 &1239387878 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1960450836113472, guid: ed1190a61d7ab8b47b24c9a476eaddcf,
@@ -7679,16 +7664,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1753797502 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1674777319880692, guid: efd444fe2a993ce4aa7fe91c8845e529,
-    type: 2}
-  m_PrefabInternal: {fileID: 2021770630}
---- !u!1 &1772960891 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1252787099162800, guid: efd444fe2a993ce4aa7fe91c8845e529,
-    type: 2}
-  m_PrefabInternal: {fileID: 2021770630}
 --- !u!1001 &1804142590
 Prefab:
   m_ObjectHideFlags: 0
@@ -8686,32 +8661,32 @@ Prefab:
         type: 2}
       propertyPath: actualBoundaries
       value: 
-      objectReference: {fileID: 2146659780}
+      objectReference: {fileID: 0}
     - target: {fileID: 114126450877459892, guid: efd444fe2a993ce4aa7fe91c8845e529,
         type: 2}
       propertyPath: actualHeadset
       value: 
-      objectReference: {fileID: 1753797502}
+      objectReference: {fileID: 0}
     - target: {fileID: 114126450877459892, guid: efd444fe2a993ce4aa7fe91c8845e529,
         type: 2}
       propertyPath: actualLeftController
       value: 
-      objectReference: {fileID: 1234501732}
+      objectReference: {fileID: 0}
     - target: {fileID: 114126450877459892, guid: efd444fe2a993ce4aa7fe91c8845e529,
         type: 2}
       propertyPath: actualRightController
       value: 
-      objectReference: {fileID: 231015280}
+      objectReference: {fileID: 0}
     - target: {fileID: 114126450877459892, guid: efd444fe2a993ce4aa7fe91c8845e529,
         type: 2}
       propertyPath: modelAliasLeftController
       value: 
-      objectReference: {fileID: 748126068}
+      objectReference: {fileID: 0}
     - target: {fileID: 114126450877459892, guid: efd444fe2a993ce4aa7fe91c8845e529,
         type: 2}
       propertyPath: modelAliasRightController
       value: 
-      objectReference: {fileID: 1772960891}
+      objectReference: {fileID: 0}
     - target: {fileID: 114089367216453930, guid: efd444fe2a993ce4aa7fe91c8845e529,
         type: 2}
       propertyPath: m_Enabled
@@ -8920,8 +8895,3 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &2146659780 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1188535310630664, guid: efd444fe2a993ce4aa7fe91c8845e529,
-    type: 2}
-  m_PrefabInternal: {fileID: 2021770630}

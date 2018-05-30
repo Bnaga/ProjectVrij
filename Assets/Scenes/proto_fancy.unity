@@ -3806,11 +3806,6 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 544c1bfa0d1dbe844a58760cb513f0a8, type: 3}
---- !u!1 &72494108 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1365250558246542, guid: efd444fe2a993ce4aa7fe91c8845e529,
-    type: 2}
-  m_PrefabInternal: {fileID: 2065767518}
 --- !u!1001 &88473939
 Prefab:
   m_ObjectHideFlags: 0
@@ -4483,11 +4478,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ed1190a61d7ab8b47b24c9a476eaddcf, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &555284165 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1188535310630664, guid: efd444fe2a993ce4aa7fe91c8845e529,
-    type: 2}
-  m_PrefabInternal: {fileID: 2065767518}
 --- !u!1 &573426330
 GameObject:
   m_ObjectHideFlags: 0
@@ -5224,16 +5214,6 @@ MonoBehaviour:
   useOverrideButton: 0
   allowedUseControllers: 0
   usingState: 0
---- !u!1 &1003544117 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1365040316302540, guid: efd444fe2a993ce4aa7fe91c8845e529,
-    type: 2}
-  m_PrefabInternal: {fileID: 2065767518}
---- !u!1 &1012385094 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1252787099162800, guid: efd444fe2a993ce4aa7fe91c8845e529,
-    type: 2}
-  m_PrefabInternal: {fileID: 2065767518}
 --- !u!4 &1040503698
 Transform:
   m_ObjectHideFlags: 0
@@ -10233,11 +10213,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 69.366005, y: -78.455, z: -83.996}
---- !u!1 &1586736565 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1124311870283942, guid: efd444fe2a993ce4aa7fe91c8845e529,
-    type: 2}
-  m_PrefabInternal: {fileID: 2065767518}
 --- !u!1 &1611248677
 GameObject:
   m_ObjectHideFlags: 0
@@ -11127,32 +11102,32 @@ Prefab:
         type: 2}
       propertyPath: actualBoundaries
       value: 
-      objectReference: {fileID: 555284165}
+      objectReference: {fileID: 0}
     - target: {fileID: 114126450877459892, guid: efd444fe2a993ce4aa7fe91c8845e529,
         type: 2}
       propertyPath: actualHeadset
       value: 
-      objectReference: {fileID: 1654980897}
+      objectReference: {fileID: 0}
     - target: {fileID: 114126450877459892, guid: efd444fe2a993ce4aa7fe91c8845e529,
         type: 2}
       propertyPath: actualLeftController
       value: 
-      objectReference: {fileID: 72494108}
+      objectReference: {fileID: 0}
     - target: {fileID: 114126450877459892, guid: efd444fe2a993ce4aa7fe91c8845e529,
         type: 2}
       propertyPath: actualRightController
       value: 
-      objectReference: {fileID: 1003544117}
+      objectReference: {fileID: 0}
     - target: {fileID: 114126450877459892, guid: efd444fe2a993ce4aa7fe91c8845e529,
         type: 2}
       propertyPath: modelAliasLeftController
       value: 
-      objectReference: {fileID: 1586736565}
+      objectReference: {fileID: 0}
     - target: {fileID: 114126450877459892, guid: efd444fe2a993ce4aa7fe91c8845e529,
         type: 2}
       propertyPath: modelAliasRightController
       value: 
-      objectReference: {fileID: 1012385094}
+      objectReference: {fileID: 0}
     - target: {fileID: 20957961095750274, guid: efd444fe2a993ce4aa7fe91c8845e529,
         type: 2}
       propertyPath: m_ClearFlags

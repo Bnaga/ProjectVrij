@@ -21,9 +21,7 @@ GameObject:
   - component: {fileID: 4859870862869000}
   - component: {fileID: 114115506701195502}
   - component: {fileID: 54492015567890040}
-  - component: {fileID: 120698682592417250}
   - component: {fileID: 114612155357851020}
-  - component: {fileID: 114639531682623144}
   - component: {fileID: 114739421852634498}
   m_Layer: 0
   m_Name: Controller (right)
@@ -687,6 +685,7 @@ GameObject:
   - component: {fileID: 124546524435033200}
   - component: {fileID: 92591071878118462}
   - component: {fileID: 81152672857572276}
+  - component: {fileID: 114539752026558420}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -1736,8 +1735,8 @@ Camera:
   m_GameObject: {fileID: 1674777319880692}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -2550,7 +2549,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -3037,7 +3036,7 @@ MonoBehaviour:
   lockMouseToView: 1
   handMoveMultiplier: 0.2
   handRotationMultiplier: 30
-  playerMoveMultiplier: 5
+  playerMoveMultiplier: 1.5
   playerRotationMultiplier: 0.5
   playerSprintMultiplier: 2
   mouseMovementKey: 325
@@ -3570,6 +3569,43 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &114539752026558420
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1674777319880692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f35c02a2c6230584391703bf32006791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_DebugShader: {fileID: 4800000, guid: 91e29ad407521e447a7254f5c1ea9b54, type: 3}
+  m_ShadowmapShader: {fileID: 4800000, guid: 2c4cd42b134f7864fa579350e9cf6896, type: 3}
+  m_InjectLightingAndDensity: {fileID: 7200000, guid: 55812fd61bd54104aa23612fc28bfeb8,
+    type: 3}
+  m_Scatter: {fileID: 7200000, guid: 2a7c01c2354d03a4e9c31096bf130b6a, type: 3}
+  m_ApplyToOpaqueShader: {fileID: 4800000, guid: 6f73df8e11615074dbf62a3a384af521,
+    type: 3}
+  m_BlurShadowmapShader: {fileID: 4800000, guid: 701192b62a7678549918bc87434699fe,
+    type: 3}
+  m_Noise: {fileID: 2800000, guid: 35eb47181d630134c97488476efbda59, type: 3}
+  m_Debug: 0
+  m_Z: 1
+  m_NearClip: 0.2
+  m_FarClipMax: 10
+  m_GlobalDensityMult: 0.4
+  m_ConstantFog: 10
+  m_HeightFogAmount: 0
+  m_HeightFogExponent: -5.72
+  m_HeightFogOffset: 0
+  m_NoiseFogAmount: 0.24
+  m_NoiseFogScale: 0.5
+  m_Wind: {fileID: 0}
+  m_Anisotropy: 0.61
+  m_GlobalIntensityMult: 1
+  m_AmbientLightIntensity: 0.3
+  m_AmbientLightColor: {r: 0.30147058, g: 0.5375254, b: 1, a: 1}
 --- !u!114 &114540197188581728
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3862,23 +3898,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Select an SDK Setup
---- !u!114 &114639531682623144
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1014199081544938}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ca970cbc9ad6c44e85ea29deacf0125, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attachPoint: {fileID: 54492015567890040}
-  grabRadius: 1
-  grabMask:
-    serializedVersion: 2
-    m_Bits: 0
-  heldObject: {fileID: 0}
 --- !u!114 &114698774661372246
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4291,94 +4310,6 @@ MonoBehaviour:
   testClip: {fileID: 0}
   receivedSounds: []
   playbackDevice: 0
---- !u!120 &120698682592417250
-LineRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1014199081544938}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 0
-  m_LightProbeUsage: 0
-  m_ReflectionProbeUsage: 0
-  m_Materials:
-  - {fileID: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
-  m_Parameters:
-    serializedVersion: 2
-    widthMultiplier: 0.01
-    widthCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 2
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    colorGradient:
-      serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
-      key1: {r: 1, g: 1, b: 1, a: 1}
-      key2: {r: 0, g: 0, b: 0, a: 0}
-      key3: {r: 0, g: 0, b: 0, a: 0}
-      key4: {r: 0, g: 0, b: 0, a: 0}
-      key5: {r: 0, g: 0, b: 0, a: 0}
-      key6: {r: 0, g: 0, b: 0, a: 0}
-      key7: {r: 0, g: 0, b: 0, a: 0}
-      ctime0: 0
-      ctime1: 65535
-      ctime2: 0
-      ctime3: 0
-      ctime4: 0
-      ctime5: 0
-      ctime6: 0
-      ctime7: 0
-      atime0: 0
-      atime1: 65535
-      atime2: 0
-      atime3: 0
-      atime4: 0
-      atime5: 0
-      atime6: 0
-      atime7: 0
-      m_Mode: 0
-      m_NumColorKeys: 2
-      m_NumAlphaKeys: 2
-    numCornerVertices: 0
-    numCapVertices: 0
-    alignment: 0
-    textureMode: 0
-    generateLightingData: 0
-  m_UseWorldSpace: 1
-  m_Loop: 0
 --- !u!124 &124093868961462374
 Behaviour:
   m_ObjectHideFlags: 1
