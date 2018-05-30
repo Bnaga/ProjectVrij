@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Clear Lake
-  m_Shader: {fileID: 4800000, guid: 4ffc531a95204d24bb7a78f96062ca76, type: 3}
+  m_Shader: {fileID: 4800000, guid: 6a41f89aaf3bcc34994f9360a94aa2b8, type: 3}
   m_ShaderKeywords: _ENABLEREFLECTIONS_ON _USEREFLECTIONS_ON
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
@@ -111,7 +111,7 @@ Material:
     - _EnableCustomFog: 0
     - _EnableReflections: 1
     - _Fade: 0.85
-    - _FlowSpeed: 0.1
+    - _FlowSpeed: 0.02
     - _FoamBlend: 0.5
     - _FoamContrast: 0.318
     - _FoamDistFade: 2.87
@@ -125,7 +125,7 @@ Material:
     - _FullTransparency: 0
     - _Gloss: 0.9
     - _Glossiness: 0.5
-    - _Intensity: 24.6
+    - _Intensity: 40.2
     - _LargeWaveRefraction: 1.53
     - _LargeWavesSpeed: 50
     - _LargeWavesTiling: 1
