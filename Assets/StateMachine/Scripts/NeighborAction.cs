@@ -24,11 +24,12 @@ public class NeighborAction : ActionScript
         {
             target = GetTarget(stateManager);
             stateManager.navMeshAgent.SetDestination(target);
+            Debug.Log("nav mesh"+ stateManager.navMeshAgent.destination);
             stateManager.onDestination = false;
             
         }
 
-        if (Vector3.Distance(stateManager.transform.position, target) <= .5f)
+        if (Vector3.Distance(stateManager.transform.position, target) <= .1f)
         {
             stateManager.onDestination = true;
             stateManager.hide = true;
@@ -49,9 +50,12 @@ public class NeighborAction : ActionScript
             if (tempfriendDistance <= friendDistance)
             {
                 friendDistance = tempfriendDistance;
+                //currentTarget = new Vector3( mojili[i].transform.position.x, 0, mojili[i].transform.position.z);
                 currentTarget = mojili[i].transform.position;
+                //Debug.Log(mojili[i].name);
             }
         }
+        Debug.Log(currentTarget);
         return currentTarget;
     }
 }

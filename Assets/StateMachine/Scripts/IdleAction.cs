@@ -15,7 +15,7 @@ public class IdleAction : ActionScript
 
     void RandomState(MJStateManager stateManager)
     {
-        if(UnityEngine.Random.Range(0, 100) <= 1)
+        if(UnityEngine.Random.Range(0, 1000) <= 10)
         {
             stateManager.RandomState();
         }

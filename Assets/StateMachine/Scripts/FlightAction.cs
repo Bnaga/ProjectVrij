@@ -10,7 +10,7 @@ public class FlightAction : ActionScript
     private float houseDistance = 100;
     private Vector3 target;
     bool onDestination = true;
-    Vector3 mojiDestination;
+   // Vector3 mojiDestination;
     //bool arrived = false;
 
     public override void Act(MJStateManager stateManager)
@@ -24,25 +24,27 @@ public class FlightAction : ActionScript
         if (onDestination)
         {
             target = GetTarget(stateManager);
+           // Debug.Log(target);
             stateManager.navMeshAgent.SetDestination(target);
+           // Debug.Log(stateManager.navMeshAgent.destination);
             stateManager.onDestination = false;
-            Debug.Log("test");
+            //Debug.Log("test");
         }
 
-        if (Vector3.Distance(stateManager.transform.position, target) <= .25f)
+        if (Vector3.Distance(stateManager.transform.position, target) <= .1f)
         {
             stateManager.onDestination = true;
             stateManager.hide = true;
         }
-
+        //Debug.Log(onDestination);
     }
 
-    private Vector3 GetTarget(MJStateManager stateManager)
+    public Vector3 GetTarget(MJStateManager stateManager)
     {
         houseDistance = 100;
         houses = GameObject.FindGameObjectsWithTag("House");
         Vector3 currentTarget = Vector3.zero;
-        Debug.Log(houses.Length);
+        //Debug.Log(houses.Length);
         for (int i = 0; i < houses.Length; i++)
         {
             
@@ -50,10 +52,8 @@ public class FlightAction : ActionScript
             if (temphouseDistance <= houseDistance)
             {
                 houseDistance = temphouseDistance;
-                Debug.Log(houseDistance);
-                //currentTarget = stateManager.transform.position;
-                currentTarget = houses[i].transform.position;
-                Debug.Log(houses[i].name);
+                currentTarget = new Vector3(houses[i].transform.position.x, 0, houses[i].transform.position.z);
+                //Debug.Log(houses[i].name);
             }
         }
         return currentTarget;

@@ -21,6 +21,7 @@ public class MJStateManager : MonoBehaviour {
         curState = 0;
         navMeshAgent = GetComponent<NavMeshAgent>();
         onDestination = true;
+        //navMeshAgent.destination = Vector3.zero;
 	}
 
     private void Update()
@@ -35,6 +36,7 @@ public class MJStateManager : MonoBehaviour {
             Gizmos.color = currentState.sceneGizmoColor;
             Gizmos.DrawWireSphere(eyes.position, 0.1f);
         }
+
     }
 
     public void TransitionToState(State nextState)

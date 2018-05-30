@@ -28,7 +28,7 @@ public class GoHomeAction : ActionScript
             stateManager.onDestination = false;
         }
 
-        if (Vector3.Distance(stateManager.transform.position, target) <= .5f)
+        if (Vector3.Distance(stateManager.transform.position, target) <= .1f)
         {
             stateManager.onDestination = true;
         }
@@ -49,7 +49,7 @@ public class GoHomeAction : ActionScript
             {
                 houseDistance = temphouseDistance;
                 Debug.Log(houseDistance);
-                currentTarget = houses[i].transform.position;
+                currentTarget = new Vector3( houses[i].transform.position.x, 0, houses[i].transform.position.z);
             }
         }
         return currentTarget;
