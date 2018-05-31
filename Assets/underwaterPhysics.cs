@@ -6,7 +6,8 @@ public class underwaterPhysics : MonoBehaviour {
 
 	public bool alwaysActive = false;
 	public int UpdateEveryXFrames = 10;
-	private int updateCounter;
+	[HideInInspector]
+	public int updateCounter;
 	private Rigidbody rigidbody;
 	private float density;
 	private Vector3 force;

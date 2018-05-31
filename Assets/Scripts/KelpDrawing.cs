@@ -191,6 +191,12 @@ class KelpDrawing : MonoBehaviour
 
 		Rigidbody rigid = joints[n].AddComponent(typeof(Rigidbody)) as Rigidbody;
 		rigid.useGravity=false;
+
+		underwaterPhysics phys = joints[n].AddComponent(typeof(underwaterPhysics)) as underwaterPhysics;
+		phys.alwaysActive=true;
+		phys.UpdateEveryXFrames = 120;
+		phys.updateCounter = Random.Range(0,120);
+		
 		if(!useMeshCollision)
 		{
 			SphereCollider col = joints[n].AddComponent(typeof(SphereCollider)) as SphereCollider;
@@ -242,19 +248,52 @@ class KelpDrawing : MonoBehaviour
 		else
 		{
 			ph.connectedBody = joints[n-1].GetComponent<Rigidbody>(); 
+			GameObject leaf = addLeaf(joints[n].transform);
 			
-			float rot = Random.Range(0,360);
-			GameObject leaf = Instantiate(leafObj, joints[n].transform);
-			leaf.transform.rotation = Quaternion.Euler(0,rot,Random.Range(-20,20));
-			leaf = Instantiate(leafObj, joints[n].transform);
-			leaf.transform.rotation = Quaternion.Euler(0,rot+Random.Range(120,240),Random.Range(-20,20));
+			//leaf = leaf = addLeaf(joints[n].transform);
+			//leaf.transform.rotation = Quaternion.Euler(0,rot+Random.Range(120,240),Random.Range(-20,20));
 			
-			//leaf.transform.position = (joints[n].transform.position + joints[n-1].transform.position)/2; 
-			//leaf.transform.position = Vector3.zero;ee
 		}
 		if (n==segments-1) {
 			rigid.freezeRotation = true;
 		
 		}
+	}
+
+	GameObject addLeaf(Transform t){
+		GameObject leaf = Instantiate(leafObj, t);
+		leaf.transform.rotation = Quaternion.Euler(0,Random.Range(0,360),Random.Range(-20,20));
+		Rigidbody rigid = leaf.AddComponent(typeof(Rigidbody)) as Rigidbody;
+		CharacterJoint ph = leaf.AddComponent(typeof(CharacterJoint)) as CharacterJoint;
+		ph.swingAxis = swingAxis;
+		
+		SoftJointLimit sjl;
+		
+		sjl = ph.lowTwistLimit;
+		sjl.limit = lowTwistLimit;
+		
+		ph.lowTwistLimit = sjl;
+		
+		sjl = ph.highTwistLimit;
+		sjl.limit = highTwistLimit;
+
+		ph.highTwistLimit = sjl;
+		
+		sjl = ph.swing1Limit;
+		sjl.limit = swing1Limit;
+		ph.swing1Limit = sjl;
+
+		SoftJointLimitSpring sjls;
+
+		sjls = ph.swingLimitSpring;
+		sjls.damper = jointDamper;
+		ph.swingLimitSpring=sjls;
+
+		sjls = ph.twistLimitSpring;
+		sjls.damper = jointDamper;
+		ph.twistLimitSpring = sjls;
+
+		ph.connectedBody = t.GetComponent<Rigidbody>();
+		return leaf;
 	}
 }
