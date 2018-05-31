@@ -968,6 +968,7 @@ GameObject:
   - component: {fileID: 195087067945177214}
   - component: {fileID: 114268302016154242}
   - component: {fileID: 114998507770109520}
+  - component: {fileID: 114550945514102158}
   m_Layer: 0
   m_Name: MojiliTest
   m_TagString: Mojili
@@ -2491,6 +2492,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c505e2465538c84a920318b798f1231, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114550945514102158
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1710005133066964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f799a32ef15a314dabf3430a32c1517, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roles: 5
 --- !u!114 &114998507770109520
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -24,7 +24,6 @@ public class NeighborAction : ActionScript
         {
             target = GetTarget(stateManager);
             stateManager.navMeshAgent.SetDestination(target);
-            Debug.Log("nav mesh"+ stateManager.navMeshAgent.destination);
             stateManager.onDestination = false;
             
         }
@@ -33,7 +32,6 @@ public class NeighborAction : ActionScript
         {
             stateManager.onDestination = true;
         }
-        Debug.Log(onDestination);
 
     }
 
@@ -42,7 +40,6 @@ public class NeighborAction : ActionScript
         friendDistance = 100;
         mojili = GameObject.FindGameObjectsWithTag("Mojili");
         Vector3 currentTarget = Vector3.zero;
-        Debug.Log(mojili.Length);
         for (int i = 0; i < mojili.Length; i++)
         {
 
@@ -50,12 +47,9 @@ public class NeighborAction : ActionScript
             if (tempfriendDistance <= friendDistance && tempfriendDistance != 0)
             {
                 friendDistance = tempfriendDistance;
-                //currentTarget = new Vector3( mojili[i].transform.position.x, 0, mojili[i].transform.position.z);
                 currentTarget = mojili[i].transform.position;
-                //Debug.Log(mojili[i].name);
             }
         }
-        Debug.Log(currentTarget);
         return currentTarget;
     }
 }

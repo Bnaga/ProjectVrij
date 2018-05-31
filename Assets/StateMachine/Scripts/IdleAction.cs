@@ -15,7 +15,8 @@ public class IdleAction : ActionScript
 
     void RandomState(MJStateManager stateManager)
     {
-        if(UnityEngine.Random.Range(0, 1000) <= 10)
+        RoleManager role = stateManager.gameObject.GetComponent<RoleManager>();
+        if (UnityEngine.Random.Range(0, 1000) <= 10 && role.GetCurrentRole() == 0)
         {
             stateManager.RandomState();
         }
