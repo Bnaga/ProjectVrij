@@ -1,17 +1,17 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "PluggableAI/Actions/Wander")]
-public class WanderAction : ActionScript
+[CreateAssetMenu(menuName = "PluggableAI/Actions/Explore")]
+public class ExploreAction : ActionScript
 {
-
     bool onDestination = true;
     Vector3 mojiDestination;
 
     public override void Act(MJStateManager stateManager)
     {
-        Wander(stateManager);
+        Explore(stateManager);
 
     }
 
@@ -29,12 +29,12 @@ public class WanderAction : ActionScript
         return finalPosition;
     }
 
-    private void Wander(MJStateManager stateManager)
+    private void Explore(MJStateManager stateManager)
     {
         onDestination = stateManager.onDestination;
         if (onDestination)
         {
-            mojiDestination = RandomNavmeshLocation(1.25f, stateManager);
+            mojiDestination = RandomNavmeshLocation(2.5f, stateManager);
             stateManager.navMeshAgent.SetDestination(mojiDestination);
             stateManager.onDestination = false;
         }
@@ -45,5 +45,4 @@ public class WanderAction : ActionScript
         }
 
     }
-
 }
