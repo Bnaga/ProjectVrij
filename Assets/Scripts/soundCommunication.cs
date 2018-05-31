@@ -8,10 +8,15 @@ public class soundCommunication : MonoBehaviour {
 	private SphereCollider soundSphere;
 	private bool playing;
 	private float soundTimer;
-	private AudioSource audioSource;
+	
 //	[HideInInspector]
 	public List <AudioClip> receivedSounds = new List<AudioClip>();
 	public bool playbackDevice;
+
+	public float soundRange;
+	private List <AudioSource> sources = new List<AudioSource>();
+	private AudioSource sourceFar;
+	private AudioSource sourceNear;
 
 	void Awake () {
 
@@ -22,16 +27,17 @@ public class soundCommunication : MonoBehaviour {
 			rb.isKinematic=true;
 		}
 		
-		if (GetComponent<AudioSource>()){
-			audioSource=GetComponent<AudioSource>();
-		}else{
-			audioSource=gameObject.AddComponent(typeof(AudioSource)) as AudioSource;
+		for (int i = 0; i < 2; i++){
+			AudioSource audioSource = gameObject.AddComponent(typeof(AudioSource)) as AudioSource;
 			audioSource.spatialBlend=1;
 			audioSource.spatialize=true;
+			sources.Add(audioSource);
 		}
+		sourceNear = sources[0];
+		sourceFar = sources[1];
 		
 		soundSphere = gameObject.AddComponent(typeof(SphereCollider)) as SphereCollider;
-		soundSphere.radius=8;
+		soundSphere.radius = soundRange;
 		soundSphere.isTrigger=true;
 
 		if (testClip) PlaySound(testClip);
@@ -44,18 +50,29 @@ public class soundCommunication : MonoBehaviour {
 	}
 
 
+	void OnDrawGizmosSelected() {
+        Gizmos.color = Color.yellow;
+		Gizmos.DrawWireSphere(transform.position,soundRange);
+    }
+
 	public void PlaySound(AudioClip clip){
 		if (clip.length > soundTimer) soundTimer=clip.length;
-		audioSource.clip=clip;
-		audioSource.Play();
+		sourceNear.clip=clip;
+		sourceNear.Play();
+	}
+
+	public void playWord(fishDictionary.word word, fishDictionary dictionary){
+		PlaySound(word.audio);
+		AudioClip far = dictionary.far[word.farawaySound];
+		if (sourceFar.clip !=far) StartCoroutine(NextSound(far,sourceFar));
 	}
 
 	void OnTriggerEnter (Collider other){
 		soundCommunication sc = other.GetComponent<soundCommunication>();
 		if (!sc || !sc.enabled) return;
-		if (!audioSource.clip) return;
+		if (!sourceNear.clip) return;
 		if (!playbackDevice){
-			sc.ReceiveSound(audioSource.clip);
+			sc.ReceiveSound(sourceNear.clip);
 		}else{
 			foreach (AudioClip a in receivedSounds){
 				sc.ReceiveSound(a);
@@ -68,5 +85,20 @@ public class soundCommunication : MonoBehaviour {
 		if (!playbackDevice && !receivedSounds.Contains(clip)) receivedSounds.Add(clip);
 		//Debug.Log(clip.name);
 	}
+
+ 
+    public static IEnumerator NextSound (AudioClip next, AudioSource audioSource) {
+        float startVolume = audioSource.volume;
+		float FadeTime = 2;
+        while (audioSource.volume > 0) {
+            audioSource.volume -= startVolume * Time.deltaTime / FadeTime;
+ 
+            yield return null;
+        }
+
+        audioSource.Stop ();
+        audioSource.volume = startVolume;
+    }
+ 
 
 }

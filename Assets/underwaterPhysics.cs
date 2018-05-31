@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class underwaterPhysics : MonoBehaviour {
 
+	public bool alwaysActive = false;
 	public int UpdateEveryXFrames = 10;
 	private int updateCounter;
 	private Rigidbody rigidbody;
@@ -21,7 +22,7 @@ public class underwaterPhysics : MonoBehaviour {
 		updateCounter++;
 		if (updateCounter>UpdateEveryXFrames){
 			updateCounter=0;
-			if (Mathf.Abs(rigidbody.velocity.y)>.1f){
+			if (alwaysActive || Mathf.Abs(rigidbody.velocity.y)>.1f){
 				force += Random.insideUnitSphere * rigidbody.drag;
 				force.y=0;
 				Debug.DrawLine(transform.position,transform.position+force/rigidbody.drag, Color.red);

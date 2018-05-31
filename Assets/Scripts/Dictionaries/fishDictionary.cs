@@ -9,19 +9,25 @@ using UnityEditor;
 	
 	[System.Serializable]
 	public class word {
+		public string Name;
 		public AudioClip audio;
 		public string meaning;
 		[HideInInspector]
 		public bool known;
 		public bool knownFromStart;
+		//[Range(0,10)]
+		public int farawaySound;
+
  }
 	
 	[Header("Dictionary")]
 	public word[] dictionary;
 
 
-	[Header("General")]
-	public float talkRate;
+	[Header("Faraway Sounds")]
+	public AudioClip[] far;
+
+
 	 #if UNITY_EDITOR
 	 [MenuItem("Assets/Create/Fish Dictionary")]
     public static void MakeScriptableObject()

@@ -8,26 +8,23 @@ public class soundManagerPrototype : MonoBehaviour {
 	public GameObject speechBalloon;
 	private soundCommunication soundCommunication;
 	private float soundTimer;
-	private ParticleSystem bubbles;
 	
 
-	public fishDictionary fishType;
-	private fishDictionary.word[] dictionary;
+	public fishDictionary dictionary;
+	private fishDictionary.word[] words;
 	// Use this for initialization
 	void Start () {
-		bubbles = GetComponent<ParticleSystem>();
 		soundCommunication = GetComponent<soundCommunication>();
-		dictionary = fishType.dictionary;
+		words = dictionary.dictionary;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		soundTimer += Time.deltaTime;
 		if (soundTimer > soundFrequency){
-			fishDictionary.word sound = dictionary[Random.Range(0,dictionary.Length)];
-			soundCommunication.PlaySound(sound.audio);
+			fishDictionary.word sound = words[Random.Range(0,words.Length)];
+			soundCommunication.playWord(sound, dictionary);
 			soundTimer = Random.Range(-soundFrequency/2,0);
-			bubbles.Play();
 			GameObject balloon = Instantiate(speechBalloon,transform, false);
 			balloon.GetComponent<speechBalloon>().init(sound);
 

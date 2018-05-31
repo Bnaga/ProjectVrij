@@ -968,6 +968,8 @@ GameObject:
   - component: {fileID: 195087067945177214}
   - component: {fileID: 114268302016154242}
   - component: {fileID: 114998507770109520}
+  - component: {fileID: 114715532491677512}
+  - component: {fileID: 114010626413164788}
   m_Layer: 0
   m_Name: MojiliTest
   m_TagString: Mojili
@@ -2232,7 +2234,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1888273748036036}
-  m_LocalRotation: {x: 0.53267515, y: 0.07034045, z: 0.83613265, w: -0.11041513}
+  m_LocalRotation: {x: 0.5326752, y: 0.070340455, z: 0.83613276, w: -0.110415146}
   m_LocalPosition: {x: 0.000022271464, y: -0.00006150465, z: 0.026027026}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2480,6 +2482,21 @@ Transform:
   m_Father: {fileID: 4162552521505548}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114010626413164788
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1710005133066964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb8628e4209363c4e8682dd37b6d1fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundFrequency: 2
+  speechBalloon: {fileID: 1898019799143832, guid: f5094cc7591059649a7571dbc66e22fe,
+    type: 2}
+  dictionary: {fileID: 11400000, guid: 4e960cd3c1dec7b4bb1297d473a24f2f, type: 2}
 --- !u!114 &114268302016154242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2491,6 +2508,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c505e2465538c84a920318b798f1231, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114715532491677512
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1710005133066964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0aa04a7405ed14ba5410547d1b8d29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  testClip: {fileID: 0}
+  receivedSounds: []
+  playbackDevice: 0
+  soundRange: 0.2
 --- !u!114 &114998507770109520
 MonoBehaviour:
   m_ObjectHideFlags: 1
