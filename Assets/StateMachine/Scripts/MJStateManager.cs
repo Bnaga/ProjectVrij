@@ -13,6 +13,7 @@ public class MJStateManager : MonoBehaviour {
     public int curState = 0;
     public int tempState = 0;
     public bool onDestination = true;
+    public bool hasFood = false;
 
     [HideInInspector] public NavMeshAgent navMeshAgent;
 	// Use this for initialization
@@ -49,7 +50,7 @@ public class MJStateManager : MonoBehaviour {
 
     public void RandomState()
     {
-        tempState = Random.Range(0, 100);
+        tempState = Random.Range(1, 101);
         if(tempState < 80)
         {
             curState = 1;
@@ -69,6 +70,32 @@ public class MJStateManager : MonoBehaviour {
         if (tempState >= 95 && tempState <= 100)
         {
             curState = 5;
+        }
+    }
+
+    public void RandomSoldierState()
+    {
+        tempState = Random.Range(0, 10);
+        if (tempState < 9)
+        {
+            curState = 6;
+        }
+        if (tempState == 9)
+        {
+            curState = 7;
+        }
+    }
+
+    public void RandomFarmerState()
+    {
+        tempState = Random.Range(0, 2);
+        if (tempState == 0)
+        {
+            curState = 8;
+        }
+        if (tempState == 1)
+        {
+            RandomState();
         }
     }
 }
