@@ -14,6 +14,21 @@ ModelImporter:
     100012: pSphere4
     100014: transform1
     100016: transform2
+    100018: pCube3
+    100020: pCylinder3
+    100022: pCylinder4
+    100024: pCylinder5
+    100026: pCylinder6
+    100028: polySurface2
+    100030: polySurface3
+    100032: polySurface4
+    100034: transform3
+    100036: transform4
+    100038: transform5
+    100040: transform6
+    100042: transform7
+    100044: controllergrip
+    100046: glass
     400000: //RootNode
     400002: pCube1
     400004: pCube2
@@ -23,19 +38,53 @@ ModelImporter:
     400012: pSphere4
     400014: transform1
     400016: transform2
+    400018: pCube3
+    400020: pCylinder3
+    400022: pCylinder4
+    400024: pCylinder5
+    400026: pCylinder6
+    400028: polySurface2
+    400030: polySurface3
+    400032: polySurface4
+    400034: transform3
+    400036: transform4
+    400038: transform5
+    400040: transform6
+    400042: transform7
+    400044: controllergrip
+    400046: glass
     2100000: lambert1
+    2100002: blinn1
     2300000: pCube2
     2300002: pSphere1
     2300004: pSphere2
     2300006: pSphere4
+    2300008: pCube3
+    2300010: pCylinder6
+    2300012: polySurface2
+    2300014: polySurface4
+    2300016: controllergrip
+    2300018: glass
     3300000: pCube2
     3300002: pSphere1
     3300004: pSphere2
     3300006: pSphere4
+    3300008: pCube3
+    3300010: pCylinder6
+    3300012: polySurface2
+    3300014: polySurface4
+    3300016: controllergrip
+    3300018: glass
     4300000: pSphere1
     4300002: pSphere2
     4300004: pSphere4
     4300006: pCube2
+    4300008: polySurface2
+    4300010: polySurface4
+    4300012: pCube3
+    4300014: pCylinder6
+    4300016: controllergrip
+    4300018: glass
   externalObjects: {}
   materials:
     importMaterials: 1

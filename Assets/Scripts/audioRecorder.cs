@@ -7,13 +7,14 @@ public class audioRecorder : MonoBehaviour{
 
 
 	const int HEADER_SIZE = 44;
-	private bool isRecording;
+	[HideInInspector]
+	public bool isRecording;
 	private FileStream fileStream;
 	private int outputRate = 44100;
     private string filepath;
     private string filename = "recording.wav";
     public AudioClip recording;
-    private int maxLength = 2;
+    public int maxLength = 2;
     private float recTimer;
 
 

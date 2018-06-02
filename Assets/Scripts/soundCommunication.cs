@@ -31,10 +31,18 @@ public class soundCommunication : MonoBehaviour {
 			AudioSource audioSource = gameObject.AddComponent(typeof(AudioSource)) as AudioSource;
 			audioSource.spatialBlend=1;
 			audioSource.spatialize=true;
+			audioSource.rolloffMode = AudioRolloffMode.Linear;
+			audioSource.minDistance = 0;
+			audioSource.maxDistance = soundRange;
+			
+			
 			sources.Add(audioSource);
+
 		}
 		sourceNear = sources[0];
 		sourceFar = sources[1];
+		sourceFar.maxDistance *= 5;
+		sourceFar.volume = .2f;
 		
 		soundSphere = gameObject.AddComponent(typeof(SphereCollider)) as SphereCollider;
 		soundSphere.radius = soundRange;
