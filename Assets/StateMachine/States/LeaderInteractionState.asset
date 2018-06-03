@@ -9,15 +9,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06881e62d640cdc459cc9a818d5f19eb, type: 3}
-  m_Name: NeighborState
+  m_Name: LeaderInteractionState
   m_EditorClassIdentifier: 
-  actions:
-  - {fileID: 11400000, guid: e51cf42031a3c7a4794c95466c51fcbb, type: 2}
+  actions: []
   transistions:
-  - decision: {fileID: 11400000, guid: 32c281e4495e39d44a8833e4256fc9f2, type: 2}
-    trueState: {fileID: 11400000, guid: b59ffc53f4658bf4095eed75cab3a3fa, type: 2}
+  - decision: {fileID: 11400000, guid: d2d6a50108e8fa347ac1e47b729989a5, type: 2}
+    trueState: {fileID: 11400000, guid: 77193ca0d476d204aa2fbe7211828895, type: 2}
     falseState: {fileID: 11400000, guid: 97f34bec1e0bdbf46b75ea64fda90f91, type: 2}
-  - decision: {fileID: 11400000, guid: f48f31a6af06dcc45b12fcafa662c440, type: 2}
-    trueState: {fileID: 11400000, guid: 0088a789abcd40044b799fe89fc9b3ad, type: 2}
+  - decision: {fileID: 11400000, guid: a3d1e25a698c2b242a650cb862d894f7, type: 2}
+    trueState: {fileID: 11400000, guid: 40ce6e1aee3e9664fa39852c5b460219, type: 2}
     falseState: {fileID: 11400000, guid: 97f34bec1e0bdbf46b75ea64fda90f91, type: 2}
-  sceneGizmoColor: {r: 1, g: 0.89695734, b: 0.066176474, a: 1}
+  sceneGizmoColor: {r: 0.5808823, g: 0, b: 0, a: 1}

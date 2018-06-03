@@ -8,11 +8,21 @@ public class MJStateManager : MonoBehaviour {
     public Transform eyes;
     public State currentState;
     public State remainState;
-    public bool hide = false;
-    public bool inDanger = false;
+
     public int curState = 0;
     public int tempState = 0;
+
+    public bool hide = false;
+    public bool inDanger = false;
     public bool onDestination = true;
+    public bool hasFood = false;
+    public bool isInteracting = false;
+    public bool isTalking = false;
+    public bool isFollowing = false;
+    public bool isMakingMusic = false;
+
+    public GameObject interactionTarget;
+    public GameObject Leader;
 
     [HideInInspector] public NavMeshAgent navMeshAgent;
 	// Use this for initialization
@@ -47,14 +57,15 @@ public class MJStateManager : MonoBehaviour {
         }
     }
 
+    #region randomStates
     public void RandomState()
     {
-        tempState = Random.Range(0, 100);
-        if(tempState < 80)
+        tempState = Random.Range(1, 101);
+        if(tempState < 81)
         {
             curState = 1;
         }
-        if(tempState >= 80 && tempState <85)
+        if(tempState >= 81 && tempState <85)
         {
             curState = 2;
         }
@@ -71,4 +82,78 @@ public class MJStateManager : MonoBehaviour {
             curState = 5;
         }
     }
+
+    public void RandomSoldierState()
+    {
+        tempState = Random.Range(0, 10);
+        if (tempState < 9)
+        {
+            curState = 6;
+        }
+        if (tempState == 9)
+        {
+            curState = 7;
+        }
+    }
+
+    public void RandomFarmerState()
+    {
+        tempState = Random.Range(0, 2);
+        if (tempState == 0)
+        {
+            curState = 8;
+        }
+        if (tempState == 1)
+        {
+            RandomState();
+        }
+    }
+    
+    #endregion
+
+    #region interaction
+    public void LeaderInteraction()
+    {
+        tempState = Random.Range(0, 4);
+        if (tempState < 3)
+        {
+            curState = 9;
+        }
+        if (tempState == 3)
+        {
+            curState = 10;
+        }
+    }
+
+    public void RandomInteraction()
+    {
+        tempState = Random.Range(0, 10);
+        if (tempState < 6)
+        {
+            curState = 11;
+        }
+        if (tempState >=6 && tempState <8)
+        {
+            curState = 12;
+        }
+        if (tempState > 8)
+        {
+            curState = 10;
+        }
+
+    }
+
+    public void MusicInteraction()
+    {
+        tempState = Random.Range(1, 101);
+        if (tempState < 86)
+        {
+            curState = 13;
+        }
+        if (tempState >= 86)
+        {
+            curState = 5;
+        }
+    }
+    #endregion
 }
