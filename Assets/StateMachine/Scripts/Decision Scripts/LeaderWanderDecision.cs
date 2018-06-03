@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "PluggableAI/Decisions/Wander")]
-public class WanderDecision1 : Decision
+[CreateAssetMenu(menuName = "PluggableAI/Decisions/LeaderWander")]
+public class LeaderWanderDecision : Decision
 {
     public override bool Decide(MJStateManager statemanager)
     {
@@ -13,7 +12,7 @@ public class WanderDecision1 : Decision
 
     public bool CheckWander(MJStateManager stateManager)
     {
-        if (!stateManager.hide)
+        if (stateManager.curState == 6 )
         {
             return true;
         }
