@@ -7,7 +7,7 @@ public class CHIPS : MonoBehaviour {
 
 
 	public fishDictionary[] dictionaries;
-	public TextMeshPro display;
+	//public TextMeshPro display;
 
 	void Awake () {
 		//reset known words
@@ -48,6 +48,6 @@ public class CHIPS : MonoBehaviour {
 					else{text+="????\n";}
 				}
 			}
-			display.SetText(text);
+			//display.SetText(text);
 	}
 }
