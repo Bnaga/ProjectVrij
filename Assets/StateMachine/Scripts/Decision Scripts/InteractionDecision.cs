@@ -29,7 +29,6 @@ public class InteractionDecision : Decision
                 stateManager.onDestination = true;
                 return true;
             }
-            //else return false;
         }
         return false;
     }
