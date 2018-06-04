@@ -63,6 +63,7 @@ GameObject:
   - component: {fileID: 114614843509481946}
   - component: {fileID: 114158428757683664}
   - component: {fileID: 114996970925008150}
+  - component: {fileID: 114597908030452642}
   m_Layer: 0
   m_Name: Controller (left)
   m_TagString: Untagged
@@ -200,7 +201,7 @@ GameObject:
   - component: {fileID: 4992910660471164}
   - component: {fileID: 114089367216453930}
   m_Layer: 0
-  m_Name: VRTK SDK MANAGER
+  m_Name: VRTK SDK MANAGER OLD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3029,7 +3030,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1260473733857816}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5837af0260a118e4d808bfe0405429a1, type: 3}
   m_Name: 
@@ -3595,7 +3596,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 20973344533587794}
-  mainCam: {fileID: 20957961095750274}
+  mainCam: {fileID: 20200305009490580}
   magnification: 20
 --- !u!114 &114382536778255088
 MonoBehaviour:
@@ -4079,6 +4080,20 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114597908030452642
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1063606745133444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bbe2ac84b86608439861700de43f854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isRecording: 0
+  recording: {fileID: 0}
+  maxLength: 2
 --- !u!114 &114599675845975472
 MonoBehaviour:
   m_ObjectHideFlags: 1

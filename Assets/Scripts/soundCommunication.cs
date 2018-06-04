@@ -43,6 +43,7 @@ public class soundCommunication : MonoBehaviour {
 		sourceFar = sources[1];
 		sourceFar.maxDistance *= 5;
 		sourceFar.volume = .2f;
+		sourceFar.loop = true;
 		
 		soundSphere = gameObject.AddComponent(typeof(SphereCollider)) as SphereCollider;
 		soundSphere.radius = soundRange;
@@ -98,6 +99,7 @@ public class soundCommunication : MonoBehaviour {
     public static IEnumerator NextSound (AudioClip next, AudioSource audioSource) {
         float startVolume = audioSource.volume;
 		float FadeTime = 2;
+		
         while (audioSource.volume > 0) {
             audioSource.volume -= startVolume * Time.deltaTime / FadeTime;
  
@@ -105,6 +107,7 @@ public class soundCommunication : MonoBehaviour {
         }
 
         audioSource.Stop ();
+		audioSource.clip = next;
         audioSource.volume = startVolume;
     }
  

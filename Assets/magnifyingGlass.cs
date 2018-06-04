@@ -9,18 +9,25 @@ public class magnifyingGlass : MonoBehaviour {
 	public Camera cam;
 	public Camera mainCam;
 	public float magnification = 2;
-	private Quaternion camAngle;
+	public Quaternion rotationOffset;
+
+	private Quaternion parentRot;
+
 
 	void Awake(){
-		camAngle = cam.transform.rotation;
 		if (!mainCam) mainCam = Camera.main;
 	}
 
 	void FixedUpdate () {
+		//Vector3 parent = transform.eulerAngles;
+		//transform.localRotation = Quaternion.Euler(0,-parent.y,0);
+
 		float d = Mathf.Abs(Vector3.Magnitude(mainCam.transform.position-transform.position));
 		cam.fieldOfView = Mathf.Clamp(d*magnification,7,90);
 		cam.transform.LookAt(mainCam.transform);
-		cam.transform.rotation *= Quaternion.Euler(0,180f,0) * camAngle;
+		cam.transform.rotation *= rotationOffset;
+		//cam.transform.rotation = mainCam.transform.rotation;
+
 		Debug.DrawLine(cam.transform.position, cam.transform.position + cam.transform.forward);
 
 		/*

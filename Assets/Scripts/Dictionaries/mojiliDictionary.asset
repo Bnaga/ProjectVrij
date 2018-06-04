@@ -17,7 +17,7 @@ MonoBehaviour:
     meaning: HI
     known: 0
     knownFromStart: 0
-    farawaySound: 0
+    farawaySound: 1
   - Name: greeting2
     audio: {fileID: 8300000, guid: adcc31e02dc74204c80c632b9844b681, type: 3}
     meaning: BOY
@@ -35,7 +35,7 @@ MonoBehaviour:
     meaning: AGREED
     known: 0
     knownFromStart: 0
-    farawaySound: 0
+    farawaySound: 2
   - Name: 
     audio: {fileID: 0}
     meaning: 
@@ -47,19 +47,19 @@ MonoBehaviour:
     meaning: COOL
     known: 0
     knownFromStart: 0
-    farawaySound: 0
+    farawaySound: 1
   - Name: 
     audio: {fileID: 8300000, guid: 4fee3982c922af44babfca8a11dffaca, type: 3}
     meaning: LMAO
     known: 0
     knownFromStart: 0
-    farawaySound: 0
+    farawaySound: 1
   - Name: 
     audio: {fileID: 8300000, guid: c9b9c3bb824daba4b9cb39713cd412a6, type: 3}
     meaning: SADFACE
     known: 0
     knownFromStart: 0
-    farawaySound: 0
+    farawaySound: 2
   far:
   - {fileID: 8300000, guid: efee776e88902a74684c56ce2962678f, type: 3}
   - {fileID: 8300000, guid: e3148a98a2496e64cb8712177bbcde71, type: 3}
