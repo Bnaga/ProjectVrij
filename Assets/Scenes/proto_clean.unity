@@ -673,6 +673,22 @@ Prefab:
       propertyPath: 
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 114998507770109520, guid: e54ef8c7461ec6e45a66f553a080a8ec,
+        type: 2}
+      propertyPath: isMakingMusic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114998507770109520, guid: e54ef8c7461ec6e45a66f553a080a8ec,
+        type: 2}
+      propertyPath: currentState
+      value: 
+      objectReference: {fileID: 11400000, guid: b59ffc53f4658bf4095eed75cab3a3fa,
+        type: 2}
+    - target: {fileID: 114550945514102158, guid: e54ef8c7461ec6e45a66f553a080a8ec,
+        type: 2}
+      propertyPath: curRole
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e54ef8c7461ec6e45a66f553a080a8ec, type: 2}
   m_IsPrefabParent: 0
