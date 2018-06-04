@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "PluggableAI/Decisions/DefaultInteraction")]
-public class DefaultIntDecision : Decision
-
+[CreateAssetMenu(menuName = "PluggableAI/Decisions/CheckForBoss")]
+public class CheckLeaderDecision : Decision
 {
+
     public override bool Decide(MJStateManager stateManager)
     {
         return CheckCurrentState(stateManager);
@@ -13,7 +13,7 @@ public class DefaultIntDecision : Decision
 
     private bool CheckCurrentState(MJStateManager stateManager)
     {
-        if (stateManager.isInteracting && stateManager.gameObject.GetComponent<RoleManager>().GetCurrentRole() != 1 && !stateManager.otherIsLeader)
+        if (stateManager.otherIsLeader)
         {
             stateManager.onDestination = true;
             return true;
