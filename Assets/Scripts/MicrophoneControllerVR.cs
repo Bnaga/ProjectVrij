@@ -23,7 +23,8 @@ public class MicrophoneControllerVR : MonoBehaviour {
 	private AudioClip audioRecording;
 	private List <AudioClip> playbackSounds = new List<AudioClip>();
 	private bool isRecording;
-	private float recordingLength;
+
+	private float barProgress;
 	private float maxRecordingLength;
 	private bool holdingRecording;
 
@@ -46,12 +47,13 @@ public class MicrophoneControllerVR : MonoBehaviour {
 			audioRecorder.StartRecording();
 			microphoneCommunication.receivedSounds.Clear();
 			
-			recordingLength=0;
+			barProgress=0;
 		}
 		if (microphoneListener.enabled && !isRecording){
 			audioRecording=audioRecorder.StopRecording();
 			playbackSounds = microphoneCommunication.receivedSounds;
 			recordingProgress.enabled=false;
+			barProgress=2*maxRecordingLength;
 		}
 		holdingRecording = audioRecorder.recording != null;
 
@@ -62,9 +64,10 @@ public class MicrophoneControllerVR : MonoBehaviour {
 			playProgress.enabled=!isRecording && holdingRecording;
 			playButton.enabled = holdingRecording;
 			
-			recordingLength+=Time.deltaTime;
-			recordingProgress.fillAmount=recordingLength/maxRecordingLength;
-			playProgress.fillAmount=recordingLength/maxRecordingLength;
+			barProgress+=Time.deltaTime;
+			recordingProgress.fillAmount=barProgress/maxRecordingLength;
+			if (audioRecording)
+			playProgress.fillAmount=2*barProgress/audioRecording.length;
 
 		
 		microphoneListener.enabled = isRecording;
@@ -75,7 +78,7 @@ public class MicrophoneControllerVR : MonoBehaviour {
 		}
 
 		if (leftHand.padPressed && !isRecording && holdingRecording){
-			recordingLength=0;
+			barProgress=0;
 			playbackDevice.receivedSounds = playbackSounds;
 			playbackDevice.PlaySound(audioRecording);
 		}
