@@ -6,15 +6,17 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "PluggableAI/Actions/Idle")]
 public class IdleAction : ActionScript
 {
-
+    float timer = 0;
     // Use this for initialization
     public override void Act(MJStateManager stateManager)
     {
         RandomState(stateManager);
+        ActTimer(stateManager);
     }
 
     void RandomState(MJStateManager stateManager)
     {
+        //stateManager.otherIsLeader = false;
         RoleManager role = stateManager.gameObject.GetComponent<RoleManager>();
         int rand = UnityEngine.Random.Range(0, 1000);
         if ( rand <= 10 && role.GetCurrentRole() == 0)
@@ -42,4 +44,16 @@ public class IdleAction : ActionScript
             stateManager.curState = 10;
         }
     }
+
+    void ActTimer(MJStateManager stateManager)
+    {
+        stateManager.waitIsOver = false;
+        timer += Time.deltaTime;
+        if (timer >= 1)
+        {
+            stateManager.waitIsOver = true;
+            timer = 0;
+        }
+    }
 }
+

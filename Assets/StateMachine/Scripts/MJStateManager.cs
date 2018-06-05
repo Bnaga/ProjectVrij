@@ -20,6 +20,8 @@ public class MJStateManager : MonoBehaviour {
     public bool isTalking = false;
     public bool isFollowing = false;
     public bool isMakingMusic = false;
+    public bool otherIsLeader = false;
+    public bool waitIsOver = false;
 
     public GameObject interactionTarget;
     public GameObject Leader;
@@ -33,6 +35,20 @@ public class MJStateManager : MonoBehaviour {
         onDestination = true;
         //navMeshAgent.destination = Vector3.zero;
 	}
+
+    private void Start()
+    {
+     hide = false;
+     inDanger = false;
+     onDestination = true;
+     hasFood = false;
+     isInteracting = false;
+     isTalking = false;
+     isFollowing = false;
+     isMakingMusic = false;
+     otherIsLeader = false;
+     waitIsOver = false;
+}
 
     private void Update()
     {

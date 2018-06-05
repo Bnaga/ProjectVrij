@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "PluggableAI/Decisions/DefaultInteraction")]
-public class DefaultIntDecision : Decision
-
+[CreateAssetMenu(menuName = "PluggableAI/Decisions/TalkToBoss")]
+public class TalkToBossDecision : Decision
 {
     public override bool Decide(MJStateManager stateManager)
     {
@@ -13,9 +12,8 @@ public class DefaultIntDecision : Decision
 
     private bool CheckCurrentState(MJStateManager stateManager)
     {
-        if (stateManager.isInteracting && stateManager.gameObject.GetComponent<RoleManager>().GetCurrentRole() != 1 && !stateManager.otherIsLeader)
+        if (stateManager.isInteracting && stateManager.otherIsLeader)
         {
-            stateManager.onDestination = true;
             return true;
         }
         else return false;
