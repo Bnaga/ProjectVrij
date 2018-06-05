@@ -25,7 +25,8 @@ public class magnifyingGlass : MonoBehaviour {
 		float d = Mathf.Abs(Vector3.Magnitude(mainCam.transform.position-transform.position));
 		cam.fieldOfView = Mathf.Clamp(d*magnification,7,90);
 		cam.transform.LookAt(mainCam.transform);
-		cam.transform.rotation *= rotationOffset * Quaternion.Euler(0,-transform.eulerAngles.y,-transform.eulerAngles.z);
+		cam.transform.rotation *= rotationOffset;
+		cam.transform.rotation *= Quaternion.Euler(0,-transform.eulerAngles.y,-transform.eulerAngles.z);
 		//cam.transform.rotation = mainCam.transform.rotation;
 
 		Debug.DrawLine(cam.transform.position, cam.transform.position + cam.transform.forward);
