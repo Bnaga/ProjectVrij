@@ -3111,6 +3111,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disabledParts:
   - body
+  - lgrip
+  - rgrip
+  - button
+  - trackpad
+  - trackpad_touch
+  - trackpad_scrollcut
 --- !u!114 &114076175003194610
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3237,9 +3243,9 @@ MonoBehaviour:
   activationMode: 0
   selectionButton: 3
   clickMethod: 1
-  attemptClickOnDeactivate: 0
+  attemptClickOnDeactivate: 1
   clickAfterHoverDuration: 0
-  controller: {fileID: 0}
+  controller: {fileID: 114437026685954486}
   pointerOriginTransform: {fileID: 0}
   hoveringElement: {fileID: 0}
   controllerRenderModel: {fileID: 0}
@@ -3313,13 +3319,13 @@ MonoBehaviour:
   holdButtonToActivate: 1
   activateOnEnable: 0
   activationDelay: 0
-  selectionButton: 10
+  selectionButton: 3
   selectOnPress: 0
   selectionDelay: 0
   selectAfterHoverDuration: 0
   interactWithObjects: 0
   grabToPointerTip: 0
-  controller: {fileID: 0}
+  controller: {fileID: 114437026685954486}
   interactUse: {fileID: 0}
   customOrigin: {fileID: 0}
 --- !u!114 &114137534775283732
@@ -3381,6 +3387,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disabledParts:
   - body
+  - lgrip
+  - rgrip
 --- !u!114 &114181558713093638
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3489,12 +3497,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoPopulateObjectReferences: 1
-  actualBoundaries: {fileID: 0}
-  actualHeadset: {fileID: 0}
-  actualLeftController: {fileID: 0}
-  actualRightController: {fileID: 0}
-  modelAliasLeftController: {fileID: 0}
-  modelAliasRightController: {fileID: 0}
+  actualBoundaries: {fileID: 1026345070576194}
+  actualHeadset: {fileID: 1415247379160036}
+  actualLeftController: {fileID: 1446372802358470}
+  actualRightController: {fileID: 1705877362289828}
+  modelAliasLeftController: {fileID: 1284013988402886}
+  modelAliasRightController: {fileID: 1241346561196382}
   cachedSystemSDKInfo:
     baseTypeName: VRTK.SDK_BaseSystem
     fallbackTypeName: VRTK.SDK_FallbackSystem

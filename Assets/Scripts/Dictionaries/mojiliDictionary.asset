@@ -38,7 +38,7 @@ MonoBehaviour:
     farawaySound: 2
   - Name: 
     audio: {fileID: 0}
-    meaning: 
+    meaning: GAZPACHO
     known: 0
     knownFromStart: 0
     farawaySound: 0
@@ -57,6 +57,12 @@ MonoBehaviour:
   - Name: 
     audio: {fileID: 8300000, guid: c9b9c3bb824daba4b9cb39713cd412a6, type: 3}
     meaning: SADFACE
+    known: 0
+    knownFromStart: 0
+    farawaySound: 2
+  - Name: 
+    audio: {fileID: 8300000, guid: c9b9c3bb824daba4b9cb39713cd412a6, type: 3}
+    meaning: PALAPORATORE
     known: 0
     knownFromStart: 0
     farawaySound: 2
