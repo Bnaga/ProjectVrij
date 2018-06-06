@@ -77,6 +77,12 @@ ModelImporter:
     100138: transform43
     100140: transform9
     100142: travelScreen
+    100144: polySurface48
+    100146: polySurface49
+    100148: transform44
+    100150: polySurface49 1
+    100152: transform45
+    100154: transform46
     400000: armature
     400002: CHIPS
     400004: //RootNode
@@ -149,13 +155,28 @@ ModelImporter:
     400138: transform43
     400140: transform9
     400142: travelScreen
+    400144: polySurface48
+    400146: polySurface49
+    400148: transform44
+    400150: polySurface49 1
+    400152: transform45
+    400154: transform46
     2100000: brushed_metal2
     2100002: tank
     2100004: brushed_metal
     2100006: screenBG
+    2100008: screenBG2
+    2100010: screenBG3
+    2100012: screenBG1
     2300000: CHIPS
+    2300002: polySurface48
+    2300004: polySurface49
     3300000: CHIPS
+    3300002: polySurface48
+    3300004: polySurface49
     4300000: CHIPS
+    4300002: polySurface48
+    4300004: polySurface49
   externalObjects: {}
   materials:
     importMaterials: 1

@@ -20,7 +20,8 @@ public class MicrophoneControllerVR : MonoBehaviour {
 	private AudioListener microphoneListener;
 	private audioRecorder audioRecorder;
 
-	private AudioClip audioRecording;
+	[HideInInspector]
+	public static AudioClip audioRecording;
 	private List <AudioClip> playbackSounds = new List<AudioClip>();
 	private bool isRecording;
 

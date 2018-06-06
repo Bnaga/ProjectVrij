@@ -14,12 +14,26 @@ public class CHIPSScreen : MonoBehaviour {
 		foreach (Transform child in transform) {
 			GameObject.Destroy(child.gameObject);
 		}
-
+		int i = 0;
 		foreach (fishDictionary.word word in dictionary.dictionary){
 			GameObject o = Instantiate(LayoutElement, transform);
 			o.name = word.meaning;
-			GameObject meaning = GameObject.Find(o.name + "/humanSpeak/Text");
-			meaning.GetComponent<Text>().text = word.meaning;
+			Text text = GameObject.Find(o.name + "/humanSpeak/Text").GetComponent<Text>();
+			text.text = word.meaning;
+			GameObject mojili = GameObject.Find(o.name + "/mojiliSpeak/Text");
+			text = mojili.GetComponent<Text>();
+			mojili.GetComponent<Button>().onClick.AddListener(delegate {InitUI(i); });
+			if (CHIPSStorage.storage[i]){
+				text.text= "FILLED";
+			}else{
+				text.text = "???";
+			}
+
+			i++;
 		}
+	}
+
+	void InitUI(int i){
+		CHIPSStorage.self.Init(i);
 	}
 }
