@@ -192,11 +192,7 @@ class KelpDrawing : MonoBehaviour
 		Rigidbody rigid = joints[n].AddComponent(typeof(Rigidbody)) as Rigidbody;
 		rigid.useGravity=false;
 
-		underwaterPhysics phys = joints[n].AddComponent(typeof(underwaterPhysics)) as underwaterPhysics;
-		phys.alwaysActive=true;
-		phys.UpdateEveryXFrames = 120;
-		phys.updateCounter = Random.Range(0,120);
-		
+		addWaterPhysics(joints[n]);
 		if(!useMeshCollision)
 		{
 			SphereCollider col = joints[n].AddComponent(typeof(SphereCollider)) as SphereCollider;
@@ -262,6 +258,7 @@ class KelpDrawing : MonoBehaviour
 
 	GameObject addLeaf(Transform t){
 		GameObject leaf = Instantiate(leafObj, t);
+		//addWaterPhysics(leaf);
 		leaf.transform.rotation = Quaternion.Euler(0,Random.Range(0,360),Random.Range(-20,20));
 		Rigidbody rigid = leaf.AddComponent(typeof(Rigidbody)) as Rigidbody;
 		CharacterJoint ph = leaf.AddComponent(typeof(CharacterJoint)) as CharacterJoint;
@@ -295,5 +292,14 @@ class KelpDrawing : MonoBehaviour
 
 		ph.connectedBody = t.GetComponent<Rigidbody>();
 		return leaf;
+	}
+
+	public void addWaterPhysics(GameObject obj){
+		underwaterPhysics phys = obj.AddComponent(typeof(underwaterPhysics)) as underwaterPhysics;
+		phys.alwaysActive=true;
+		phys.UpdateEveryXFrames = 120;
+		phys.floating = 20;
+		phys.updateCounter = Random.Range(0,120);
+
 	}
 }

@@ -7,23 +7,32 @@ public class CHIPSStorage : MonoBehaviour {
 
 	public static List<AudioClip> storage = new List<AudioClip>();
 	public static CHIPSStorage self;
+	public fishDictionary Dictionary;
+
 	private AudioSource source;
-	private int current;
+	public int current;
 
 	[SerializeField]
 	public Button[] useButtons;
 
 	// Use this for initialization
-	void Start () {
+	public void Awake() {
 		self = this;
 		source = GetComponent<AudioSource>();
 	}
 
+	public void ClearAll(){
+		storage.Clear();
+		foreach (fishDictionary.word word in Dictionary.dictionary){
+			storage.Add(null);
+		}
+	}
+
 	public void Init(int i){
-		current = i;
+		gameObject.SetActive(true);
 		source.clip = storage[i];
 		foreach (Button b in useButtons){
-			b.interactable = storage[current];
+			b.interactable = storage[current] != null;
 		}
 	}
 
@@ -48,6 +57,6 @@ public class CHIPSStorage : MonoBehaviour {
 	}
 
 	public void disable(){
-		self.SetActive(false);
+		gameObject.SetActive(false);
 	}
 }
