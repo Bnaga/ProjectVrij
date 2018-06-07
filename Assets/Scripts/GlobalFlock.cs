@@ -22,7 +22,7 @@ public class GlobalFlock : MonoBehaviour {
             Vector3 pos = new Vector3(Random.Range(-tankSize, tankSize),
                                       Random.Range(tankMin, tankSize*2),
                                       Random.Range(-tankSize, tankSize));
-            GameObject obj = fishObj[Random.Range(0,fishObj.Length)];
+            GameObject obj = fishObj[Random.Range(0,fishObj.Length-1)];
             allFIsh[i] = (GameObject) Instantiate(obj, pos, Quaternion.identity);
         }
 	}
