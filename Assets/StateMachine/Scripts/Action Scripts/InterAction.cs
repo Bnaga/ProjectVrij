@@ -6,19 +6,27 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "PluggableAI/Actions/InterAction")]
 public class InterAction : ActionScript
 {
-    float timer = 0;
+    Vector3 averagePos = Vector3.zero;
     public override void Act(MJStateManager stateManager)
     {
-        ActTimer(stateManager);
+        MoveToAvg(stateManager);
     }
 
-    void ActTimer(MJStateManager stateManager)
+    void MoveToAvg(MJStateManager stateManager)
     {
-        stateManager.waitIsOver = false;
-        timer += Time.deltaTime;
-        if(timer >= 10)
+        if (stateManager.onDestination)
         {
-            stateManager.waitIsOver = true;
+            averagePos = (stateManager.gameObject.transform.position + stateManager.interactionTarget.transform.position) / 2;
+            //Debug.Log(averagePos);
+            stateManager.navMeshAgent.SetDestination(averagePos);
+            stateManager.onDestination = false;
+            stateManager.onIntDestination = false;
         }
+        if(Vector3.Distance(stateManager.gameObject.transform.position, averagePos) <= 0.2f && Vector3.Distance(stateManager.interactionTarget.transform.position, averagePos) <=0.2f)
+        {
+            stateManager.onDestination = true;
+            stateManager.onIntDestination = true;
+        }
+
     }
 }

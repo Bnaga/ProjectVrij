@@ -11,6 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06881e62d640cdc459cc9a818d5f19eb, type: 3}
   m_Name: TalkState
   m_EditorClassIdentifier: 
-  actions: []
-  transistions: []
+  actions:
+  - {fileID: 11400000, guid: 25726a2460fb4684ab62be257f27f700, type: 2}
+  transistions:
+  - decision: {fileID: 11400000, guid: 99b527d8529fcf14b952c76d73432268, type: 2}
+    trueState: {fileID: 11400000, guid: b59ffc53f4658bf4095eed75cab3a3fa, type: 2}
+    falseState: {fileID: 11400000, guid: 97f34bec1e0bdbf46b75ea64fda90f91, type: 2}
   sceneGizmoColor: {r: 0.35499567, g: 0.9852941, b: 0.5419117, a: 1}

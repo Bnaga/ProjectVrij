@@ -18,7 +18,7 @@ public class IdleAction : ActionScript
     {
         //stateManager.otherIsLeader = false;
         RoleManager role = stateManager.gameObject.GetComponent<RoleManager>();
-        int rand = UnityEngine.Random.Range(0, 1000);
+        int rand = UnityEngine.Random.Range(0, 100);
         if ( rand <= 10 && role.GetCurrentRole() == 0)
         {
             stateManager.RandomState();
