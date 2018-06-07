@@ -191,7 +191,7 @@ public class MJStateManager : MonoBehaviour {
     {
         if(other.tag=="Mojili")
         {
-            //Debug.Log("trigger" + this.gameObject.name);
+            Debug.Log("trigger" + this.gameObject.name);
             if(interactionTarget == null && other.GetComponent<MJStateManager>().interactionTarget == null)
             {
                 other.GetComponent<MJStateManager>().isInteracting = true;

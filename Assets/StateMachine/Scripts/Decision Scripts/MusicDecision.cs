@@ -16,6 +16,7 @@ public class MusicDecision : Decision
         if (stateManager.curState == 5)
         {
             stateManager.isMakingMusic = true;
+            //stateManager.isInteracting = false;
             stateManager.onDestination = true;
             return true;
         }
