@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GlobalFlock : MonoBehaviour {
 
-    public GameObject fish;
+    public GameObject[] fishObj;
     public static int tankSize = 5;
     public static int tankMin = 0;
 
@@ -22,7 +22,8 @@ public class GlobalFlock : MonoBehaviour {
             Vector3 pos = new Vector3(Random.Range(-tankSize, tankSize),
                                       Random.Range(tankMin, tankSize*2),
                                       Random.Range(-tankSize, tankSize));
-            allFIsh[i] = (GameObject) Instantiate(fish, pos, Quaternion.identity);
+            GameObject obj = fishObj[Random.Range(0,fishObj.Length)];
+            allFIsh[i] = (GameObject) Instantiate(obj, pos, Quaternion.identity);
         }
 	}
 	
