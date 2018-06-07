@@ -11,6 +11,9 @@ public class MJStateManager : MonoBehaviour {
 
     public int curState = 0;
     public int tempState = 0;
+    public int waitSec = 15;
+    public float interMax = 10;
+    public float coolDownMax = 10;
 
     public bool hide = false;
     public bool inDanger = false;
@@ -22,6 +25,15 @@ public class MJStateManager : MonoBehaviour {
     public bool isMakingMusic = false;
     public bool otherIsLeader = false;
     public bool waitIsOver = false;
+    public bool isSpokenTo = false;
+    public bool isSpeaking = false;
+    public bool onIntDestination = false;
+    public bool coolDown = false;
+
+    float interactionTimer = 0;
+    float interactionCoolDown = 0;
+
+
 
     public GameObject interactionTarget;
     public GameObject Leader;
@@ -53,6 +65,7 @@ public class MJStateManager : MonoBehaviour {
     private void Update()
     {
         currentState.UpdateState(this);
+        StartCoolDown();
     }
 
     private void OnDrawGizmos()
@@ -172,4 +185,64 @@ public class MJStateManager : MonoBehaviour {
         }
     }
     #endregion
+
+    #region trigger
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag=="Mojili")
+        {
+            //Debug.Log("trigger" + this.gameObject.name);
+            if(interactionTarget == null && other.GetComponent<MJStateManager>().interactionTarget == null)
+            {
+                other.GetComponent<MJStateManager>().isInteracting = true;
+                isInteracting = true;
+                other.GetComponent<MJStateManager>().interactionTarget = this.gameObject;
+                interactionTarget = other.gameObject;
+            }
+
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.name == interactionTarget.name)
+        {
+            other.GetComponent<MJStateManager>().isInteracting = false;
+            isInteracting = false;
+            other.GetComponent<MJStateManager>().interactionTarget = null;
+            interactionTarget = null;
+        }
+    }
+    #endregion
+
+    public void StartInteractiontimer()
+    {
+        interactionTimer += Time.deltaTime;
+        if(interactionTimer >= interMax )
+        {
+            coolDown = true;
+            interactionTimer = 0;
+        }
+    }
+
+    public void StartCoolDown()
+    {
+        if (coolDown)
+        {
+            interactionCoolDown += Time.deltaTime;
+            if(interactionCoolDown >= coolDownMax)
+            {
+                coolDown = false;
+                interactionCoolDown = 0;
+            }
+            
+        }
+    }
+
+
+    IEnumerator CoolDownTimer()
+    {
+        yield return new WaitForSeconds(waitSec);
+        coolDown = false;
+    }
 }

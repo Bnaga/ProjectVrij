@@ -966,9 +966,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4685456101184050}
   - component: {fileID: 195087067945177214}
-  - component: {fileID: 114268302016154242}
   - component: {fileID: 114998507770109520}
   - component: {fileID: 114550945514102158}
+  - component: {fileID: 114852094249011404}
   m_Layer: 0
   m_Name: MojiliTest
   m_TagString: Mojili
@@ -2162,7 +2162,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1710005133066964}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.21, y: -0.0009, z: -0.045}
+  m_LocalPosition: {x: -0.26, y: -0.0009, z: 0.153}
   m_LocalScale: {x: 0.03179971, y: 0.031799708, z: 0.031799708}
   m_Children:
   - {fileID: 4525183985792356}
@@ -2481,17 +2481,6 @@ Transform:
   m_Father: {fileID: 4162552521505548}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114268302016154242
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1710005133066964}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c505e2465538c84a920318b798f1231, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114550945514102158
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2504,6 +2493,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roles: 5
+  curRole: 0
+--- !u!114 &114852094249011404
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1710005133066964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0aa04a7405ed14ba5410547d1b8d29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  testClip: {fileID: 8300000, guid: 918ee1b51fd32d748a66d520586569ba, type: 3}
+  receivedSounds: []
+  playbackDevice: 0
 --- !u!114 &114998507770109520
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2518,11 +2522,22 @@ MonoBehaviour:
   eyes: {fileID: 4949233347266322}
   currentState: {fileID: 11400000, guid: b59ffc53f4658bf4095eed75cab3a3fa, type: 2}
   remainState: {fileID: 11400000, guid: 97f34bec1e0bdbf46b75ea64fda90f91, type: 2}
-  hide: 0
-  inDanger: 0
   curState: 0
   tempState: 0
+  hide: 0
+  inDanger: 0
   onDestination: 1
+  hasFood: 0
+  isInteracting: 0
+  isTalking: 0
+  isFollowing: 0
+  isMakingMusic: 0
+  otherIsLeader: 0
+  waitIsOver: 0
+  isSpokenTo: 0
+  isSpeaking: 0
+  interactionTarget: {fileID: 0}
+  Leader: {fileID: 0}
   navMeshAgent: {fileID: 0}
 --- !u!137 &137284413043391332
 SkinnedMeshRenderer:

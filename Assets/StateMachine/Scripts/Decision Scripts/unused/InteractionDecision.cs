@@ -6,7 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "PluggableAI/Decisions/InteractionDecision")]
 public class InteractionDecision : Decision
 {
-    float friendDistance = 0.5f;
+    float friendDistance = 0.05f;
 
     public override bool Decide(MJStateManager stateManager)
     {
@@ -21,7 +21,7 @@ public class InteractionDecision : Decision
         {
             float tempfriendDistance = Vector3.Distance(stateManager.transform.position, mojili[i].transform.position);
             //Debug.Log(tempfriendDistance);
-            if ((tempfriendDistance <= friendDistance) && tempfriendDistance !=0 && stateManager.waitIsOver)
+            if ((tempfriendDistance <= friendDistance) && (mojili[i].name != stateManager.gameObject.name) && stateManager.waitIsOver)
             {
                 //Debug.Log("test");
                 stateManager.interactionTarget = mojili[i];

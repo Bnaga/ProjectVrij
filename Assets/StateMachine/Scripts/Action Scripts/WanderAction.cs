@@ -5,14 +5,14 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "PluggableAI/Actions/Wander")]
 public class WanderAction : ActionScript
 {
-
+    float timer = 0;
     bool onDestination = true;
     Vector3 mojiDestination;
 
     public override void Act(MJStateManager stateManager)
     {
         Wander(stateManager);
-
+        ActTimer(stateManager);
     }
 
     public Vector3 RandomNavmeshLocation(float radius, MJStateManager stateManager)
@@ -46,4 +46,14 @@ public class WanderAction : ActionScript
 
     }
 
+    void ActTimer(MJStateManager stateManager)
+    {
+        stateManager.waitIsOver = false;
+        timer += Time.deltaTime;
+        if (timer >= 1)
+        {
+            stateManager.waitIsOver = true;
+            timer = 0;
+        }
+    }
 }

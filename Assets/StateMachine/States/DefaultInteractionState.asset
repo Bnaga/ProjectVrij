@@ -11,7 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06881e62d640cdc459cc9a818d5f19eb, type: 3}
   m_Name: DefaultInteractionState
   m_EditorClassIdentifier: 
-  actions: []
+  actions:
+  - {fileID: 11400000, guid: ad4d4858a2b144146a64e403808df404, type: 2}
   transistions:
   - decision: {fileID: 11400000, guid: 2c2d01d9b6894b745a66f92f61844e1b, type: 2}
     trueState: {fileID: 11400000, guid: 70e0fc34fb377bc4cad3aa858233702e, type: 2}
@@ -21,5 +22,8 @@ MonoBehaviour:
     falseState: {fileID: 11400000, guid: 97f34bec1e0bdbf46b75ea64fda90f91, type: 2}
   - decision: {fileID: 11400000, guid: d2d6a50108e8fa347ac1e47b729989a5, type: 2}
     trueState: {fileID: 11400000, guid: 77193ca0d476d204aa2fbe7211828895, type: 2}
+    falseState: {fileID: 11400000, guid: 97f34bec1e0bdbf46b75ea64fda90f91, type: 2}
+  - decision: {fileID: 11400000, guid: 32c281e4495e39d44a8833e4256fc9f2, type: 2}
+    trueState: {fileID: 11400000, guid: b59ffc53f4658bf4095eed75cab3a3fa, type: 2}
     falseState: {fileID: 11400000, guid: 97f34bec1e0bdbf46b75ea64fda90f91, type: 2}
   sceneGizmoColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
