@@ -34,6 +34,9 @@ public class MicrophoneControllerVR : MonoBehaviour {
 	public Image recordingProgress;
 	public Image playButton;
 
+	public GameObject Menu;
+	public VRTK.VRTK_Pointer PointerScript;
+
 	void Start(){
 		leftHand = GetComponent<SteamVR_TrackedController>();
 		microphoneListener = microphone.GetComponent<AudioListener>();
@@ -74,8 +77,15 @@ public class MicrophoneControllerVR : MonoBehaviour {
 		microphoneListener.enabled = isRecording;
 		characterListener.enabled = !isRecording;
 
-		if (leftHand.menuPressed && holdingRecording){
-			audioRecorder.recording=null;
+		if (leftHand.menuPressed && barProgress>.3f){
+			barProgress=0;
+			bool a = !Menu.activeInHierarchy;
+			Menu.SetActive(a);
+			//PointerScript.Toggle(a);
+			playButton.enabled = a;
+			recordingProgress.enabled = a;
+
+
 		}
 
 		if (leftHand.padPressed && !isRecording && holdingRecording){
@@ -84,6 +94,7 @@ public class MicrophoneControllerVR : MonoBehaviour {
 			playbackDevice.PlaySound(audioRecording);
 		}
 	}
+	
 }
 
 
