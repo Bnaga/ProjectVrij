@@ -10,11 +10,25 @@ ModelImporter:
     100004: Finn_right
     100006: //RootNode
     100008: pasted__Eye
+    100010: fish_small_body
+    100012: fish_small_body1
+    100014: transform1
+    100016: transform2
+    100018: transform3
+    100020: transform4
+    100022: transform5
     400000: Eye
     400002: Finn_left
     400004: Finn_right
     400006: //RootNode
     400008: pasted__Eye
+    400010: fish_small_body
+    400012: fish_small_body1
+    400014: transform1
+    400016: transform2
+    400018: transform3
+    400020: transform4
+    400022: transform5
     2100000: lambert4
     2100002: lambert1
     2300000: Eye
@@ -22,16 +36,19 @@ ModelImporter:
     2300004: Finn_right
     2300006: //RootNode
     2300008: pasted__Eye
+    2300010: fish_small_body1
     3300000: Eye
     3300002: Finn_left
     3300004: Finn_right
     3300006: //RootNode
     3300008: pasted__Eye
+    3300010: fish_small_body1
     4300000: fish_small_body
     4300002: pasted__Eye
     4300004: Eye
     4300006: Finn_right
     4300008: Finn_left
+    4300010: fish_small_body1
   externalObjects: {}
   materials:
     importMaterials: 1
