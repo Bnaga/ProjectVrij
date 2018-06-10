@@ -23,10 +23,10 @@ Material:
         m_Scale: {x: 100, y: 100}
         m_Offset: {x: 0.5, y: 0.5}
     m_Floats:
-    - _DepthFade: -5
+    - _DepthFade: -4
     - _DistanceVisibility: 2
     - _Fade: 0.2
     - _Intensity: 0.2
-    - _WaterLevel: 5
+    - _WaterLevel: 6
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
