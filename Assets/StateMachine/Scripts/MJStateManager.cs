@@ -9,6 +9,10 @@ public class MJStateManager : MonoBehaviour {
     public State currentState;
     public State remainState;
 
+    public fishDictionary dictionary;
+    [HideInInspector]
+    public soundCommunication soundCommunication;
+
     public int curState = 0;
     public int tempState = 0;
     public int waitSec = 15;
@@ -45,6 +49,7 @@ public class MJStateManager : MonoBehaviour {
         curState = 0;
         navMeshAgent = GetComponent<NavMeshAgent>();
         onDestination = true;
+        soundCommunication = GetComponent<soundCommunication>();
         //navMeshAgent.destination = Vector3.zero;
 	}
 
@@ -60,12 +65,27 @@ public class MJStateManager : MonoBehaviour {
      isMakingMusic = false;
      otherIsLeader = false;
      waitIsOver = false;
+
+     
 }
 
     private void Update()
     {
         currentState.UpdateState(this);
         StartCoolDown();
+        soundResponse();
+    }
+
+
+    private void soundResponse(){
+        List <fishDictionary.word> words = soundCommunication.receivedWords;
+        if (words.Count>0){
+            foreach (fishDictionary.word word in words){
+                if (word.Name == "Music"){
+                    curState = 4;
+                }
+            }
+        }
     }
 
     private void OnDrawGizmos()
@@ -245,4 +265,17 @@ public class MJStateManager : MonoBehaviour {
         yield return new WaitForSeconds(waitSec);
         coolDown = false;
     }
+
+    public void AudioAction(string tag){
+
+        foreach (fishDictionary.word word in dictionary.dictionary){
+            if (word.Name == tag){
+                soundCommunication.playWord(word, dictionary);
+                Debug.DrawLine(transform.position,transform.position + transform.up,Color.green);
+                break;
+            }
+        }
+	
+    }
+    
 }

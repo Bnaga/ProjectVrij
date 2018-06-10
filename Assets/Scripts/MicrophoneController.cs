@@ -15,7 +15,7 @@ public class MicrophoneController : MonoBehaviour {
 	[SerializeField]
 	private soundCommunication microphoneCommunication;
 	private AudioClip audioRecording;
-	private List <AudioClip> playbackSounds = new List<AudioClip>();
+	private List <fishDictionary.word> playbackWords = new List<fishDictionary.word>();
 	private bool isRecording;
 
 	void Start(){
@@ -27,18 +27,18 @@ public class MicrophoneController : MonoBehaviour {
 		isRecording = Input.GetButton("Fire1");
 		if (!microphoneListener.enabled && isRecording){
 			audioRecorder.StartRecording();
-			microphoneCommunication.receivedSounds.Clear();
+			microphoneCommunication.receivedWords.Clear();
 		}
 		if (microphoneListener.enabled && !isRecording){
 			audioRecording=audioRecorder.StopRecording();
-			playbackSounds = microphoneCommunication.receivedSounds;
+			playbackWords = microphoneCommunication.receivedWords;
 		}
 
 		microphoneListener.enabled = isRecording;
 		characterListener.enabled = !isRecording;
 
 		if (Input.GetButtonDown("Fire2")){
-			playbackDevice.receivedSounds = playbackSounds;
+			playbackDevice.receivedWords = playbackWords;
 			playbackDevice.PlaySound(audioRecording);
 		}
 	}

@@ -6,7 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "PluggableAI/Actions/TestTalk")]
 public class TestTalkAction : ActionScript
 {
-    public AudioClip testSound;
+    private fishDictionary.word[] words;
 
     public override void Act(MJStateManager stateManager)
     {
@@ -15,7 +15,11 @@ public class TestTalkAction : ActionScript
     
     void TestTalk(MJStateManager stateManager)
     {
-        stateManager.gameObject.GetComponent<soundCommunication>().PlaySound(testSound);
+        fishDictionary.word[] words = stateManager.dictionary.dictionary;
+        fishDictionary.word sound = words[UnityEngine.Random.Range(0,words.Length)];
+		stateManager.soundCommunication.playWord(sound, stateManager.dictionary);
         stateManager.StartInteractiontimer();
+        Transform t = stateManager.transform;
+        Debug.DrawLine(t.position,t.position + t.up,Color.green);
     }
 }

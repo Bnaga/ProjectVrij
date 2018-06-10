@@ -28,11 +28,11 @@ public class CHIPS : MonoBehaviour {
 		soundCommunication comms = other.GetComponent<soundCommunication>();
 		if (!comms || !other.GetComponent<AudioListener>()) return;
 		Debug.Log("UPDATED CHIPS");
-		foreach (AudioClip clip in comms.receivedSounds){
+		foreach (fishDictionary.word word in comms.receivedWords){
 			foreach (fishDictionary dict in dictionaries){
 				foreach (fishDictionary.word w in dict.dictionary){
-					if (w.audio == clip) w.known = true;
-
+					if (word== w) w.known = true;
+			
 				}
 			}
 		}

@@ -12,61 +12,77 @@ MonoBehaviour:
   m_Name: mojiliDictionary
   m_EditorClassIdentifier: 
   dictionary:
-  - Name: greeting1
-    audio: {fileID: 8300000, guid: 918ee1b51fd32d748a66d520586569ba, type: 3}
-    meaning: HI
+  - Name: greeting
+    meaning: Hello
+    audio:
+    - {fileID: 8300000, guid: 2caf37b5173dbb440841b200f10eb02f, type: 3}
+    farawaySound: 1
     known: 0
     knownFromStart: 0
-    farawaySound: 1
-  - Name: greeting2
-    audio: {fileID: 8300000, guid: adcc31e02dc74204c80c632b9844b681, type: 3}
+  - Name: ass
     meaning: BOY
+    audio:
+    - {fileID: 8300000, guid: 50a99ce901000d24c9d29a207b5649b3, type: 3}
+    farawaySound: 0
     known: 0
     knownFromStart: 0
-    farawaySound: 0
   - Name: 
-    audio: {fileID: 8300000, guid: adcc31e02dc74204c80c632b9844b681, type: 3}
     meaning: WHY
+    audio:
+    - {fileID: 8300000, guid: 8545ddbbf682f6a489b1927edacc4008, type: 3}
+    farawaySound: 0
     known: 0
     knownFromStart: 0
-    farawaySound: 0
   - Name: 
-    audio: {fileID: 8300000, guid: eafd8df4914b6054db2b36a3aa4b4830, type: 3}
     meaning: AGREED
+    audio:
+    - {fileID: 8300000, guid: fee60530532e4d34081dc169be7e67a3, type: 3}
+    farawaySound: 2
     known: 0
     knownFromStart: 0
-    farawaySound: 2
   - Name: 
-    audio: {fileID: 0}
     meaning: GAZPACHO
-    known: 0
-    knownFromStart: 0
+    audio:
+    - {fileID: 8300000, guid: d718e8dc54d57c14ba434ce48a3f1e94, type: 3}
     farawaySound: 0
+    known: 0
+    knownFromStart: 0
   - Name: 
-    audio: {fileID: 8300000, guid: 95ced3c408cd93048b111626535a8b3f, type: 3}
     meaning: COOL
+    audio:
+    - {fileID: 8300000, guid: 8c86f34e362b4bb47ae315c83a6f8eda, type: 3}
+    farawaySound: 1
     known: 0
     knownFromStart: 0
-    farawaySound: 1
   - Name: 
-    audio: {fileID: 8300000, guid: 4fee3982c922af44babfca8a11dffaca, type: 3}
     meaning: LMAO
-    known: 0
-    knownFromStart: 0
+    audio:
+    - {fileID: 8300000, guid: fdb23d8ad3c5b0b448d06ce1ad4f729e, type: 3}
     farawaySound: 1
+    known: 0
+    knownFromStart: 0
   - Name: 
-    audio: {fileID: 8300000, guid: c9b9c3bb824daba4b9cb39713cd412a6, type: 3}
     meaning: SADFACE
+    audio:
+    - {fileID: 8300000, guid: 06bc41a1470b51f429824958a33be5d2, type: 3}
+    farawaySound: 2
     known: 0
     knownFromStart: 0
+  - Name: Music
+    meaning: Cultural Music
+    audio:
+    - {fileID: 8300000, guid: 3653c4e441b19b446a3d507556b9d813, type: 3}
+    - {fileID: 8300000, guid: 4e2de50f717b0d540be1d76425cf1533, type: 3}
+    - {fileID: 8300000, guid: e8abf7d433c40004ca25d733acff2efa, type: 3}
+    - {fileID: 8300000, guid: 2019aca755cb3c14b8db278ca662e73b, type: 3}
     farawaySound: 2
-  - Name: 
-    audio: {fileID: 8300000, guid: c9b9c3bb824daba4b9cb39713cd412a6, type: 3}
-    meaning: PALAPORATORE
     known: 0
     knownFromStart: 0
-    farawaySound: 2
   far:
-  - {fileID: 8300000, guid: efee776e88902a74684c56ce2962678f, type: 3}
-  - {fileID: 8300000, guid: e3148a98a2496e64cb8712177bbcde71, type: 3}
-  - {fileID: 8300000, guid: 918ee1b51fd32d748a66d520586569ba, type: 3}
+  - {fileID: 8300000, guid: fd02ee11d8bbb454fa3eb227b267d8b5, type: 3}
+  - {fileID: 8300000, guid: d458fdc2cf61dd749872a29dfb747a66, type: 3}
+  - {fileID: 8300000, guid: 5fd36a4bf45c51c41aaede0363e83927, type: 3}
+  - {fileID: 8300000, guid: b1d2bc6eca1b2f245b8ee91e091af742, type: 3}
+  - {fileID: 8300000, guid: d61a02bc526c11d41af9c667dc9e2ad1, type: 3}
+  - {fileID: 8300000, guid: 1b679a5ce5b4522458c991c1783c3894, type: 3}
+  test: []

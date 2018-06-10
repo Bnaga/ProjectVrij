@@ -10,13 +10,15 @@ public class soundCommunication : MonoBehaviour {
 	private float soundTimer;
 	
 //	[HideInInspector]
-	public List <AudioClip> receivedSounds = new List<AudioClip>();
+	public List <fishDictionary.word> receivedWords = new List<fishDictionary.word>();
+	private fishDictionary.word currentWord;
 	public bool playbackDevice;
 
 	public float soundRange;
 	private List <AudioSource> sources = new List<AudioSource>();
 	private AudioSource sourceFar;
-	private AudioSource sourceNear;
+	[HideInInspector]
+	public AudioSource sourceNear;
 
 	void Awake () {
 
@@ -70,8 +72,14 @@ public class soundCommunication : MonoBehaviour {
 		sourceNear.Play();
 	}
 
+	public void PlayRandomSound(AudioClip[] clips){
+		AudioClip clip = clips[Random.Range(0,clips.Length-1)];
+		PlaySound(clip);
+	}
+
 	public void playWord(fishDictionary.word word, fishDictionary dictionary){
-		PlaySound(word.audio);
+		PlayRandomSound(word.audio);
+		currentWord = word;
 		AudioClip far = dictionary.far[word.farawaySound];
 		if (sourceFar.clip !=far) StartCoroutine(NextSound(far,sourceFar));
 	}
@@ -81,17 +89,17 @@ public class soundCommunication : MonoBehaviour {
 		if (!sc || !sc.enabled) return;
 		if (!sourceNear.clip) return;
 		if (!playbackDevice){
-			sc.ReceiveSound(sourceNear.clip);
+			sc.ReceiveSound(currentWord);
 		}else{
-			foreach (AudioClip a in receivedSounds){
-				sc.ReceiveSound(a);
+			foreach (fishDictionary.word word in receivedWords){
+				sc.ReceiveSound(word);
 			}
 		}
 
 	}
 
-	public void ReceiveSound(AudioClip clip){
-		if (!playbackDevice && !receivedSounds.Contains(clip)) receivedSounds.Add(clip);
+	public void ReceiveSound(fishDictionary.word word){
+		if (!playbackDevice && !receivedWords.Contains(word)) receivedWords.Add(word);
 		//Debug.Log(clip.name);
 	}
 

@@ -22,7 +22,7 @@ public class MicrophoneControllerVR : MonoBehaviour {
 
 	[HideInInspector]
 	public static AudioClip audioRecording;
-	private List <AudioClip> playbackSounds = new List<AudioClip>();
+private List <fishDictionary.word> playbackWords = new List<fishDictionary.word>();
 	private bool isRecording;
 
 	private float barProgress;
@@ -49,13 +49,13 @@ public class MicrophoneControllerVR : MonoBehaviour {
 		//setting the audio recorder
 		if (!microphoneListener.enabled && isRecording){
 			audioRecorder.StartRecording();
-			microphoneCommunication.receivedSounds.Clear();
+			microphoneCommunication.receivedWords.Clear();
 			
 			barProgress=0;
 		}
 		if (microphoneListener.enabled && !isRecording){
 			audioRecording=audioRecorder.StopRecording();
-			playbackSounds = microphoneCommunication.receivedSounds;
+			playbackWords = microphoneCommunication.receivedWords;
 			recordingProgress.enabled=false;
 			barProgress=2*maxRecordingLength;
 		}
@@ -90,7 +90,7 @@ public class MicrophoneControllerVR : MonoBehaviour {
 
 		if (leftHand.padPressed && !isRecording && holdingRecording){
 			barProgress=0;
-			playbackDevice.receivedSounds = playbackSounds;
+			playbackDevice.receivedWords = playbackWords;
 			playbackDevice.PlaySound(audioRecording);
 		}
 	}

@@ -6,7 +6,6 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "PluggableAI/Actions/MusicAction")]
 public class MusicAction : ActionScript
 {
-    public AudioClip testSound;
 
     public override void Act(MJStateManager stateManager)
     {
@@ -16,6 +15,7 @@ public class MusicAction : ActionScript
     void PlayMusic(MJStateManager stateManager)
     {
         stateManager.isMakingMusic = true;
-        stateManager.gameObject.GetComponent<soundCommunication>().PlaySound(testSound);
+        if (!stateManager.soundCommunication.sourceNear.isPlaying)
+            stateManager.AudioAction("Music");
     }
 }

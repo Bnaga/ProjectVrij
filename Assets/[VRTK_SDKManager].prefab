@@ -2188,7 +2188,7 @@ GameObject:
   - component: {fileID: 114583283395761746}
   m_Layer: 0
   m_Name: Camera (ears)
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6281,12 +6281,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoPopulateObjectReferences: 1
-  actualBoundaries: {fileID: 1026345070576194}
-  actualHeadset: {fileID: 1415247379160036}
-  actualLeftController: {fileID: 1446372802358470}
-  actualRightController: {fileID: 1705877362289828}
-  modelAliasLeftController: {fileID: 1284013988402886}
-  modelAliasRightController: {fileID: 1241346561196382}
+  actualBoundaries: {fileID: 0}
+  actualHeadset: {fileID: 0}
+  actualLeftController: {fileID: 0}
+  actualRightController: {fileID: 0}
+  modelAliasLeftController: {fileID: 0}
+  modelAliasRightController: {fileID: 0}
   cachedSystemSDKInfo:
     baseTypeName: VRTK.SDK_BaseSystem
     fallbackTypeName: VRTK.SDK_FallbackSystem
