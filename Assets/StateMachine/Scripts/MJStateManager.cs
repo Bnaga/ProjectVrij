@@ -82,7 +82,7 @@ public class MJStateManager : MonoBehaviour {
         if (words.Count>0){
             foreach (fishDictionary.word word in words){
                 if (word.Name == "Music"){
-                    curState = 4;
+                    curState = 5;
                 }
             }
         }
@@ -112,23 +112,23 @@ public class MJStateManager : MonoBehaviour {
         tempState = Random.Range(1, 101);
         if(tempState < 81)
         {
-            curState = 1;
+            curState = 1; //wandering state
         }
         if(tempState >= 81 && tempState <85)
         {
-            curState = 2;
+            curState = 2; //go home state
         }
         if (tempState >= 85 && tempState < 90)
         {
-            curState = 3;
+            curState = 3;  //go to neighbor
         }
         if (tempState >= 90 && tempState < 95)
         {
-            curState = 4;
+            curState = 4; //exploration state
         }
         if (tempState >= 95 && tempState <= 100)
         {
-            curState = 5;
+            curState = 5; //music state
         }
     }
 
@@ -137,11 +137,11 @@ public class MJStateManager : MonoBehaviour {
         tempState = Random.Range(0, 10);
         if (tempState < 9)
         {
-            curState = 6;
+            curState = 6; // leader/soldier wander
         }
         if (tempState == 9)
         {
-            curState = 7;
+            curState = 7; // go to nearest mojili
         }
     }
 
@@ -150,7 +150,7 @@ public class MJStateManager : MonoBehaviour {
         tempState = Random.Range(0, 2);
         if (tempState == 0)
         {
-            curState = 8;
+            curState = 8; // get food state
         }
         if (tempState == 1)
         {
@@ -166,11 +166,11 @@ public class MJStateManager : MonoBehaviour {
         tempState = Random.Range(0, 4);
         if (tempState < 3)
         {
-            curState = 9;
+            curState = 9; // assign new role state
         }
         if (tempState == 3)
         {
-            curState = 10;
+            curState = 10; //follow me state
         }
     }
 
@@ -179,15 +179,15 @@ public class MJStateManager : MonoBehaviour {
         tempState = Random.Range(0, 10);
         if (tempState < 6)
         {
-            curState = 11;
+            curState = 11; //talk state
         }
         if (tempState >=6 && tempState <8)
         {
-            curState = 12;
+            curState = 12; //send to leader state
         }
         if (tempState > 8)
         {
-            curState = 10;
+            curState = 10; //follow me state
         }
 
     }
@@ -197,11 +197,11 @@ public class MJStateManager : MonoBehaviour {
         tempState = Random.Range(1, 101);
         if (tempState < 86)
         {
-            curState = 13;
+            curState = 13; //dance state
         }
         if (tempState >= 86)
         {
-            curState = 5;
+            curState = 5; //music state
         }
     }
     #endregion
