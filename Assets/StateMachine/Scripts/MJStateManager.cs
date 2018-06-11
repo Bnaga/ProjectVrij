@@ -186,6 +186,7 @@ public class MJStateManager : MonoBehaviour {
     }
     #endregion
 
+    
     #region trigger
     private void OnTriggerEnter(Collider other)
     {
@@ -214,6 +215,7 @@ public class MJStateManager : MonoBehaviour {
         }
     }
     #endregion
+    
 
     public void StartInteractiontimer()
     {
