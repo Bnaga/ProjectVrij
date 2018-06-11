@@ -197,6 +197,10 @@ public class MJStateManager : MonoBehaviour {
             {
                 other.GetComponent<MJStateManager>().isInteracting = true;
                 isInteracting = true;
+                navMeshAgent.SetDestination(transform.position);
+                onDestination = true;
+                other.GetComponent<MJStateManager>().navMeshAgent.SetDestination(other.transform.position);
+                other.GetComponent<MJStateManager>().onDestination = true;
                 other.GetComponent<MJStateManager>().interactionTarget = this.gameObject;
                 interactionTarget = other.gameObject;
             }

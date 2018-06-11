@@ -15,7 +15,7 @@ public class TestTalkAction : ActionScript
     
     void TestTalk(MJStateManager stateManager)
     {
-        stateManager.gameObject.GetComponent<soundCommunication>().PlaySound(testSound);
+        //stateManager.gameObject.GetComponent<soundCommunication>().PlaySound(testSound);
         stateManager.StartInteractiontimer();
     }
 }
