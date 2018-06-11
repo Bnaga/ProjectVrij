@@ -8,7 +8,7 @@ using UnityEngine;
 public class IdleDecision : Decision {
 
     float testTimer = 0;
-    float endTimer = 20;
+    float endTimer = 10;
 
     public override bool Decide(MJStateManager stateManager)
     {

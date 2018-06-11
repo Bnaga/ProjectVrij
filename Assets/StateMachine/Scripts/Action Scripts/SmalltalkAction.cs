@@ -8,7 +8,7 @@ public class SmalltalkAction : ActionScript
 {
     public override void Act(MJStateManager stateManager)
     {
-        throw new NotImplementedException();
+        SmallTalk(stateManager);
     }
 
     void SmallTalk(MJStateManager stateManager)

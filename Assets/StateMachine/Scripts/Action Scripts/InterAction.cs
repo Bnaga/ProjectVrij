@@ -10,6 +10,7 @@ public class InterAction : ActionScript
     public override void Act(MJStateManager stateManager)
     {
         MoveToAvg(stateManager);
+        stateManager.StartInteractiontimer();
     }
 
     void MoveToAvg(MJStateManager stateManager)
@@ -27,6 +28,8 @@ public class InterAction : ActionScript
             stateManager.onDestination = true;
             stateManager.onIntDestination = true;
         }
+
+
 
     }
 }
