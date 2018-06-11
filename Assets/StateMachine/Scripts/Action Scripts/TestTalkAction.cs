@@ -15,11 +15,8 @@ public class TestTalkAction : ActionScript
     
     void TestTalk(MJStateManager stateManager)
     {
-        fishDictionary.word[] words = stateManager.dictionary.dictionary;
-        fishDictionary.word sound = words[UnityEngine.Random.Range(0,words.Length)];
-		stateManager.soundCommunication.playWord(sound, stateManager.dictionary);
-        stateManager.StartInteractiontimer();
-        Transform t = stateManager.transform;
-        Debug.DrawLine(t.position,t.position + t.up,Color.green);
+        if (!stateManager.soundCommunication.sourceNear.isPlaying && UnityEngine.Random.Range(0,100)<1)
+            stateManager.AudioAction("smalltalk");
     }
 }
+ 

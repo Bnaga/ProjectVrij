@@ -14,7 +14,7 @@ public class soundCommunication : MonoBehaviour {
 	private fishDictionary.word currentWord;
 	public bool playbackDevice;
 
-	public float soundRange;
+	public float soundRange = .5f;
 	private List <AudioSource> sources = new List<AudioSource>();
 	private AudioSource sourceFar;
 	[HideInInspector]
@@ -44,8 +44,7 @@ public class soundCommunication : MonoBehaviour {
 		sourceNear = sources[0];
 		sourceFar = sources[1];
 		sourceFar.maxDistance *= 5;
-		sourceFar.volume = .2f;
-		sourceFar.loop = true;
+		sourceFar.volume = .3f;
 		
 		soundSphere = gameObject.AddComponent(typeof(SphereCollider)) as SphereCollider;
 		soundSphere.radius = soundRange;
@@ -117,6 +116,7 @@ public class soundCommunication : MonoBehaviour {
         audioSource.Stop ();
 		audioSource.clip = next;
         audioSource.volume = startVolume;
+		audioSource.Play();
     }
  
 
