@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CHIPSScreen : MonoBehaviour {
 
@@ -8,10 +9,11 @@ public class CHIPSScreen : MonoBehaviour {
 	public fishDictionary dictionary;
 
 	public static AudioClip[] library;
+	public Image micImage;
 
 	public CHIPSStorage storage;
 	// Use this for initialization
-	void Start () {
+	void OnEnable () {
 		foreach (Transform child in transform) {
 			GameObject.Destroy(child.gameObject);
 		}
@@ -26,7 +28,8 @@ public class CHIPSScreen : MonoBehaviour {
 		float h = LayoutElement.GetComponent<RectTransform>().rect.height;
 	
 		gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(0,h *i);
-
+		Texture2D tex = MicrophoneControllerVR.audioImage;
+		micImage.overrideSprite = Sprite.Create (tex, new Rect (0f, 0f, tex.width, tex.height), new Vector2 (0.5f, 0.5f));
 
 	}
 	

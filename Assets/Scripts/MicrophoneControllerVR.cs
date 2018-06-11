@@ -22,6 +22,7 @@ public class MicrophoneControllerVR : MonoBehaviour {
 
 	[HideInInspector]
 	public static AudioClip audioRecording;
+	public static Texture2D audioImage;
 private List <fishDictionary.word> playbackWords = new List<fishDictionary.word>();
 	private bool isRecording;
 
@@ -55,6 +56,7 @@ private List <fishDictionary.word> playbackWords = new List<fishDictionary.word>
 		}
 		if (microphoneListener.enabled && !isRecording){
 			audioRecording=audioRecorder.StopRecording();
+			audioImage = WaveFormImage.RenderWaveForm(audioRecording,Color.red);
 			playbackWords = microphoneCommunication.receivedWords;
 			recordingProgress.enabled=false;
 			barProgress=2*maxRecordingLength;
