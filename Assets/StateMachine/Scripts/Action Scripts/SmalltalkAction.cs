@@ -13,7 +13,8 @@ public class SmalltalkAction : ActionScript
 
     void SmallTalk(MJStateManager stateManager)
     {
-        if (!stateManager.soundCommunication.sourceNear.isPlaying)
+        
+        if (!stateManager.soundCommunication.sourceNear.isPlaying && UnityEngine.Random.Range(0,100)<1)
             stateManager.AudioAction("smalltalk");
     }
 }
