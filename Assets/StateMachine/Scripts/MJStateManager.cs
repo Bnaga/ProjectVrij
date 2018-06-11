@@ -82,7 +82,7 @@ public class MJStateManager : MonoBehaviour {
         if (words.Count>0){
             foreach (fishDictionary.word word in words){
                 if (word.Name == "Music"){
-                    curState = 5;
+                    curState = 13;
                 }
             }
         }
