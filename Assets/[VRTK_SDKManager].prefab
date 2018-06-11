@@ -1733,6 +1733,7 @@ GameObject:
   - component: {fileID: 114648300002343272}
   - component: {fileID: 92058454154752812}
   - component: {fileID: 82634594602543422}
+  - component: {fileID: 135922252435345962}
   m_Layer: 0
   m_Name: Camera (head)
   m_TagString: MainCamera
@@ -4571,7 +4572,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.053
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -7625,7 +7626,7 @@ MonoBehaviour:
   clickMethod: 1
   attemptClickOnDeactivate: 0
   clickAfterHoverDuration: 0
-  controller: {fileID: 0}
+  controller: {fileID: 114316164859469006}
   pointerOriginTransform: {fileID: 0}
   hoveringElement: {fileID: 0}
   controllerRenderModel: {fileID: 0}
@@ -8409,7 +8410,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   showControlHints: 1
   hideHandsAtSwitch: 0
-  resetHandsAtSwitch: 1
+  resetHandsAtSwitch: 0
   mouseMovementInput: 0
   lockMouseToView: 1
   handMoveMultiplier: 0.2
@@ -9824,7 +9825,7 @@ MonoBehaviour:
   selectAfterHoverDuration: 0
   interactWithObjects: 0
   grabToPointerTip: 0
-  controller: {fileID: 0}
+  controller: {fileID: 114316164859469006}
   interactUse: {fileID: 0}
   customOrigin: {fileID: 0}
 --- !u!114 &114789731701917608
@@ -11482,6 +11483,18 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1152715440384548}
   m_Enabled: 1
+--- !u!135 &135922252435345962
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1572949106110368}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.3
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &136055665062252596
 CapsuleCollider:
   m_ObjectHideFlags: 1
