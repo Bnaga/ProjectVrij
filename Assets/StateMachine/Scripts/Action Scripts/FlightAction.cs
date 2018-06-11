@@ -16,6 +16,7 @@ public class FlightAction : ActionScript
     public override void Act(MJStateManager stateManager)
     {
         Hide(stateManager);
+        stateManager.StartInteractiontimer();
     }
 
     private void Hide(MJStateManager stateManager)
@@ -52,7 +53,8 @@ public class FlightAction : ActionScript
             if (temphouseDistance <= houseDistance)
             {
                 houseDistance = temphouseDistance;
-                currentTarget = new Vector3(houses[i].transform.position.x, 0, houses[i].transform.position.z);
+                //currentTarget = new Vector3(houses[i].transform.position.x, 0, houses[i].transform.position.z);
+                currentTarget = houses[i].transform.position;
                 //Debug.Log(houses[i].name);
             }
         }
