@@ -15,7 +15,7 @@ public class FlightDecision : Decision
     {
         Camera mainCamera = Camera.main;
         if (!mainCamera) return false; //skip check if camera doesn't exist yet
-        if (Vector3.Distance(mainCamera.transform.position, stateManager.transform.position) <= 1)
+        if (Vector3.Distance(mainCamera.transform.position, stateManager.transform.position) <= .25)
         {
             stateManager.inDanger = true;
             stateManager.onDestination = true;
