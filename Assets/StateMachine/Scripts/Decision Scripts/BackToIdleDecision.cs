@@ -17,8 +17,8 @@ public class BackToIdleDecision : Decision
         if (stateManager.coolDown)
         {
             stateManager.curState = 0;
-            stateManager.coolDown = true;
-            stateManager.StartCoroutine("CoolDownTimer");
+            //stateManager.coolDown = true;
+            //stateManager.StartCoroutine("CoolDownTimer");
             return true;
         }
         else return false;

@@ -18,9 +18,27 @@ GameObject:
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4949233347266322}
+  - component: {fileID: 4986530208363406}
+  - component: {fileID: 135489169384223870}
+  - component: {fileID: 114849146893915850}
   m_Layer: 0
-  m_Name: eyes
+  m_Name: test trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1440428336366640
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4057449917197142}
+  - component: {fileID: 33286299046865488}
+  m_Layer: 0
+  m_Name: Body_Skin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -93,8 +111,8 @@ GameObject:
   - component: {fileID: 33111945594497688}
   - component: {fileID: 23342940885157146}
   m_Layer: 0
-  m_Name: Body_Skin
-  m_TagString: Untagged
+  m_Name: MojiliTest
+  m_TagString: Mojili
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,7 +181,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1710005133066964}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.105, y: 0.059, z: 0.153}
+  m_LocalPosition: {x: 0.633, y: 0.017892, z: -0.203}
   m_LocalScale: {x: 0.03179971, y: 0.031799708, z: 0.031799708}
   m_Children:
   - {fileID: 4949233347266322}
@@ -358,7 +376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roles: 5
-  curRole: 0
+  curRole: 1
 --- !u!114 &114715532491677512
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -374,7 +392,17 @@ MonoBehaviour:
   receivedWords: []
   playbackDevice: 0
   soundRange: 0.6
-  sourceNear: {fileID: 0}
+--- !u!114 &114849146893915850
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1438248706759118}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b634a19319bbf7848821266a34add96b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114852094249011404
 MonoBehaviour:
   m_ObjectHideFlags: 1
