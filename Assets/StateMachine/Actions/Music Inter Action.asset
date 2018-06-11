@@ -9,5 +9,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7e5dcd8494dfa54dabf50ef484c79ed, type: 3}
-  m_Name: New Music Inter Action
+  m_Name: Music Inter Action
   m_EditorClassIdentifier: 

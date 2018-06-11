@@ -8,7 +8,7 @@ public class TriggerManager : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        stateManager = this.gameObject.GetComponent<MJStateManager>();
+        stateManager = this.transform.parent.gameObject.GetComponent<MJStateManager>();
 	}
 	
 	// Update is called once per frame
@@ -21,20 +21,27 @@ public class TriggerManager : MonoBehaviour {
         if (other.tag == "Mojili")
         {
             Debug.Log("trigger" + other.transform.parent.gameObject.name);
-            if (stateManager.interactionTarget == null && other.GetComponent<MJStateManager>().interactionTarget == null)
+            if (stateManager.interactionTarget == null && other.transform.parent.gameObject.GetComponent<MJStateManager>().interactionTarget == null)
             {
                 other.transform.parent.gameObject.GetComponent<MJStateManager>().isInteracting = true;
                 stateManager.isInteracting = true;
-                other.transform.parent.gameObject.GetComponent<MJStateManager>().interactionTarget = this.gameObject;
-                stateManager.interactionTarget = other.gameObject;
+                other.transform.parent.gameObject.GetComponent<MJStateManager>().interactionTarget = this.transform.parent.gameObject;
+                stateManager.interactionTarget = other.transform.parent.gameObject;
+                stateManager.onDestination = true;
+                other.transform.parent.gameObject.GetComponent<MJStateManager>().navMeshAgent.SetDestination(other.transform.position);
+                other.transform.parent.gameObject.GetComponent<MJStateManager>().onDestination = true;
+                other.transform.parent.gameObject.GetComponent<MJStateManager>().interactionTarget = this.transform.parent.gameObject.gameObject;
+                stateManager.isInteractor = true;
+                other.transform.parent.gameObject.GetComponent<MJStateManager>().isInteractee = true;
             }
 
         }
     }
 
+    /*
     private void OnTriggerExit(Collider other)
     {
-        if (other.name == stateManager.interactionTarget.name)
+        if (other.transform.parent.gameObject.name == stateManager.interactionTarget.name)
         {
             other.transform.parent.gameObject.GetComponent<MJStateManager>().isInteracting = false;
             stateManager.isInteracting = false;
@@ -42,4 +49,5 @@ public class TriggerManager : MonoBehaviour {
             stateManager.interactionTarget = null;
         }
     }
+    */
 }

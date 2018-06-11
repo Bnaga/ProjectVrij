@@ -37,7 +37,8 @@ public class MJStateManager : MonoBehaviour {
     float interactionTimer = 0;
     float interactionCoolDown = 0;
 
-
+    public bool isInteractor = false;
+    public bool isInteractee = false;
 
     public GameObject interactionTarget;
     public GameObject Leader;
@@ -81,8 +82,24 @@ public class MJStateManager : MonoBehaviour {
         List <fishDictionary.word> words = soundCommunication.receivedWords;
         if (words.Count>0){
             foreach (fishDictionary.word word in words){
-                if (word.Name == "Music"){
+                if (word.Name == "music"){
                     curState = 13;
+                }
+                if( word.Name == "followme")
+                {
+                    curState = 14; //follow state
+                }
+                if(word.Name == "greeting")
+                {
+                    curState = 11;
+                }
+                if(word.Name == "alert")
+                {
+                    curState = 15; //flight state
+                }
+                if(word.Name == "smallTalk")
+                {
+                    curState = 11;
                 }
             }
         }
@@ -90,10 +107,10 @@ public class MJStateManager : MonoBehaviour {
 
     private void OnDrawGizmos()
     {
-        if (currentState != null && eyes != null )
+        if (currentState != null)
         {
             Gizmos.color = currentState.sceneGizmoColor;
-            Gizmos.DrawWireSphere(eyes.position, 0.1f);
+            Gizmos.DrawWireSphere(transform.position, 0.1f);
         }
 
     }
@@ -206,23 +223,25 @@ public class MJStateManager : MonoBehaviour {
     }
     #endregion
 
-    
+    /* trigger
     #region trigger
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag=="Mojili")
         {
             Debug.Log("trigger" + this.gameObject.name);
-            if(interactionTarget == null && other.GetComponent<MJStateManager>().interactionTarget == null)
+            if(interactionTarget == null && other.transform.parent.gameObject.GetComponent<MJStateManager>().interactionTarget == null)
             {
-                other.GetComponent<MJStateManager>().isInteracting = true;
+                other.transform.parent.gameObject.GetComponent<MJStateManager>().isInteracting = true;
+                isInteractor = true;
+                other.transform.parent.gameObject.GetComponent<MJStateManager>().isInteractee = true;
                 isInteracting = true;
                 navMeshAgent.SetDestination(transform.position);
                 onDestination = true;
-                other.GetComponent<MJStateManager>().navMeshAgent.SetDestination(other.transform.position);
-                other.GetComponent<MJStateManager>().onDestination = true;
-                other.GetComponent<MJStateManager>().interactionTarget = this.gameObject;
-                interactionTarget = other.gameObject;
+                other.transform.parent.gameObject.GetComponent<MJStateManager>().navMeshAgent.SetDestination(other.transform.position);
+                other.transform.parent.gameObject.GetComponent<MJStateManager>().onDestination = true;
+                other.transform.parent.gameObject.GetComponent<MJStateManager>().interactionTarget = this.gameObject;
+                interactionTarget = other.transform.parent.gameObject;
             }
 
         }
@@ -239,6 +258,7 @@ public class MJStateManager : MonoBehaviour {
         }
     }
     #endregion
+    */
     
 
     public void StartInteractiontimer()

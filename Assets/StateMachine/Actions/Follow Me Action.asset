@@ -8,10 +8,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06881e62d640cdc459cc9a818d5f19eb, type: 3}
-  m_Name: FollowMeState
+  m_Script: {fileID: 11500000, guid: 0a895f396380f6b47bbeb0ef4b2e5e70, type: 3}
+  m_Name: Follow Me Action
   m_EditorClassIdentifier: 
-  actions:
-  - {fileID: 11400000, guid: edb331a94c0b32542bf658d65a607ca2, type: 2}
-  transistions: []
-  sceneGizmoColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}

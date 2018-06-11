@@ -16,6 +16,6 @@ public class MusicAction : ActionScript
     {
         stateManager.isMakingMusic = true;
         if (!stateManager.soundCommunication.sourceNear.isPlaying)
-            stateManager.AudioAction("Music");
+            stateManager.AudioAction("music");
     }
 }
