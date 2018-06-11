@@ -9,7 +9,7 @@ public class FollowDecision : Decision
 {
     public override bool Decide(MJStateManager stateManager)
     {
-        throw new NotImplementedException();
+        return CheckState(stateManager);
     }
 
     bool CheckState(MJStateManager stateManager)

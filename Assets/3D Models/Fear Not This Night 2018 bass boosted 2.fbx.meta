@@ -1,121 +1,99 @@
 fileFormatVersion: 2
-guid: e8f40c9e9e3126c46a9009ba2204cb2f
-timeCreated: 1528741037
+guid: d08916680e2022043b619ecf029785f5
+timeCreated: 1528739715
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Buschel
-    100002: //RootNode
-    100004: Grass
-    100006: Grass_Patch
-    100008: GrassA_2
-    100010: GRassB_1
+    100000: Ambient_trees
+    100002: buschel
+    100004: buschel_lang
+    100006: Bush
+    100008: //RootNode
+    100010: Flora
     100012: ground_zero
-    100014: Mojili
-    100016: Moss
-    100018: Moss_tree
-    100020: Rocks
-    100022: Sand
-    100024: Tree
-    100026: Tree_1
-    100028: Tree_2
-    100030: Tree_3
-    100032: Ambient_trees
-    100034: buschel
-    100036: buschel_lang
-    100038: Bush
-    100040: Flora
-    100042: Kelp
-    100044: Multi_patch
-    100046: Single_patch
-    400000: Buschel
-    400002: //RootNode
-    400004: Grass
-    400006: Grass_Patch
-    400008: GrassA_2
-    400010: GRassB_1
+    100014: Kelp
+    100016: Mojili
+    100018: Moss
+    100020: Moss_tree
+    100022: Multi_patch
+    100024: Rocks
+    100026: Sand
+    100028: Single_patch
+    100030: Tree
+    100032: Tree_1
+    100034: Tree_2
+    100036: Tree_3
+    400000: Ambient_trees
+    400002: buschel
+    400004: buschel_lang
+    400006: Bush
+    400008: //RootNode
+    400010: Flora
     400012: ground_zero
-    400014: Mojili
-    400016: Moss
-    400018: Moss_tree
-    400020: Rocks
-    400022: Sand
-    400024: Tree
-    400026: Tree_1
-    400028: Tree_2
-    400030: Tree_3
-    400032: Ambient_trees
-    400034: buschel
-    400036: buschel_lang
-    400038: Bush
-    400040: Flora
-    400042: Kelp
-    400044: Multi_patch
-    400046: Single_patch
-    2100000: No Name
-    2100002: Mat.1
+    400014: Kelp
+    400016: Mojili
+    400018: Moss
+    400020: Moss_tree
+    400022: Multi_patch
+    400024: Rocks
+    400026: Sand
+    400028: Single_patch
+    400030: Tree
+    400032: Tree_1
+    400034: Tree_2
+    400036: Tree_3
+    2100000: Mat.1
+    2100002: No Name
     2100004: Mat.3
-    2300000: Buschel
-    2300002: Grass_Patch
-    2300004: GrassA_2
-    2300006: GRassB_1
-    2300008: ground_zero
+    2300000: buschel
+    2300002: buschel_lang
+    2300004: Bush
+    2300006: ground_zero
+    2300008: Kelp
     2300010: Mojili
     2300012: Moss
     2300014: Moss_tree
-    2300016: Rocks
-    2300018: Sand
-    2300020: Tree
-    2300022: Tree_1
-    2300024: Tree_2
-    2300026: Tree_3
-    2300028: buschel
-    2300030: buschel_lang
-    2300032: Bush
-    2300034: Kelp
-    2300036: Multi_patch
-    2300038: Single_patch
-    3300000: Buschel
-    3300002: Grass_Patch
-    3300004: GrassA_2
-    3300006: GRassB_1
-    3300008: ground_zero
+    2300016: Multi_patch
+    2300018: Rocks
+    2300020: Sand
+    2300022: Single_patch
+    2300024: Tree
+    2300026: Tree_1
+    2300028: Tree_2
+    2300030: Tree_3
+    3300000: buschel
+    3300002: buschel_lang
+    3300004: Bush
+    3300006: ground_zero
+    3300008: Kelp
     3300010: Mojili
     3300012: Moss
     3300014: Moss_tree
-    3300016: Rocks
-    3300018: Sand
-    3300020: Tree
-    3300022: Tree_1
-    3300024: Tree_2
-    3300026: Tree_3
-    3300028: buschel
-    3300030: buschel_lang
-    3300032: Bush
-    3300034: Kelp
-    3300036: Multi_patch
-    3300038: Single_patch
-    4300000: Mojili
-    4300002: Buschel
-    4300004: GRassB_1
-    4300006: Grass_Patch
-    4300008: GrassA_2
-    4300010: Sand
-    4300012: Moss
-    4300014: Rocks
-    4300016: ground_zero
-    4300018: Tree
-    4300020: Moss_tree
-    4300022: Tree_1
-    4300024: Tree_2
-    4300026: Tree_3
-    4300028: buschel
-    4300030: buschel_lang
-    4300032: Multi_patch
-    4300034: Kelp
-    4300036: Single_patch
-    4300038: Bush
+    3300016: Multi_patch
+    3300018: Rocks
+    3300020: Sand
+    3300022: Single_patch
+    3300024: Tree
+    3300026: Tree_1
+    3300028: Tree_2
+    3300030: Tree_3
+    4300000: buschel
+    4300002: buschel_lang
+    4300004: Multi_patch
+    4300006: Kelp
+    4300008: Single_patch
+    4300010: Bush
+    4300012: Mojili
+    4300014: Sand
+    4300016: Moss
+    4300018: Rocks
+    4300020: ground_zero
+    4300022: Tree
+    4300024: Moss_tree
+    4300026: Tree_1
+    4300028: Tree_2
+    4300030: Tree_3
   externalObjects: {}
   materials:
     importMaterials: 1
