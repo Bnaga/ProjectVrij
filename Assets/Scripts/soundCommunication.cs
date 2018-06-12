@@ -45,8 +45,8 @@ public class soundCommunication : MonoBehaviour {
 		sourceNear.volume=.6f;
 
 		sourceFar = sources[1];
-		sourceFar.maxDistance *= 20;
-		sourceFar.volume = .3f;
+		sourceFar.maxDistance *= 4;
+		sourceFar.volume = .1f;
 		
 		soundSphere = gameObject.AddComponent(typeof(SphereCollider)) as SphereCollider;
 		soundSphere.radius = soundRange;

@@ -36,6 +36,7 @@ private List <fishDictionary.word> playbackWords = new List<fishDictionary.word>
 	public Image playButton;
 
 	public GameObject Menu;
+	private bool menuActive;
 	public VRTK.VRTK_Pointer PointerScript;
 
 	void Start(){
@@ -48,7 +49,7 @@ private List <fishDictionary.word> playbackWords = new List<fishDictionary.word>
 	void Update () {
 		isRecording = leftHand.triggerPressed;
 		//setting the audio recorder
-		if (!microphoneListener.enabled && isRecording){
+		if (!microphoneListener.enabled && isRecording && !menuActive){
 			audioRecorder.StartRecording();
 			microphoneCommunication.receivedWords.Clear();
 			
@@ -81,16 +82,16 @@ private List <fishDictionary.word> playbackWords = new List<fishDictionary.word>
 
 		if (leftHand.menuPressed && barProgress>.3f){
 			barProgress=0;
-			bool a = !Menu.activeInHierarchy;
-			Menu.SetActive(a);
+			menuActive = !Menu.activeInHierarchy;
+			Menu.SetActive(menuActive);
 			//PointerScript.Toggle(a);
-			playButton.enabled = a;
-			recordingProgress.enabled = a;
+			playButton.enabled = menuActive;
+			recordingProgress.enabled = menuActive;
 
 
 		}
 
-		if (leftHand.padPressed && !isRecording && holdingRecording){
+		if (leftHand.padPressed && !isRecording && holdingRecording && !menuActive){
 			barProgress=0;
 			playbackDevice.receivedWords = playbackWords;
 			playbackDevice.PlaySound(audioRecording);

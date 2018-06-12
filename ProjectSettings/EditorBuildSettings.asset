@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/proto_fancy.unity
     guid: a085d7c147ae5e740a7655ebb6937399
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/world_carl.unity
     guid: eca93b3ad6788bb4290bb5af8da5b199
+  - enabled: 1
+    path: Assets/Scenes/world_carl 1.unity
+    guid: 8307146447185374781778770dc9c5b5
