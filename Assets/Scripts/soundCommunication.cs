@@ -20,7 +20,7 @@ public class soundCommunication : MonoBehaviour {
 	[HideInInspector]
 	public AudioSource sourceNear;
 
-	void Awake () {
+	void Start () {
 
 		//if (!GetComponent<Rigidbody>()) Debug.Log("No RigidBody on" + gameObject.name);
 		if (!GetComponent<Rigidbody>()){
@@ -29,23 +29,26 @@ public class soundCommunication : MonoBehaviour {
 			rb.isKinematic=true;
 		}
 		
+		AudioSource settings = audiosourceSettings.source;
 		for (int i = 0; i < 2; i++){
 			AudioSource audioSource = gameObject.AddComponent(typeof(AudioSource)) as AudioSource;
-			audioSource.spatialBlend=1;
-			audioSource.spatialize=true;
-			audioSource.rolloffMode = AudioRolloffMode.Linear;
-			audioSource.minDistance = 0;
-			audioSource.maxDistance = soundRange;
+			audioSource.spatialBlend	= settings.spatialBlend;
+			audioSource.spatialize		= settings.spatialize;
+			audioSource.rolloffMode 	= settings.rolloffMode;
+			audioSource.rolloffMode		= settings.rolloffMode;
+			audioSource.SetCustomCurve(AudioSourceCurveType.CustomRolloff,settings.GetCustomCurve(AudioSourceCurveType.CustomRolloff));
+			
+			audioSource.maxDistance = soundRange*2;
 			
 			
 			sources.Add(audioSource);
 
 		}
 		sourceNear = sources[0];
-		sourceNear.volume=.6f;
+		sourceNear.volume=.4f;
 
 		sourceFar = sources[1];
-		sourceFar.maxDistance *= 4;
+		sourceFar.maxDistance *= 8;
 		sourceFar.volume = .1f;
 		
 		soundSphere = gameObject.AddComponent(typeof(SphereCollider)) as SphereCollider;
