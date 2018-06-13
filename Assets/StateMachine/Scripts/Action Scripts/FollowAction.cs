@@ -13,6 +13,7 @@ public class FollowAction : ActionScript
 
     void FollowTarget(MJStateManager stateManager)
     {
-
+        stateManager.navMeshAgent.SetDestination(stateManager.followTarget.transform.position);
+        stateManager.StartInteractiontimer();
     }
 }
