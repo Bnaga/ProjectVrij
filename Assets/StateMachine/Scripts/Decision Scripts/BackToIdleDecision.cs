@@ -21,6 +21,10 @@ public class BackToIdleDecision : Decision
             //stateManager.StartCoroutine("CoolDownTimer");
             return true;
         }
+        if(stateManager.curState == 0)
+        {
+            return true;
+        }
         else return false;
     }
 }

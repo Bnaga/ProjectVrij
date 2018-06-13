@@ -37,6 +37,7 @@ public class FlightAction : ActionScript
         {
             stateManager.onDestination = true;
             stateManager.navMeshAgent.speed = 0.1f;
+            stateManager.curState = 0;
             stateManager.hide = true;
         }
         //Debug.Log(onDestination);

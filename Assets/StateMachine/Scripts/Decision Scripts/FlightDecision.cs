@@ -22,6 +22,10 @@ public class FlightDecision : Decision
             stateManager.isInteracting = false;
             return true;
         }
+        if(stateManager.curState == 15 && !stateManager.coolDown)
+        {
+            return true;
+        }
         else return false;
     }
 }

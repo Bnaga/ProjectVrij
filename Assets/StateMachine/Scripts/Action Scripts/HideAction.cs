@@ -21,6 +21,8 @@ public class HideAction : ActionScript
         {
             if(!SafetyTest(stateManager))
             {
+                stateManager.StartCoolDown();
+                stateManager.curState = 0;
                 stateManager.inDanger = false;
                 stateManager.hide = false;
             }
@@ -31,7 +33,7 @@ public class HideAction : ActionScript
     public bool SafetyTest(MJStateManager stateManager)
     {
         Camera mainCamera = Camera.main;
-        if (Vector3.Distance(mainCamera.transform.position, stateManager.transform.position) <= 1)
+        if (Vector3.Distance(mainCamera.transform.position, stateManager.transform.position) <= .25f)
         {
             Debug.Log("Panic!!");
             stateManager.inDanger = true;

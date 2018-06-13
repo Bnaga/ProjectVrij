@@ -20,6 +20,7 @@ public class HideDecision : Decision
         if (stateManager.hide && testTimer >= endTimer)
         {
             testTimer = 0;
+            stateManager.curState = 0;
             return true;
         }
         return false;
