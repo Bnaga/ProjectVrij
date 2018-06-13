@@ -13,7 +13,7 @@ public class DefaultInterAction : ActionScript
 
     void RandomState(MJStateManager stateManager)
     {
-        //stateManager.RandomInteraction();
-        stateManager.curState = 11;
+        stateManager.RandomsInteraction();
+        //stateManager.curState = 11;
     }
 }

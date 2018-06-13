@@ -42,6 +42,7 @@ public class MJStateManager : MonoBehaviour {
 
     public GameObject interactionTarget;
     public GameObject Leader;
+    public GameObject followTarget;
 
     [HideInInspector] public NavMeshAgent navMeshAgent;
 	// Use this for initialization
@@ -88,6 +89,8 @@ public class MJStateManager : MonoBehaviour {
                 if( word.Name == "followme")
                 {
                     curState = 14; //follow state
+                    followTarget = interactionTarget;
+                    isFollowing = true;
                 }
                 if(word.Name == "greeting")
                 {
@@ -209,7 +212,20 @@ public class MJStateManager : MonoBehaviour {
 
     }
 
-    public void MusicInteraction()
+    public void RandomsInteraction()
+    {
+        tempState = Random.Range(0, 10);
+        if (tempState < 6)
+        {
+            curState = 11; //talk state
+        }
+        if (tempState >= 6)
+        {
+            curState = 10; //follow me state
+        }
+    }
+
+        public void MusicInteraction()
     {
         tempState = Random.Range(1, 101);
         if (tempState < 86)
