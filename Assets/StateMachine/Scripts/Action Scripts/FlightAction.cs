@@ -10,7 +10,7 @@ public class FlightAction : ActionScript
     private float houseDistance = 100;
     private Vector3 target;
     bool onDestination = true;
-   // Vector3 mojiDestination;
+    //Vector3 mojiDestination;
     //bool arrived = false;
 
     public override void Act(MJStateManager stateManager)
@@ -29,12 +29,14 @@ public class FlightAction : ActionScript
             stateManager.navMeshAgent.SetDestination(target);
            // Debug.Log(stateManager.navMeshAgent.destination);
             stateManager.onDestination = false;
+            stateManager.navMeshAgent.speed = 0.2f;
             //Debug.Log("test");
         }
 
         if (Vector3.Distance(stateManager.transform.position, target) <= .1f)
         {
             stateManager.onDestination = true;
+            stateManager.navMeshAgent.speed = 0.1f;
             stateManager.hide = true;
         }
         //Debug.Log(onDestination);
