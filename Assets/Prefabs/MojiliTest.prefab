@@ -42,7 +42,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1627833285921272
 GameObject:
   m_ObjectHideFlags: 1
@@ -72,9 +72,11 @@ GameObject:
   - component: {fileID: 114998507770109520}
   - component: {fileID: 114550945514102158}
   - component: {fileID: 114682133530434382}
+  - component: {fileID: 135184243947419752}
+  - component: {fileID: 114042134100444800}
   m_Layer: 0
   m_Name: MojiliTest
-  m_TagString: Untagged
+  m_TagString: Mojili
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -215,8 +217,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1710005133066964}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.247, y: 0.017892, z: -0.626}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.947, y: 0.067, z: -0.756}
   m_LocalScale: {x: 0.03179971, y: 0.031799708, z: 0.031799708}
   m_Children:
   - {fileID: 4159135272101496}
@@ -347,6 +349,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1627833285921272}
   m_Mesh: {fileID: 4300002, guid: b160f4724cf258147b3756b798e64eba, type: 3}
+--- !u!114 &114042134100444800
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1710005133066964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b634a19319bbf7848821266a34add96b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114550945514102158
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -374,7 +387,7 @@ MonoBehaviour:
   testClip: {fileID: 0}
   receivedWords: []
   playbackDevice: 0
-  soundRange: 0
+  soundRange: 0.6
   sourceNear: {fileID: 0}
 --- !u!114 &114871953565628050
 MonoBehaviour:
@@ -426,7 +439,20 @@ MonoBehaviour:
   isInteractee: 0
   interactionTarget: {fileID: 0}
   Leader: {fileID: 0}
+  followTarget: {fileID: 0}
   navMeshAgent: {fileID: 0}
+--- !u!135 &135184243947419752
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1710005133066964}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 5.025199
+  m_Center: {x: 0, y: 0.83485883, z: -0.20186011}
 --- !u!135 &135885106441998394
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -13,7 +13,7 @@ public class DefaultIntDecision : Decision
 
     private bool CheckCurrentState(MJStateManager stateManager)
     {
-        if (stateManager.isInteracting && stateManager.gameObject.GetComponent<RoleManager>().GetCurrentRole() != 1 && !stateManager.otherIsLeader && stateManager.onIntDestination)
+        if (stateManager.isInteracting && stateManager.gameObject.GetComponent<RoleManager>().GetCurrentRole() != 1 && !stateManager.otherIsLeader && stateManager.onIntDestination && stateManager.isInteractor)
         {
             stateManager.onDestination = true;
             return true;

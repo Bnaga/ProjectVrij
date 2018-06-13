@@ -19,6 +19,7 @@ public class FlightDecision : Decision
         {
             stateManager.inDanger = true;
             stateManager.onDestination = true;
+            stateManager.isInteracting = false;
             return true;
         }
         else return false;

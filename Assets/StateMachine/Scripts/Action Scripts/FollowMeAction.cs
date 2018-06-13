@@ -8,13 +8,14 @@ public class FollowMeAction : ActionScript
 {
     public override void Act(MJStateManager stateManager)
     {
-        throw new NotImplementedException();
+        FollowSound(stateManager);
     }
 
     void FollowSound(MJStateManager stateManager)
     {
         if (!stateManager.soundCommunication.sourceNear.isPlaying)
             stateManager.AudioAction("followme");
+        stateManager.StartInteractiontimer();
     }
 
 }

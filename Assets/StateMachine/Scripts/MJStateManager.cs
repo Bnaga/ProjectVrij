@@ -66,10 +66,10 @@ public class MJStateManager : MonoBehaviour {
      isFollowing = false;
      isMakingMusic = false;
      otherIsLeader = false;
-     waitIsOver = false;
-
-     
-}
+     waitIsOver = false; 
+     isInteractor = false;
+     isInteractee = false;
+    }
 
     private void Update()
     {
@@ -88,6 +88,7 @@ public class MJStateManager : MonoBehaviour {
                 }
                 if( word.Name == "followme")
                 {
+                    Debug.Log("follow me");
                     curState = 14; //follow state
                     followTarget = interactionTarget;
                     isFollowing = true;

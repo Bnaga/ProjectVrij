@@ -8,7 +8,7 @@ public class FollowAction : ActionScript
 {
     public override void Act(MJStateManager stateManager)
     {
-        throw new NotImplementedException();
+        FollowTarget(stateManager);
     }
 
     void FollowTarget(MJStateManager stateManager)

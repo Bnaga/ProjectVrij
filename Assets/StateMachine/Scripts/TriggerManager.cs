@@ -30,7 +30,7 @@ public class TriggerManager : MonoBehaviour {
                 stateManager.onDestination = true;
                 other.transform.parent.gameObject.GetComponent<MJStateManager>().navMeshAgent.SetDestination(other.transform.position);
                 other.transform.parent.gameObject.GetComponent<MJStateManager>().onDestination = true;
-                other.transform.parent.gameObject.GetComponent<MJStateManager>().interactionTarget = this.transform.parent.gameObject.gameObject;
+                other.transform.parent.gameObject.GetComponent<MJStateManager>().interactionTarget = this.transform.parent.gameObject;
                 stateManager.isInteractor = true;
                 other.transform.parent.gameObject.GetComponent<MJStateManager>().isInteractee = true;
             }
@@ -38,7 +38,7 @@ public class TriggerManager : MonoBehaviour {
         }
     }
 
-    /*
+    
     private void OnTriggerExit(Collider other)
     {
         if (other.transform.parent.gameObject.name == stateManager.interactionTarget.name)
@@ -47,7 +47,9 @@ public class TriggerManager : MonoBehaviour {
             stateManager.isInteracting = false;
             other.transform.parent.gameObject.GetComponent<MJStateManager>().interactionTarget = null;
             stateManager.interactionTarget = null;
+            stateManager.isInteractor = false;
+            other.transform.parent.gameObject.GetComponent<MJStateManager>().isInteractee = false;
         }
     }
-    */
+    
 }
