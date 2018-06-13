@@ -69,6 +69,7 @@ public class MJStateManager : MonoBehaviour {
      waitIsOver = false; 
      isInteractor = false;
      isInteractee = false;
+     interactionTarget = gameObject;
     }
 
     private void Update()
@@ -88,7 +89,7 @@ public class MJStateManager : MonoBehaviour {
                 }
                 if( word.Name == "followme")
                 {
-                    Debug.Log("follow me");
+                   // Debug.Log("follow me");
                     curState = 14; //follow state
                     followTarget = interactionTarget;
                     isFollowing = true;
@@ -240,42 +241,47 @@ public class MJStateManager : MonoBehaviour {
     }
     #endregion
 
-    /* trigger
+    
     #region trigger
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag=="Mojili")
+        if (other.tag == "Mojili")
         {
-            Debug.Log("trigger" + this.gameObject.name);
-            if(interactionTarget == null && other.transform.parent.gameObject.GetComponent<MJStateManager>().interactionTarget == null)
+            interactionTarget = null;
+            //Debug.Log("trigger" + other.name);
+            if (this.interactionTarget == null && other.gameObject.GetComponent<MJStateManager>().interactionTarget == null)
             {
-                other.transform.parent.gameObject.GetComponent<MJStateManager>().isInteracting = true;
-                isInteractor = true;
-                other.transform.parent.gameObject.GetComponent<MJStateManager>().isInteractee = true;
+                other.gameObject.GetComponent<MJStateManager>().isInteracting = true;
                 isInteracting = true;
-                navMeshAgent.SetDestination(transform.position);
+                other.gameObject.GetComponent<MJStateManager>().interactionTarget = this.gameObject;
+                interactionTarget = other.gameObject;
                 onDestination = true;
-                other.transform.parent.gameObject.GetComponent<MJStateManager>().navMeshAgent.SetDestination(other.transform.position);
-                other.transform.parent.gameObject.GetComponent<MJStateManager>().onDestination = true;
-                other.transform.parent.gameObject.GetComponent<MJStateManager>().interactionTarget = this.gameObject;
-                interactionTarget = other.transform.parent.gameObject;
+                other.GetComponent<MJStateManager>().navMeshAgent.SetDestination(other.transform.position);
+                other.GetComponent<MJStateManager>().onDestination = true;
+                other.GetComponent<MJStateManager>().interactionTarget = this.gameObject;
+                isInteractor = true;
+                other.gameObject.GetComponent<MJStateManager>().isInteractee = true;
             }
 
         }
     }
 
+    
     private void OnTriggerExit(Collider other)
     {
-        if (other.name == interactionTarget.name)
+        if(other.tag == "Mojili")
         {
-            other.GetComponent<MJStateManager>().isInteracting = false;
-            isInteracting = false;
-            other.GetComponent<MJStateManager>().interactionTarget = null;
-            interactionTarget = null;
+                other.gameObject.GetComponent<MJStateManager>().isInteracting = false;
+                isInteracting = false;
+                other.gameObject.GetComponent<MJStateManager>().interactionTarget = null;
+                interactionTarget = null;
+                isInteractor = false;
+                other.gameObject.GetComponent<MJStateManager>().isInteractee = false;
         }
+
     }
     #endregion
-    */
+    
     
 
     public void StartInteractiontimer()

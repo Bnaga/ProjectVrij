@@ -41,15 +41,19 @@ MJStateManager stateManager;
     
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.name == stateManager.interactionTarget.name)
+        if(other.tag == "Mojili")
         {
-            other.gameObject.GetComponent<MJStateManager>().isInteracting = false;
-            stateManager.isInteracting = false;
-            other.gameObject.GetComponent<MJStateManager>().interactionTarget = null;
-            stateManager.interactionTarget = null;
-            stateManager.isInteractor = false;
-            other.gameObject.GetComponent<MJStateManager>().isInteractee = false;
+            if (other.gameObject.name == stateManager.interactionTarget.name)
+            {
+                other.gameObject.GetComponent<MJStateManager>().isInteracting = false;
+                stateManager.isInteracting = false;
+                other.gameObject.GetComponent<MJStateManager>().interactionTarget = null;
+                stateManager.interactionTarget = null;
+                stateManager.isInteractor = false;
+                other.gameObject.GetComponent<MJStateManager>().isInteractee = false;
+            }
         }
+
     }
     
 }

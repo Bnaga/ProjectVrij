@@ -15,7 +15,7 @@ public class InterAction : ActionScript
 
     void MoveToAvg(MJStateManager stateManager)
     {
-        if (stateManager.onDestination)
+        if (stateManager.onDestination && stateManager.interactionTarget != null)
         {
             averagePos = (stateManager.gameObject.transform.position + stateManager.interactionTarget.transform.position) / 2;
             //Debug.Log(averagePos);
