@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 198130434427437560}
   - component: {fileID: 65787109145566102}
   - component: {fileID: 135145729181174122}
+  - component: {fileID: 114023128892508044}
   m_Layer: 0
   m_Name: Fish_Big
   m_TagString: Untagged
@@ -115,6 +116,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.091262385, y: 0.35574508, z: 0.93995255}
   m_Center: {x: 0.0000000018626451, y: 0.000000007450581, z: 0.000000029802322}
+--- !u!114 &114023128892508044
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1989941529895064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c319970e06fe474eb3bd75395dab968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: ba8d68937fd6b734ba5a158e68d9d704, type: 3}
+  - {fileID: 8300000, guid: 7d7bd3fbc0dc7f94c88a6f8e781d4eb3, type: 3}
+  - {fileID: 8300000, guid: 386be409e290a034787c13e07627d774, type: 3}
+  - {fileID: 8300000, guid: 90e0084bea4479847bb1e1dd01aefd24, type: 3}
+  - {fileID: 8300000, guid: 6ccf67f16c388084cb03acc3d3fb793b, type: 3}
+  - {fileID: 8300000, guid: 645c1fdc02f615641a7813c06c37be0f, type: 3}
+  - {fileID: 8300000, guid: 137ecdaccae19474fa9b5fa65f2894e0, type: 3}
+  soundFrequency: 4
 --- !u!114 &114866735177263838
 MonoBehaviour:
   m_ObjectHideFlags: 1

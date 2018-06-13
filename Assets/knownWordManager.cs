@@ -6,9 +6,11 @@ public class knownWordManager : MonoBehaviour {
 
 	public GameObject speechBalloon;
 	public GameObject speechParticles;
+	public Material alertMaterial;
 	public static knownWordManager self;
 	public fishDictionary[] dictionaries;
 	private static GameObject o;
+
 
 	void Start(){
 		self = this;
@@ -32,8 +34,15 @@ public class knownWordManager : MonoBehaviour {
 	
 
 	public static void wordBalloon(Vector3 location, fishDictionary.word word ){
+		Instantiate(self.speechParticles,location, Quaternion.identity);
 		if (!word.known) return;
 		o = Instantiate(self.speechBalloon, location, Quaternion.identity);
 		o.GetComponent<speechBalloon>().initWord(word);
+	}
+
+	public static void alerted(Vector3 location){
+		o = Instantiate(self.speechParticles,location, Quaternion.identity);
+		o.GetComponent<ParticleSystemRenderer>().material = self.alertMaterial;
+
 	}
 }

@@ -86,6 +86,7 @@ public class soundCommunication : MonoBehaviour {
 		currentWord = word;
 		AudioClip far = dictionary.far[word.farawaySound];
 		if (sourceFar.clip !=far) StartCoroutine(NextSound(far,sourceFar));
+		knownWordManager.wordBalloon(transform.position, word);
 	}
 
 	void OnTriggerEnter (Collider other){
