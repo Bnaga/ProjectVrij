@@ -113,6 +113,7 @@ GameObject:
   - component: {fileID: 114643473699653720}
   - component: {fileID: 114036065441680120}
   - component: {fileID: 114181558713093638}
+  - component: {fileID: 114897088561219298}
   m_Layer: 0
   m_Name: Controller (left)
   m_TagString: Untagged
@@ -1259,7 +1260,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1389975421373460
 GameObject:
   m_ObjectHideFlags: 1
@@ -11045,6 +11046,21 @@ MonoBehaviour:
   - {x: -1.56, y: 0.01, z: -1.185}
   - {x: -1.56, y: 0.01, z: 1.185}
   - {x: 1.56, y: 0.01, z: 1.185}
+--- !u!114 &114897088561219298
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1023314365617372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 332d14cb192014e468c6600e917c8c28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBalloon: {fileID: 1898019799143832, guid: f5094cc7591059649a7571dbc66e22fe,
+    type: 2}
+  dictionaries:
+  - {fileID: 11400000, guid: 4e960cd3c1dec7b4bb1297d473a24f2f, type: 2}
 --- !u!114 &114902374783581976
 MonoBehaviour:
   m_ObjectHideFlags: 1

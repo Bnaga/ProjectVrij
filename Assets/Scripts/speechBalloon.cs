@@ -11,14 +11,22 @@ public class speechBalloon : MonoBehaviour {
 	private fishDictionary.word word;
 	
 	// Update is called once per frame
-	public void init(fishDictionary.word initword){
+	public void initWord(fishDictionary.word initword){
 		word = initword;
-		transform.rotation = Random.rotation;
+		
 		string text = word.meaning;
 		if (!word.known) text = "???????";
-		GetComponent<TextMeshPro>().SetText(text);
+		init(text);
+		
 
 	}
+
+	public void init(string text){
+		transform.rotation = Random.rotation;
+		GetComponent<TextMeshPro>().SetText(text);
+	}
+
+
 	
 	void Update () {
 		timer += Time.deltaTime;

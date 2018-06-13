@@ -1,90 +1,16 @@
 fileFormatVersion: 2
-guid: ff853a957e870f243bb96ad70e74fe8b
-timeCreated: 1527354408
+guid: a0617aa8e6d2a1e48bb2d4e77442eff1
+timeCreated: 1528898095
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
-    100002: polySurface1
-    100004: polySurface2
-    100006: pSphere1
-    100008: pSphere2
-    100010: pSphere3
-    100012: pSphere4
-    100014: pTorus1
-    100016: transform1
-    100018: transform2
-    100020: transform3
-    100022: polySurface3
-    100024: polySurface4
-    100026: polySurface5
-    100028: polySurface6
-    100030: polySurface7
-    100032: polySurface7 1
-    100034: transform4
-    100036: transform5
-    100038: polySurface10
-    100040: polySurface11
-    100042: polySurface8
-    100044: polySurface9
-    100046: transform6
     400000: //RootNode
-    400002: polySurface1
-    400004: polySurface2
-    400006: pSphere1
-    400008: pSphere2
-    400010: pSphere3
-    400012: pSphere4
-    400014: pTorus1
-    400016: transform1
-    400018: transform2
-    400020: transform3
-    400022: polySurface3
-    400024: polySurface4
-    400026: polySurface5
-    400028: polySurface6
-    400030: polySurface7
-    400032: polySurface7 1
-    400034: transform4
-    400036: transform5
-    400038: polySurface10
-    400040: polySurface11
-    400042: polySurface8
-    400044: polySurface9
-    400046: transform6
-    2100000: lambert1
-    2100002: micColors
-    2300000: polySurface2
-    2300002: pSphere1
-    2300004: pSphere2
-    2300006: pSphere4
-    2300008: polySurface5
-    2300010: polySurface7
-    2300012: polySurface10
-    2300014: polySurface11
-    2300016: polySurface8
-    2300018: polySurface9
-    3300000: polySurface2
-    3300002: pSphere1
-    3300004: pSphere2
-    3300006: pSphere4
-    3300008: polySurface5
-    3300010: polySurface7
-    3300012: polySurface10
-    3300014: polySurface11
-    3300016: polySurface8
-    3300018: polySurface9
-    4300000: pSphere1
-    4300002: pSphere2
-    4300004: pSphere4
-    4300006: polySurface2
-    4300008: polySurface5
-    4300010: polySurface7
-    4300012: polySurface8
-    4300014: polySurface9
-    4300016: polySurface10
-    4300018: polySurface11
+    2100000: lambert4
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Mask_base
   externalObjects: {}
   materials:
     importMaterials: 1
