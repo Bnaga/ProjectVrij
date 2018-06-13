@@ -61,6 +61,7 @@ private List <fishDictionary.word> playbackWords = new List<fishDictionary.word>
 			playbackWords = microphoneCommunication.receivedWords;
 			recordingProgress.enabled=false;
 			barProgress=2*maxRecordingLength;
+			knownWordManager.checkRecording(playbackWords);
 		}
 		holdingRecording = audioRecorder.recording != null;
 

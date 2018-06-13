@@ -55,6 +55,7 @@ ModelImporter:
     400046: glass
     2100000: lambert1
     2100002: blinn1
+    2100004: blinn3
     2300000: pCube2
     2300002: pSphere1
     2300004: pSphere2

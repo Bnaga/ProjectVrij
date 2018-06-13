@@ -26,7 +26,7 @@ public class soundManagerPrototype : MonoBehaviour {
 			soundCommunication.playWord(sound, dictionary);
 			soundTimer = Random.Range(-soundFrequency/2,0);
 			GameObject balloon = Instantiate(speechBalloon,transform, false);
-			balloon.GetComponent<speechBalloon>().init(sound);
+			balloon.GetComponent<speechBalloon>().initWord(sound);
 
 		}	
 	}
