@@ -17,7 +17,6 @@ public class knownWordManager : MonoBehaviour {
 		foreach (fishDictionary dict in dictionaries){
 			foreach (fishDictionary.word w in dict.dictionary){
 				w.known = w.knownFromStart;
-				w.known = Random.value>.5f;
 			}
 		}
 	}

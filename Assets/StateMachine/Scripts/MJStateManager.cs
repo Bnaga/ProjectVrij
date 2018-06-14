@@ -81,33 +81,33 @@ public class MJStateManager : MonoBehaviour {
 
 
     private void soundResponse(){
-        List <fishDictionary.word> words = soundCommunication.receivedWords;
-        if (words.Count>0){
-            foreach (fishDictionary.word word in words){
-                if (word.Name == "music"){
-                    curState = 13;
-                }
-                if( word.Name == "followme")
-                {
-                   // Debug.Log("follow me");
-                    curState = 14; //follow state
-                    followTarget = interactionTarget;
-                    isFollowing = true;
-                }
-                if(word.Name == "greeting")
-                {
-                    curState = 11;
-                }
-                if(word.Name == "alert")
-                {
-                    curState = 15; //flight state
-                }
-                if(word.Name == "smallTalk")
-                {
-                    curState = 11;
-                }
+        fishDictionary.word word = soundCommunication.nearestReceived();
+        if (word != null){
+            soundCommunication.Clear();
+            if (word.Name == "music"){
+                curState = 13;
+            }
+            if( word.Name == "followme")
+            {
+                // Debug.Log("follow me");
+                curState = 14; //follow state
+                followTarget = interactionTarget;
+                isFollowing = true;
+            }
+            if(word.Name == "greeting")
+            {
+                curState = 11;
+            }
+            if(word.Name == "alert")
+            {
+                curState = 15; //flight state
+            }
+            if(word.Name == "smallTalk")
+            {
+                curState = 11;
             }
         }
+      
     }
 
     private void OnDrawGizmos()

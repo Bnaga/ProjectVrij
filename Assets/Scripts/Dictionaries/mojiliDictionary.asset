@@ -31,7 +31,7 @@ MonoBehaviour:
     audio:
     - {fileID: 8300000, guid: bdaedd5c163231a4486625de46d17219, type: 3}
     farawaySound: 0
-    known: 0
+    known: 1
     knownFromStart: 0
   - Name: smalltalk
     meaning: Chit-Chat
@@ -44,8 +44,8 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 8c86f34e362b4bb47ae315c83a6f8eda, type: 3}
     - {fileID: 8300000, guid: a214e8af00b903c4ca130e340e1f0e98, type: 3}
     farawaySound: 2
-    known: 0
-    knownFromStart: 0
+    known: 1
+    knownFromStart: 1
   - Name: music
     meaning: Music
     audio:
@@ -54,7 +54,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: e8abf7d433c40004ca25d733acff2efa, type: 3}
     - {fileID: 8300000, guid: 2019aca755cb3c14b8db278ca662e73b, type: 3}
     farawaySound: 1
-    known: 0
+    known: 1
     knownFromStart: 0
   far:
   - {fileID: 8300000, guid: fd02ee11d8bbb454fa3eb227b267d8b5, type: 3}
