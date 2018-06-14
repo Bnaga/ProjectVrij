@@ -46,6 +46,7 @@ public class soundCommunication : MonoBehaviour {
 		}
 		sourceNear = sources[0];
 		sourceNear.volume=.4f;
+		if (playbackDevice) sourceNear.volume = 1.5f;
 
 		sourceFar = sources[1];
 		sourceFar.maxDistance *= 8;
@@ -87,6 +88,7 @@ public class soundCommunication : MonoBehaviour {
 		currentWord = word;
 		AudioClip far = dictionary.far[word.farawaySound];
 		if (sourceFar.clip !=far) StartCoroutine(NextSound(far,sourceFar));
+		knownWordManager.wordBalloon(transform.position, word);
 		
 	}
 

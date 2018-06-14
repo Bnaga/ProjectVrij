@@ -38,7 +38,6 @@ public class knownWordManager : MonoBehaviour {
 			Debug.Log("no self knownwordmanager");
 			return;
 		};
-		location+=Vector3.up;
 		Instantiate(self.speechParticles,location, Quaternion.identity);
 		if (!word.known) return;
 		o = Instantiate(self.speechBalloon, location, Quaternion.identity);

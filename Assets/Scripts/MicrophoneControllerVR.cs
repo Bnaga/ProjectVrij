@@ -82,6 +82,7 @@ private List <fishDictionary.word> playbackWords = new List<fishDictionary.word>
 		characterListener.enabled = !isRecording;
 
 		if (leftHand.menuPressed && barProgress>.3f){
+			return;
 			barProgress=0;
 			menuActive = !Menu.activeInHierarchy;
 			Menu.SetActive(menuActive);
