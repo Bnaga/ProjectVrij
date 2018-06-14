@@ -12,10 +12,14 @@ public class MusicIntDecision : Decision
 
     private bool CheckCurrentState(MJStateManager stateManager)
     {
-        if (stateManager.isInteracting && stateManager.interactionTarget.GetComponent<MJStateManager>().isMakingMusic == true)
+        if (stateManager.interactionTarget != null)
         {
-            stateManager.onDestination = true;
-            return true;
+            if (stateManager.isInteracting && stateManager.interactionTarget.GetComponent<MJStateManager>().isMakingMusic == true)
+            {
+                stateManager.onDestination = true;
+                return true;
+            }
+            else return false;
         }
         else return false;
     }
