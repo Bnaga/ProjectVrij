@@ -23,10 +23,13 @@ public class InterAction : ActionScript
             stateManager.onDestination = false;
             stateManager.onIntDestination = false;
         }
-        if(Vector3.Distance(stateManager.gameObject.transform.position, averagePos) <= 0.2f && Vector3.Distance(stateManager.interactionTarget.transform.position, averagePos) <=0.2f)
+        if (stateManager.interactionTarget != null)
         {
-            stateManager.onDestination = true;
-            stateManager.onIntDestination = true;
+            if (Vector3.Distance(stateManager.gameObject.transform.position, averagePos) <= 0.2f && Vector3.Distance(stateManager.interactionTarget.transform.position, averagePos) <= 0.2f)
+            {
+                stateManager.onDestination = true;
+                stateManager.onIntDestination = true;
+            }
         }
 
 

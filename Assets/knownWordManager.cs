@@ -34,10 +34,16 @@ public class knownWordManager : MonoBehaviour {
 	
 
 	public static void wordBalloon(Vector3 location, fishDictionary.word word ){
+		if (!self){
+			Debug.Log("no self knownwordmanager");
+			return;
+		};
+		location+=Vector3.up;
 		Instantiate(self.speechParticles,location, Quaternion.identity);
 		if (!word.known) return;
 		o = Instantiate(self.speechBalloon, location, Quaternion.identity);
 		o.GetComponent<speechBalloon>().initWord(word);
+		Debug.Log("WE DID IT");
 	}
 
 	public static void alerted(Vector3 location){
