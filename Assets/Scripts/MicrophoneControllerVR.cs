@@ -23,7 +23,8 @@ public class MicrophoneControllerVR : MonoBehaviour {
 	[HideInInspector]
 	public static AudioClip audioRecording;
 	public static Texture2D audioImage;
-private List <fishDictionary.word> playbackWords = new List<fishDictionary.word>();
+//private List <fishDictionary.word> playbackWords = new List<fishDictionary.word>();
+private fishDictionary.word playbackWord;
 	private bool isRecording;
 
 	private float barProgress;
@@ -51,17 +52,17 @@ private List <fishDictionary.word> playbackWords = new List<fishDictionary.word>
 		//setting the audio recorder
 		if (!microphoneListener.enabled && isRecording && !menuActive){
 			audioRecorder.StartRecording();
-			microphoneCommunication.receivedWords.Clear();
+			microphoneCommunication.Clear();
 			
 			barProgress=0;
 		}
 		if (microphoneListener.enabled && !isRecording){
 			audioRecording=audioRecorder.StopRecording();
 			audioImage = WaveFormImage.RenderWaveForm(audioRecording,Color.red);
-			playbackWords = microphoneCommunication.receivedWords;
+			playbackWord = microphoneCommunication.nearestReceived();
 			recordingProgress.enabled=false;
 			barProgress=2*maxRecordingLength;
-			knownWordManager.checkRecording(playbackWords);
+			knownWordManager.checkRecording(playbackWord);
 		}
 		holdingRecording = audioRecorder.recording != null;
 
@@ -95,11 +96,12 @@ private List <fishDictionary.word> playbackWords = new List<fishDictionary.word>
 
 		if (leftHand.padPressed && !isRecording && holdingRecording && !menuActive){
 			barProgress=0;
-			playbackDevice.receivedWords = playbackWords;
+			playbackDevice.playbackWord = playbackWord;
 			playbackDevice.PlaySound(audioRecording);
-			//knownWordManager.wordBalloon(transform.position,playbackWords[0]);
+			knownWordManager.wordBalloon(transform,playbackWord);
 		}
 	}
+	
 	
 }
 

@@ -9,10 +9,12 @@ public class soundCommunication : MonoBehaviour {
 	private bool playing;
 	private float soundTimer;
 	
-//	[HideInInspector]
-	public List <fishDictionary.word> receivedWords = new List<fishDictionary.word>();
+	private List <fishDictionary.word> receivedWords = new List<fishDictionary.word>();
+	private List<float> receivedDistance = new List<float>();
 	private fishDictionary.word currentWord;
 	public bool playbackDevice;
+	[HideInInspector]
+	public fishDictionary.word playbackWord;
 
 	public float soundRange = .5f;
 	private List <AudioSource> sources = new List<AudioSource>();
@@ -88,7 +90,7 @@ public class soundCommunication : MonoBehaviour {
 		currentWord = word;
 		AudioClip far = dictionary.far[word.farawaySound];
 		if (sourceFar.clip !=far) StartCoroutine(NextSound(far,sourceFar));
-		knownWordManager.wordBalloon(transform.position, word);
+		knownWordManager.wordBalloon(transform, word);
 		
 	}
 
@@ -107,7 +109,10 @@ public class soundCommunication : MonoBehaviour {
 	}
 
 	public void ReceiveSound(fishDictionary.word word){
-		if (!playbackDevice && !receivedWords.Contains(word)) receivedWords.Add(word);
+		if (!playbackDevice && !receivedWords.Contains(word)){
+			receivedWords.Add(word);
+
+		} 
 		//Debug.Log(clip.name);
 	}
 
@@ -127,6 +132,24 @@ public class soundCommunication : MonoBehaviour {
         audioSource.volume = startVolume;
 		audioSource.Play();
     }
+
+	public fishDictionary.word nearestReceived(){
+		if (receivedWords.Count<1) return null;
+		float n = Mathf.Infinity;
+		int s = 0;
+		for (int i = 0; i < receivedDistance.Count;i++){
+			if (receivedDistance[i]<n){
+				n = receivedDistance[i];
+				s = i;
+			}
+		}
+		return receivedWords[s];
+	}
+
+	public void Clear(){
+		receivedWords.Clear();
+		receivedDistance.Clear();
+	}
  
 
 }

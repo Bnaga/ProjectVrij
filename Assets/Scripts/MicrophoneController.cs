@@ -27,18 +27,18 @@ public class MicrophoneController : MonoBehaviour {
 		isRecording = Input.GetButton("Fire1");
 		if (!microphoneListener.enabled && isRecording){
 			audioRecorder.StartRecording();
-			microphoneCommunication.receivedWords.Clear();
+			//microphoneCommunication.receivedWords.Clear();
 		}
 		if (microphoneListener.enabled && !isRecording){
 			audioRecording=audioRecorder.StopRecording();
-			playbackWords = microphoneCommunication.receivedWords;
+			//playbackWords = microphoneCommunication.receivedWords;
 		}
 
 		microphoneListener.enabled = isRecording;
 		characterListener.enabled = !isRecording;
 
 		if (Input.GetButtonDown("Fire2")){
-			playbackDevice.receivedWords = playbackWords;
+			//playbackDevice.receivedWords = playbackWords;
 			playbackDevice.PlaySound(audioRecording);
 		}
 	}
