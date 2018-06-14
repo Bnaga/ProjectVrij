@@ -1,0 +1,155 @@
+fileFormatVersion: 2
+guid: 9abfac225f0363549b87b3d2999af1d7
+timeCreated: 1528900369
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Bark
+    100002: door
+    100004: //RootNode
+    100006: Moss
+    100008: Pointy_shell
+    100010: Seaweed_1
+    100012: Seaweed_1_2
+    100014: Seaweed_2
+    100016: Seaweed_3
+    100018: Seaweed_4
+    100020: Shell
+    100022: Shell_1
+    100024: Shell_2
+    100026: Sticks
+    400000: Bark
+    400002: door
+    400004: //RootNode
+    400006: Moss
+    400008: Pointy_shell
+    400010: Seaweed_1
+    400012: Seaweed_1_2
+    400014: Seaweed_2
+    400016: Seaweed_3
+    400018: Seaweed_4
+    400020: Shell
+    400022: Shell_1
+    400024: Shell_2
+    400026: Sticks
+    2100000: Mat.1
+    2300000: Bark
+    2300002: door
+    2300004: Moss
+    2300006: Pointy_shell
+    2300008: Seaweed_1
+    2300010: Seaweed_1_2
+    2300012: Seaweed_2
+    2300014: Seaweed_3
+    2300016: Seaweed_4
+    2300018: Shell
+    2300020: Shell_1
+    2300022: Shell_2
+    2300024: Sticks
+    3300000: Bark
+    3300002: door
+    3300004: Moss
+    3300006: Pointy_shell
+    3300008: Seaweed_1
+    3300010: Seaweed_1_2
+    3300012: Seaweed_2
+    3300014: Seaweed_3
+    3300016: Seaweed_4
+    3300018: Shell
+    3300020: Shell_1
+    3300022: Shell_2
+    3300024: Sticks
+    4300000: Seaweed_1
+    4300002: Seaweed_4
+    4300004: Seaweed_3
+    4300006: Seaweed_2
+    4300008: Seaweed_1_2
+    4300010: Pointy_shell
+    4300012: Shell
+    4300014: door
+    4300016: Moss
+    4300018: Bark
+    4300020: Sticks
+    4300022: Shell_1
+    4300024: Shell_2
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
