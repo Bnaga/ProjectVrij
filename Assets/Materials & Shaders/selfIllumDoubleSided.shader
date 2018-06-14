@@ -1,4 +1,4 @@
-﻿﻿Shader "Custom/SelfIllumDoubleSided" { 
+﻿Shader "Custom/SelfIllumDoubleSided" { 
     Properties { 
         _Color ("Main Color", Color) = (1,1,1,1) 
         _MainTex ("Base (RGB)", 2D) = "white" {} 
@@ -26,7 +26,7 @@
     // Vertex lights 
     Pass { 
         Name "BASE" 
-        Tags {"LightMode" = "Vertex"} 
+	Tags {"LightMode" = "Vertex"} 
         Material { 
             Diffuse [_Color] 
             Emission [_PPLAmbient] 
