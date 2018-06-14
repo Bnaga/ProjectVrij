@@ -10,10 +10,10 @@ public class RandomSoundPlayer : MonoBehaviour {
 	private AudioSource source;
 	
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		soundTimer= Random.Range(0,soundFrequency);
 		AudioSource settings = audiosourceSettings.source;
-		AudioSource source  = gameObject.AddComponent(typeof(AudioSource)) as AudioSource;
+		source  = gameObject.AddComponent(typeof(AudioSource)) as AudioSource;
 		source.spatialBlend	= settings.spatialBlend;
 		source.spatialize	= settings.spatialize;
 		source.rolloffMode 	= settings.rolloffMode;

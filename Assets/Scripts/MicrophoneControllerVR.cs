@@ -96,6 +96,7 @@ private List <fishDictionary.word> playbackWords = new List<fishDictionary.word>
 			barProgress=0;
 			playbackDevice.receivedWords = playbackWords;
 			playbackDevice.PlaySound(audioRecording);
+			//knownWordManager.wordBalloon(transform.position,playbackWords[0]);
 		}
 	}
 	

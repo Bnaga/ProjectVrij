@@ -74,6 +74,7 @@ public class soundCommunication : MonoBehaviour {
 		if (clip.length > soundTimer) soundTimer=clip.length;
 		sourceNear.clip=clip;
 		sourceNear.Play();
+		//if (playbackDevice) knownWordManager.wordBalloon(transform.position, receivedWords[0]);
 	}
 
 	public void PlayRandomSound(AudioClip[] clips){
@@ -86,7 +87,7 @@ public class soundCommunication : MonoBehaviour {
 		currentWord = word;
 		AudioClip far = dictionary.far[word.farawaySound];
 		if (sourceFar.clip !=far) StartCoroutine(NextSound(far,sourceFar));
-		knownWordManager.wordBalloon(transform.position, word);
+		
 	}
 
 	void OnTriggerEnter (Collider other){
