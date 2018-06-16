@@ -121,7 +121,7 @@ Material:
     - _MediumWaveRefraction: 1.8
     - _MediumWavesSpeed: 40
     - _MediumWavesTiling: 0.5
-    - _Metallic: 0
+    - _Metallic: 0.187
     - _Mode: 0
     - _Occlusion: 0
     - _OcclusionStrength: 1
@@ -129,8 +129,8 @@ Material:
     - _ReflectionIntensity: 0.5
     - _RefractionDistance: 0
     - _RefractionFalloff: 0
-    - _Roll: 8.88
-    - _Scale: 0.243
+    - _Roll: 0.1
+    - _Scale: 0.01
     - _ShakeBending: 1
     - _ShakeDisplacement: 1
     - _ShakeTime: 0.314
@@ -143,7 +143,7 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _Specular: 0
     - _SpecularHighlights: 1
-    - _Speed: 1.9
+    - _Speed: 0.45
     - _SquashAmount: 1
     - _SrcBlend: 1
     - _Transparency: 0
@@ -152,7 +152,7 @@ Material:
     - _UsingLinearColorSpace: 0
     - _WaveBlend: 0.77
     - _WaveFade: 1.19
-    - _Yaw: 7.43
+    - _Yaw: 10.1
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
