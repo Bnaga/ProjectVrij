@@ -9,6 +9,7 @@
          Tags { "RenderType"="Opaque" "Queue"="Transparent" }
          LOD 200
          Cull Back
+         Ztest Less
  
          CGPROGRAM
              // Physically based Standard lighting model, and enable shadows on all light types
@@ -38,6 +39,7 @@
          ENDCG
  
          Cull Front
+        Ztest Less
  
          CGPROGRAM
              // Physically based Standard lighting model, and enable shadows on all light types
