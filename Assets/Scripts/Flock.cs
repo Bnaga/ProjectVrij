@@ -79,7 +79,7 @@ public class Flock : MonoBehaviour {
         float gSpeed = 1f;
 
         goalPos = GlobalFlock.goalPos;
-        Debug.DrawLine(transform.position,goalPos);
+        //Debug.DrawLine(transform.position,goalPos);
 
         if (Vector3.Distance(transform.position,goalPos)<1f){
             //GlobalFlock.newGoal(transform.position);
