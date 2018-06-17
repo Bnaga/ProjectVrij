@@ -8,6 +8,7 @@ public class RandomSoundPlayer : MonoBehaviour {
 	public float soundFrequency;
 	private float soundTimer;
 	private AudioSource source;
+	public static int isPlaying;
 	
 	// Use this for initialization
 	void Awake () {
@@ -19,23 +20,41 @@ public class RandomSoundPlayer : MonoBehaviour {
 		source.rolloffMode 	= settings.rolloffMode;
 		source.rolloffMode	= settings.rolloffMode;
 		source.maxDistance	= settings.maxDistance;
+		source.playOnAwake 	= settings.playOnAwake;
+		source.dopplerLevel	= settings.dopplerLevel;
+		source.priority 	= Random.Range(100,256);
+		source.volume		= settings.volume;
+		source.spread 		= settings.spread;
+
 
 		source.SetCustomCurve(AudioSourceCurveType.CustomRolloff,settings.GetCustomCurve(AudioSourceCurveType.CustomRolloff));
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		source.maxDistance	= audiosourceSettings.source.maxDistance;
 		soundTimer += Time.deltaTime;
 		if (soundTimer>soundFrequency){
 			soundTimer= Random.Range(-soundFrequency/8,0);
-			Play();
+			if (Random.value>.5f) return;
+			float d = Vector3.Distance(transform.position,Camera.main.transform.position);
+			if ( d< source.maxDistance/2 && isPlaying <3) 
+				StartCoroutine( Play());
 		}
 	}
 
-	public void Play(){
-		if (source.isPlaying) return;
+	IEnumerator Play(){
+		isPlaying++;
 		source.clip = sounds[Random.Range(0,sounds.Length)];
 		source.Play();
+		yield return  new WaitForSeconds(source.clip.length);
+		isPlaying--;
 
 	}
+
+	/*void OnDrawGizmos(){
+		if (source)
+			Gizmos.DrawWireSphere(transform.position,source.maxDistance);
+	}
+	*/
 }

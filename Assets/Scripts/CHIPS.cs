@@ -7,7 +7,7 @@ public class CHIPS : MonoBehaviour {
 
 
 	public fishDictionary[] dictionaries;
-	//public TextMeshPro display;
+	public TextMeshPro display;
 
 	void Awake () {
 		//reset known words
