@@ -5,7 +5,7 @@ using UnityEngine;
 public class GlobalFlock : MonoBehaviour {
 
     public GameObject[] fishObj;
-    public static int tankSize = 5;
+    public static int tankSize = 2;
     public static int tankMin = 0;
 
     static int numFish = 30;
@@ -20,8 +20,8 @@ public class GlobalFlock : MonoBehaviour {
 		for(int i = 0; i < numFish; i++)
         {
             Vector3 pos = new Vector3(Random.Range(-tankSize, tankSize),
-                                      Random.Range(tankMin, tankSize*2),
-                                      Random.Range(-tankSize, tankSize));
+                                      Random.Range(tankMin, tankSize),
+                                      Random.Range(0, tankSize));
             GameObject obj = fishObj[Random.Range(0,fishObj.Length)];
             allFIsh[i] = (GameObject) Instantiate(obj, pos, Quaternion.identity);
         }
@@ -30,7 +30,7 @@ public class GlobalFlock : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-		if(Random.Range(0,10000) < 50) newGoal(transform.position);
+		if(Random.Range(0,1000) < 50) newGoal(transform.position);
 
 		
           
@@ -38,7 +38,7 @@ public class GlobalFlock : MonoBehaviour {
 
 	public static void newGoal(Vector3 origin){
 		  goalPos = new Vector3(Random.Range(-tankSize, tankSize),
-                                  Random.Range(tankMin, tankSize * 2),
+                                  Random.Range(-tankMin/2, 0),
                                   Random.Range(-tankSize, tankSize));
 								   RaycastHit hit;
         if (Physics.Raycast(origin,goalPos, out hit)){
@@ -46,5 +46,9 @@ public class GlobalFlock : MonoBehaviour {
 
 	    }
 
+    }
+
+    void OnDrawGizmos(){
+        Gizmos.DrawWireSphere(goalPos,.1f);
     }
 }
