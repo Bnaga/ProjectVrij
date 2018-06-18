@@ -9,15 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06881e62d640cdc459cc9a818d5f19eb, type: 3}
-  m_Name: LeaderWander
+  m_Name: Bring Food State
   m_EditorClassIdentifier: 
   actions:
-  - {fileID: 11400000, guid: f1702a0a9d5dfe6438b7e8c33f821df0, type: 2}
+  - {fileID: 11400000, guid: fa91ab903968f94428c5857125ca366c, type: 2}
   transistions:
   - decision: {fileID: 11400000, guid: 32c281e4495e39d44a8833e4256fc9f2, type: 2}
     trueState: {fileID: 11400000, guid: b59ffc53f4658bf4095eed75cab3a3fa, type: 2}
     falseState: {fileID: 11400000, guid: 97f34bec1e0bdbf46b75ea64fda90f91, type: 2}
-  - decision: {fileID: 11400000, guid: 621147fe6094e1b418b8bc4f767845d2, type: 2}
-    trueState: {fileID: 11400000, guid: 0088a789abcd40044b799fe89fc9b3ad, type: 2}
-    falseState: {fileID: 11400000, guid: 97f34bec1e0bdbf46b75ea64fda90f91, type: 2}
-  sceneGizmoColor: {r: 0.31176466, g: 1, b: 0.1397059, a: 1}
+  sceneGizmoColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}

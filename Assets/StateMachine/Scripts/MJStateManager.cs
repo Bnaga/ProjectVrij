@@ -18,6 +18,7 @@ public class MJStateManager : MonoBehaviour {
     public int waitSec = 15;
     public float interMax = 10;
     public float coolDownMax = 10;
+    public Vector3 offset;
 
     public bool hide = false;
     public bool inDanger = false;
@@ -33,6 +34,8 @@ public class MJStateManager : MonoBehaviour {
     public bool isSpeaking = false;
     public bool onIntDestination = false;
     public bool coolDown = false;
+    public GameObject food;
+
 
     float interactionTimer = 0;
     float interactionCoolDown = 0;
@@ -52,6 +55,7 @@ public class MJStateManager : MonoBehaviour {
         navMeshAgent = GetComponent<NavMeshAgent>();
         onDestination = true;
         soundCommunication = GetComponent<soundCommunication>();
+        food = null;
         //navMeshAgent.destination = Vector3.zero;
 	}
 
@@ -163,7 +167,7 @@ public class MJStateManager : MonoBehaviour {
         }
         if (tempState == 9)
         {
-            curState = 7; // go to nearest mojili
+            curState = 3; // go to nearest mojili
         }
     }
 

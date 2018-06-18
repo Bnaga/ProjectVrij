@@ -8,6 +8,7 @@ TagManager:
   - holdable
   - Shell
   - Mojili
+  - Food
   layers:
   - Default
   - TransparentFX

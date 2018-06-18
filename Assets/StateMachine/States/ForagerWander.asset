@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06881e62d640cdc459cc9a818d5f19eb, type: 3}
+  m_Name: ForagerWander
+  m_EditorClassIdentifier: 
+  actions:
+  - {fileID: 11400000, guid: 232be2e8463c27f409b96222827a0b74, type: 2}
+  transistions:
+  - decision: {fileID: 11400000, guid: b6e0e396bb689514082779f064ae8ad5, type: 2}
+    trueState: {fileID: 11400000, guid: 6f33e9996d5f7f348843789b80ee46f3, type: 2}
+    falseState: {fileID: 11400000, guid: 97f34bec1e0bdbf46b75ea64fda90f91, type: 2}
+  sceneGizmoColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}

@@ -34,14 +34,14 @@ public class IdleAction : ActionScript
             stateManager.RandomFarmerState();
         }
 
-        if (role.GetCurrentRole() == 5  && stateManager.hasFood)
+        if (role.GetCurrentRole() == 5  && !stateManager.hasFood)
         {
-            stateManager.curState = 9;
+            stateManager.curState = 16; //forage action
         }
 
-        if (role.GetCurrentRole() == 5 && !stateManager.hasFood)
+        if (role.GetCurrentRole() == 5 && stateManager.hasFood)
         {
-            stateManager.curState = 10;
+            stateManager.curState = 17;
         }
     }
 
