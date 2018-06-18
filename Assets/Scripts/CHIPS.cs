@@ -21,7 +21,7 @@ public class CHIPS : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		updateScreen();
 	}
 
 	void OnTriggerEnter(Collider other){

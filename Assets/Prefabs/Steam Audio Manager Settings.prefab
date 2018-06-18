@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 114397069023358620}
   - component: {fileID: 82152948351665330}
   - component: {fileID: 114509289354735488}
+  - component: {fileID: 114522996055980306}
   m_Layer: 0
   m_Name: Steam Audio Manager Settings
   m_TagString: Untagged
@@ -187,3 +188,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63ee9ae25664b0c4d8b40838a29e2e4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114522996055980306
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1478204436874624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 332d14cb192014e468c6600e917c8c28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBalloon: {fileID: 1898019799143832, guid: f5094cc7591059649a7571dbc66e22fe,
+    type: 2}
+  speechParticles: {fileID: 1319963419369614, guid: 225076204a4829a4a8b765e2e9fbb424,
+    type: 2}
+  alertMaterial: {fileID: 2100000, guid: 5f66d175c72271c4489e5c2e4ee1bc4b, type: 2}
+  dictionaries:
+  - {fileID: 11400000, guid: 4e960cd3c1dec7b4bb1297d473a24f2f, type: 2}

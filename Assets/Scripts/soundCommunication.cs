@@ -134,7 +134,7 @@ public class soundCommunication : MonoBehaviour {
     }
 
 	public fishDictionary.word nearestReceived(){
-		if (receivedWords.Count<1) return null;
+		if (receivedWords.Count==0) return null;
 		float n = Mathf.Infinity;
 		int s = 0;
 		for (int i = 0; i < receivedDistance.Count;i++){
