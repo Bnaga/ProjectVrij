@@ -25,6 +25,13 @@ GameObject:
   - component: {fileID: 64553745522129250}
   - component: {fileID: 114531668614851338}
   - component: {fileID: 114807680043890058}
+  - component: {fileID: 64411048696390558}
+  - component: {fileID: 64557251878314436}
+  - component: {fileID: 64209049644140270}
+  - component: {fileID: 64970685908587040}
+  - component: {fileID: 64206070309205142}
+  - component: {fileID: 64463867157217102}
+  - component: {fileID: 64484508105531988}
   m_Layer: 0
   m_Name: cloth (1)
   m_TagString: Untagged
@@ -81,9 +88,107 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1027874446802084}
   m_Mesh: {fileID: 4300006, guid: 3ce2b8e35428dee4285f58bd4764d0da, type: 3}
+--- !u!64 &64206070309205142
+MeshCollider:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1027874446802084}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300006, guid: 3ce2b8e35428dee4285f58bd4764d0da, type: 3}
+--- !u!64 &64209049644140270
+MeshCollider:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1027874446802084}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300006, guid: 3ce2b8e35428dee4285f58bd4764d0da, type: 3}
+--- !u!64 &64411048696390558
+MeshCollider:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1027874446802084}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300006, guid: 3ce2b8e35428dee4285f58bd4764d0da, type: 3}
+--- !u!64 &64463867157217102
+MeshCollider:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1027874446802084}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300006, guid: 3ce2b8e35428dee4285f58bd4764d0da, type: 3}
+--- !u!64 &64484508105531988
+MeshCollider:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1027874446802084}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300006, guid: 3ce2b8e35428dee4285f58bd4764d0da, type: 3}
 --- !u!64 &64553745522129250
 MeshCollider:
   m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1027874446802084}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300006, guid: 3ce2b8e35428dee4285f58bd4764d0da, type: 3}
+--- !u!64 &64557251878314436
+MeshCollider:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1027874446802084}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300006, guid: 3ce2b8e35428dee4285f58bd4764d0da, type: 3}
+--- !u!64 &64970685908587040
+MeshCollider:
+  m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1027874446802084}
@@ -134,7 +239,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 000c708f140a3bf449d6867112cfa9d3, type: 2}
+  - {fileID: 2100000, guid: ddf029b35665cea4a9ba7a406f03f81c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -25,6 +25,9 @@ GameObject:
   - component: {fileID: 64290663257443718}
   - component: {fileID: 114626752708030490}
   - component: {fileID: 114601178971535306}
+  - component: {fileID: 64945026082277416}
+  - component: {fileID: 64397447264365102}
+  - component: {fileID: 64956195956184944}
   m_Layer: 0
   m_Name: cloth (1)
   m_TagString: Untagged
@@ -95,6 +98,48 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: 3ce2b8e35428dee4285f58bd4764d0da, type: 3}
+--- !u!64 &64397447264365102
+MeshCollider:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1027594737771228}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300002, guid: 3ce2b8e35428dee4285f58bd4764d0da, type: 3}
+--- !u!64 &64945026082277416
+MeshCollider:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1027594737771228}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300002, guid: 3ce2b8e35428dee4285f58bd4764d0da, type: 3}
+--- !u!64 &64956195956184944
+MeshCollider:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1027594737771228}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300002, guid: 3ce2b8e35428dee4285f58bd4764d0da, type: 3}
 --- !u!114 &114601178971535306
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -134,7 +179,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 000c708f140a3bf449d6867112cfa9d3, type: 2}
+  - {fileID: 2100000, guid: ddf029b35665cea4a9ba7a406f03f81c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
