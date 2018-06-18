@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class knownWordManager : MonoBehaviour {
 
 	public GameObject speechBalloon;
@@ -10,6 +12,7 @@ public class knownWordManager : MonoBehaviour {
 	public static knownWordManager self;
 	public fishDictionary[] dictionaries;
 	private static GameObject o;
+
 
 
 	void Start(){
@@ -40,10 +43,20 @@ public class knownWordManager : MonoBehaviour {
 		if (!word.known) return;
 		o = Instantiate(self.speechBalloon, t);
 		o.GetComponent<speechBalloon>().initWord(word);
+		setGlobScale(o.transform,Vector3.one);
 		Vector3 r = Random.insideUnitSphere/5;
 		r.y = Mathf.Abs(r.y) + .1f;
 		o.transform.position += r;
-		Debug.Log("WE DID IT");
+	}
+
+	public static void textBalloon(Transform t, string text){
+		Instantiate(self.speechParticles,t);
+		o = Instantiate(self.speechBalloon, t);
+		o.GetComponent<speechBalloon>().init(text);
+		setGlobScale(o.transform,Vector3.one);
+		Vector3 r = Random.insideUnitSphere/5;
+		r.y = Mathf.Abs(r.y) + .1f;
+		o.transform.position += r;
 	}
 
 	public static void alerted(Vector3 location){
@@ -51,4 +64,12 @@ public class knownWordManager : MonoBehaviour {
 		o.GetComponent<ParticleSystemRenderer>().material = self.alertMaterial;
 
 	}
+
+	 public static void setGlobScale ( Transform transform, Vector3 globalScale)
+ {
+     transform.localScale = Vector3.one;
+     transform.localScale = new Vector3 (globalScale.x/transform.lossyScale.x, globalScale.y/transform.lossyScale.y, globalScale.z/transform.lossyScale.z);
+ }
+
+	
 }

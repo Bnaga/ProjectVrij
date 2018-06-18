@@ -58,13 +58,18 @@ private fishDictionary.word playbackWord;
 		}
 		if (microphoneListener.enabled && !isRecording){
 			audioRecording=audioRecorder.StopRecording();
-			audioImage = WaveFormImage.RenderWaveForm(audioRecording,Color.red);
+			//audioImage = WaveFormImage.RenderWaveForm(audioRecording,Color.red);
 			playbackWord = microphoneCommunication.nearestReceived();
 			recordingProgress.enabled=false;
 			barProgress=2*maxRecordingLength;
-			knownWordManager.checkRecording(playbackWord);
+			if (playbackWord != null){ 
+				knownWordManager.checkRecording(playbackWord);
+			}else{
+				knownWordManager.textBalloon(transform,"Nothing recorded");
+			}
 		}
 		holdingRecording = audioRecorder.recording != null;
+		Debug.Log(playbackWord);
 
 		//updating UI
 	
@@ -98,7 +103,7 @@ private fishDictionary.word playbackWord;
 			barProgress=0;
 			playbackDevice.playbackWord = playbackWord;
 			playbackDevice.PlaySound(audioRecording);
-			knownWordManager.wordBalloon(transform,playbackWord);
+			if (playbackWord != null) knownWordManager.wordBalloon(transform,playbackWord);
 		}
 	}
 	

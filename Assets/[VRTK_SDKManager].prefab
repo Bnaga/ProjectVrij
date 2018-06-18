@@ -679,6 +679,7 @@ GameObject:
   - component: {fileID: 4582144570531968}
   - component: {fileID: 33474718140134876}
   - component: {fileID: 23487693537333988}
+  - component: {fileID: 136885050691560326}
   m_Layer: 0
   m_Name: controllergrip
   m_TagString: Untagged
@@ -1402,8 +1403,7 @@ GameObject:
   - component: {fileID: 124754455557869878}
   - component: {fileID: 92242295191009362}
   - component: {fileID: 81956417184881852}
-  - component: {fileID: 114476010987607548}
-  - component: {fileID: 114650806838578150}
+  - component: {fileID: 114175522989620644}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -2501,8 +2501,10 @@ GameObject:
   - component: {fileID: 4272884182532478}
   - component: {fileID: 33515755064395704}
   - component: {fileID: 23744845921430762}
+  - component: {fileID: 136941364957163334}
+  - component: {fileID: 114606174438369754}
   m_Layer: 0
-  m_Name: polySurface11
+  m_Name: CAPSULE COLLIDER
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5523,8 +5525,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   testClip: {fileID: 0}
-  receivedWords: []
   playbackDevice: 1
+  playbackWord:
+    Name: 
+    meaning: 
+    audio: []
+    farawaySound: 0
+    known: 0
+    knownFromStart: 0
   soundRange: 8
   sourceNear: {fileID: 0}
 --- !u!114 &114026361827368220
@@ -5711,8 +5719,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   testClip: {fileID: 0}
-  receivedWords: []
   playbackDevice: 0
+  playbackWord:
+    Name: 
+    meaning: 
+    audio: []
+    farawaySound: 0
+    known: 0
+    knownFromStart: 0
   soundRange: 0.6
   sourceNear: {fileID: 0}
 --- !u!114 &114038115809511844
@@ -6459,6 +6473,43 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114175522989620644
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1415247379160036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f35c02a2c6230584391703bf32006791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_DebugShader: {fileID: 4800000, guid: 91e29ad407521e447a7254f5c1ea9b54, type: 3}
+  m_ShadowmapShader: {fileID: 4800000, guid: 2c4cd42b134f7864fa579350e9cf6896, type: 3}
+  m_InjectLightingAndDensity: {fileID: 7200000, guid: 55812fd61bd54104aa23612fc28bfeb8,
+    type: 3}
+  m_Scatter: {fileID: 7200000, guid: 2a7c01c2354d03a4e9c31096bf130b6a, type: 3}
+  m_ApplyToOpaqueShader: {fileID: 4800000, guid: 6f73df8e11615074dbf62a3a384af521,
+    type: 3}
+  m_BlurShadowmapShader: {fileID: 4800000, guid: 701192b62a7678549918bc87434699fe,
+    type: 3}
+  m_Noise: {fileID: 2800000, guid: 35eb47181d630134c97488476efbda59, type: 3}
+  m_Debug: 0
+  m_Z: 1
+  m_NearClip: 0.2
+  m_FarClipMax: 10
+  m_GlobalDensityMult: 1
+  m_ConstantFog: 1
+  m_HeightFogAmount: 0
+  m_HeightFogExponent: 0
+  m_HeightFogOffset: 0
+  m_NoiseFogAmount: 0.7
+  m_NoiseFogScale: 0.5
+  m_Wind: {fileID: 0}
+  m_Anisotropy: 0.15
+  m_GlobalIntensityMult: 2
+  m_AmbientLightIntensity: 30
+  m_AmbientLightColor: {r: 0.30147058, g: 0.5375254, b: 1, a: 1}
 --- !u!114 &114181558713093638
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8364,43 +8415,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Microphone is holding \nthis recording:"
---- !u!114 &114476010987607548
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1415247379160036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35c02a2c6230584391703bf32006791, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_DebugShader: {fileID: 4800000, guid: 91e29ad407521e447a7254f5c1ea9b54, type: 3}
-  m_ShadowmapShader: {fileID: 4800000, guid: 2c4cd42b134f7864fa579350e9cf6896, type: 3}
-  m_InjectLightingAndDensity: {fileID: 7200000, guid: 55812fd61bd54104aa23612fc28bfeb8,
-    type: 3}
-  m_Scatter: {fileID: 7200000, guid: 2a7c01c2354d03a4e9c31096bf130b6a, type: 3}
-  m_ApplyToOpaqueShader: {fileID: 4800000, guid: 6f73df8e11615074dbf62a3a384af521,
-    type: 3}
-  m_BlurShadowmapShader: {fileID: 4800000, guid: 701192b62a7678549918bc87434699fe,
-    type: 3}
-  m_Noise: {fileID: 2800000, guid: 35eb47181d630134c97488476efbda59, type: 3}
-  m_Debug: 0
-  m_Z: 1
-  m_NearClip: 0.2
-  m_FarClipMax: 10
-  m_GlobalDensityMult: 0.4
-  m_ConstantFog: 10
-  m_HeightFogAmount: 0
-  m_HeightFogExponent: -5.72
-  m_HeightFogOffset: 0
-  m_NoiseFogAmount: 0.24
-  m_NoiseFogScale: 0.5
-  m_Wind: {fileID: 0}
-  m_Anisotropy: 0.61
-  m_GlobalIntensityMult: 1
-  m_AmbientLightIntensity: 0.3
-  m_AmbientLightColor: {r: 0.30147058, g: 0.5375254, b: 1, a: 1}
 --- !u!114 &114478937106958700
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8788,8 +8802,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   testClip: {fileID: 0}
-  receivedWords: []
   playbackDevice: 1
+  playbackWord:
+    Name: 
+    meaning: 
+    audio: []
+    farawaySound: 0
+    known: 0
+    knownFromStart: 0
   soundRange: 1
   sourceNear: {fileID: 0}
 --- !u!114 &114514043707437164
@@ -9426,6 +9446,19 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114606174438369754
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1780025434141554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ef92ca2ca1f6d04fbe80cc090451fda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localLeft: {fileID: 136941364957163334}
+  localRight: {fileID: 136885050691560326}
 --- !u!114 &114606384717101522
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9892,43 +9925,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 0
   origin: {fileID: 0}
---- !u!114 &114650806838578150
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1415247379160036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35c02a2c6230584391703bf32006791, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_DebugShader: {fileID: 4800000, guid: 91e29ad407521e447a7254f5c1ea9b54, type: 3}
-  m_ShadowmapShader: {fileID: 4800000, guid: 2c4cd42b134f7864fa579350e9cf6896, type: 3}
-  m_InjectLightingAndDensity: {fileID: 7200000, guid: 55812fd61bd54104aa23612fc28bfeb8,
-    type: 3}
-  m_Scatter: {fileID: 7200000, guid: 2a7c01c2354d03a4e9c31096bf130b6a, type: 3}
-  m_ApplyToOpaqueShader: {fileID: 4800000, guid: 6f73df8e11615074dbf62a3a384af521,
-    type: 3}
-  m_BlurShadowmapShader: {fileID: 4800000, guid: 701192b62a7678549918bc87434699fe,
-    type: 3}
-  m_Noise: {fileID: 2800000, guid: 35eb47181d630134c97488476efbda59, type: 3}
-  m_Debug: 0
-  m_Z: 1
-  m_NearClip: 0.2
-  m_FarClipMax: 10
-  m_GlobalDensityMult: 0.4
-  m_ConstantFog: 10
-  m_HeightFogAmount: 76.9
-  m_HeightFogExponent: 2
-  m_HeightFogOffset: 0
-  m_NoiseFogAmount: 0.24
-  m_NoiseFogScale: 0.5
-  m_Wind: {fileID: 0}
-  m_Anisotropy: 0.26
-  m_GlobalIntensityMult: 1
-  m_AmbientLightIntensity: 0.3
-  m_AmbientLightColor: {r: 0.30147058, g: 0.5375254, b: 1, a: 1}
 --- !u!114 &114654292471606572
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12277,6 +12273,32 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.3
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &136885050691560326
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1190632888449218}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.015
+  m_Height: 0.09
+  m_Direction: 2
+  m_Center: {x: 0, y: -0.0039620665, z: 0.02}
+--- !u!136 &136941364957163334
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1780025434141554}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.01
+  m_Height: 0.08
+  m_Direction: 2
+  m_Center: {x: 0, y: -0.0037380755, z: 0.025}
 --- !u!222 &222011845128493696
 CanvasRenderer:
   m_ObjectHideFlags: 1

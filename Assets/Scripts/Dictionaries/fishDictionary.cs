@@ -14,7 +14,6 @@ using UnityEditor;
 		public AudioClip[] audio;	
 		[Range(0,10)]
 		public int farawaySound;	
-		[HideInInspector]
 		public bool known;
 		public bool knownFromStart;
 		

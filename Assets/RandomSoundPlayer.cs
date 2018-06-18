@@ -14,7 +14,7 @@ public class RandomSoundPlayer : MonoBehaviour {
 	void Awake () {
 		soundTimer= Random.Range(0,soundFrequency);
 		AudioSource settings = audiosourceSettings.source;
-		source  = gameObject.AddComponent(typeof(AudioSource)) as AudioSource;
+		source  			= gameObject.AddComponent(typeof(AudioSource)) as AudioSource;
 		source.spatialBlend	= settings.spatialBlend;
 		source.spatialize	= settings.spatialize;
 		source.rolloffMode 	= settings.rolloffMode;
@@ -32,7 +32,6 @@ public class RandomSoundPlayer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		source.maxDistance	= audiosourceSettings.source.maxDistance;
 		soundTimer += Time.deltaTime;
 		if (soundTimer>soundFrequency){
 			soundTimer= Random.Range(-soundFrequency/8,0);
