@@ -6,6 +6,7 @@ public class FoodDecay : MonoBehaviour {
 
     public float foodDecay = 10;
     private float decayTimer;
+    public bool pickedUp = false;
 
 	// Use this for initialization
 	void Start () {
@@ -14,7 +15,14 @@ public class FoodDecay : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        decayTimer += Time.deltaTime;
+        if(!pickedUp)
+        {
+            decayTimer += Time.deltaTime;
+        }
+        if(pickedUp)
+        {
+            decayTimer = 0;
+        }
         if(decayTimer >= foodDecay)
         {
             Destroy(this.gameObject);

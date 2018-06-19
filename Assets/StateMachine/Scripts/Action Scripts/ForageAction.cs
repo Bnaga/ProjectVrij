@@ -70,6 +70,7 @@ public class ForageAction : ActionScript
             stateManager.food.transform.position = targetPos;
             stateManager.hasFood = true;
             stateManager.food.GetComponent<Rigidbody>().isKinematic = true;
+            stateManager.food.GetComponent<FoodDecay>().pickedUp = true;
         }
 
     }

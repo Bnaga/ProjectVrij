@@ -65,6 +65,7 @@ public class BringFood : ActionScript
             Vector3 targetPos = stateManager.transform.position + stateManager.transform.forward * stateManager.offset.z + stateManager.transform.right * stateManager.offset.x + stateManager.transform.up * stateManager.offset.y;
             stateManager.food.transform.position = targetPos;
             stateManager.food.GetComponent<Rigidbody>().isKinematic = true;
+            stateManager.food.GetComponent<FoodDecay>().pickedUp = true;
         }
 
     }
