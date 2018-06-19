@@ -7,4 +7,30 @@ AvatarMask:
   m_PrefabInternal: {fileID: 0}
   m_Name: Mask_arms
   m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-  m_Elements: []
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: mojili
+    m_Weight: 0
+  - m_Path: mojili/bottom
+    m_Weight: 0
+  - m_Path: mojili/bottom/midriff
+    m_Weight: 0
+  - m_Path: mojili/bottom/midriff/head
+    m_Weight: 0
+  - m_Path: mojili/bottom/midriff/shoulder_l
+    m_Weight: 1
+  - m_Path: mojili/bottom/midriff/shoulder_l/hand_l
+    m_Weight: 1
+  - m_Path: mojili/bottom/midriff/shoulder_r
+    m_Weight: 1
+  - m_Path: mojili/bottom/midriff/shoulder_r/hand_r
+    m_Weight: 1
+  - m_Path: Skin
+    m_Weight: 0
+  - m_Path: Skin/Body
+    m_Weight: 0
+  - m_Path: Skin/Left_Leg
+    m_Weight: 0
+  - m_Path: Skin/Right_Leg
+    m_Weight: 0
