@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Animations;
 
 public class MJStateManager : MonoBehaviour {
 
@@ -36,7 +37,7 @@ public class MJStateManager : MonoBehaviour {
     public bool coolDown = false;
     public GameObject food;
 
-
+    public Animator animator;
     float interactionTimer = 0;
     float interactionCoolDown = 0;
 
@@ -57,6 +58,7 @@ public class MJStateManager : MonoBehaviour {
         soundCommunication = GetComponent<soundCommunication>();
         food = null;
         //navMeshAgent.destination = Vector3.zero;
+        animator = GetComponent<Animator>();
 	}
 
     private void Start()
@@ -81,6 +83,8 @@ public class MJStateManager : MonoBehaviour {
         currentState.UpdateState(this);
         StartCoolDown();
         soundResponse();
+        animator.SetFloat("speed", navMeshAgent.speed);
+        animator.speed = navMeshAgent.speed * 10;
     }
 
 
