@@ -64,7 +64,7 @@ ParticleSystem:
   m_GameObject: {fileID: 1616146131017258}
   serializedVersion: 5
   lengthInSec: 100
-  simulationSpeed: 0.05
+  simulationSpeed: 0.09
   stopAction: 0
   looping: 1
   prewarm: 1
@@ -116,7 +116,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 904753207
+  randomSeed: 274981320
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -206,7 +206,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.43144464, g: 0.4553901, b: 0.6985294, a: 0.541}
+      maxColor: {r: 1, g: 1, b: 1, a: 0.541}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -512,7 +512,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 2000
     size3D: 0
     rotation3D: 0
     gravityModifier:

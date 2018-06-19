@@ -51,6 +51,6 @@ public class CHIPS : MonoBehaviour {
 					else{text+="????\n";}
 				}
 			}
-			//display.SetText(text);
+			display.SetText(text);
 	}
 }

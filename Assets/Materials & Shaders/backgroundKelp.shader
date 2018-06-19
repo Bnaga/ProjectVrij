@@ -6,6 +6,7 @@
          _MainTex ("Albedo (RGB)", 2D) = "white" {}
          _Glossiness ("Smoothness", Range(0,1)) = 0.5
          _Metallic ("Metallic", Range(0,1)) = 0.0
+		_BaseHeight ("BaseHeight", Float) = 0
 
            [Header(Animation)]
         _Speed("Speed", Range( 0 , 10)) = 0
@@ -32,6 +33,8 @@
         uniform half _Glossiness;
         uniform half _Metallic;
         uniform fixed4 _Color;
+
+		uniform float _BaseHeight;
     
         uniform float _Speed;
 		uniform float _Yaw;
@@ -42,7 +45,7 @@
          void vert (inout appdata_full v){
             float3 ase_vertex3Pos = v.vertex.xyz;
            float3 worldPos = mul(unity_ObjectToWorld, v.vertex);
-            v.vertex.xyz += ( ( sin( ( ( (_Time.w) * _Speed) + ( ase_vertex3Pos.z * _Yaw ) + ( ase_vertex3Pos.y * _Roll ) )+ v.vertex.y*_Yaw ) * _Scale ) * float3(1,0,0) ) * worldPos.y;
+            v.vertex.xyz += ( ( sin( ( ( (_Time.w) * _Speed) + ( ase_vertex3Pos.z * _Yaw ) + ( ase_vertex3Pos.y * _Roll ) )+ v.vertex.y*_Yaw ) * _Scale ) * float3(1,0,0) ) * (worldPos.y + _BaseHeight);
             
          }
        
@@ -78,6 +81,8 @@
         uniform half _Metallic;
         uniform fixed4 _Color;
     
+		uniform float _BaseHeight;
+
         uniform float _Speed;
 		uniform float _Yaw;
 		uniform float _Roll;
@@ -86,7 +91,7 @@
          void vert (inout appdata_full v) {
              float3 ase_vertex3Pos = v.vertex.xyz;
              float3 worldPos = mul(unity_ObjectToWorld, v.vertex);
-            v.vertex.xyz += ( ( sin( ( ( (_Time.w) * _Speed) + ( ase_vertex3Pos.z * _Yaw ) + ( ase_vertex3Pos.y * _Roll ) )+ v.vertex.y*_Yaw ) * _Scale ) * float3(1,0,0) ) * worldPos.y;
+            v.vertex.xyz += ( ( sin( ( ( (_Time.w) * _Speed) + ( ase_vertex3Pos.z * _Yaw ) + ( ase_vertex3Pos.y * _Roll ) )+ v.vertex.y*_Yaw ) * _Scale ) * float3(1,0,0) ) * (worldPos.y + _BaseHeight);
             v.normal *= -1;
          }
  
