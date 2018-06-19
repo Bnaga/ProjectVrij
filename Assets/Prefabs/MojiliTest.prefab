@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 114682133530434382}
   - component: {fileID: 135184243947419752}
   - component: {fileID: 54621444837131542}
+  - component: {fileID: 95619743863753700}
   m_Layer: 0
   m_Name: MojiliTest
   m_TagString: Mojili
@@ -333,6 +334,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!95 &95619743863753700
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1710005133066964}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: a125f9cf766bb774d9c205857c60053d, type: 3}
+  m_Controller: {fileID: 9100000, guid: b6a599dc6766c5044b51471982d4fe8a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114550945514102158
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -405,6 +423,7 @@ MonoBehaviour:
   onIntDestination: 0
   coolDown: 0
   food: {fileID: 0}
+  animator: {fileID: 0}
   isInteractor: 0
   isInteractee: 0
   interactionTarget: {fileID: 0}
