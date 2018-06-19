@@ -98,11 +98,13 @@ private fishDictionary.word playbackWord;
 
 		}
 
-		if (leftHand.padPressed && !isRecording && holdingRecording && !menuActive){
+		if (leftHand.padPressed && !isRecording && holdingRecording && !menuActive && barProgress / audioRecording.length >.25f)
+        {
 			barProgress=0;
 			playbackDevice.playbackWord = playbackWord;
 			playbackDevice.PlaySound(audioRecording);
 			if (playbackWord != null) knownWordManager.wordBalloon(transform,playbackWord);
+            knownWordManager.particles(transform);
 		}
 	}
 	

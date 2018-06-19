@@ -15,7 +15,7 @@ public class IntColDecision : Decision
     {
         if(stateManager.isInteracting && !stateManager.coolDown &&stateManager.interactionTarget != null )
         {
-            Debug.Log("interaction");
+            //Debug.Log("interaction");
             if (stateManager.interactionTarget.GetComponent<RoleManager>().GetCurrentRole() == 1)
             {
                 stateManager.otherIsLeader = true;
