@@ -69,7 +69,6 @@ private fishDictionary.word playbackWord;
 			}
 		}
 		holdingRecording = audioRecorder.recording != null;
-		Debug.Log(playbackWord);
 
 		//updating UI
 	
