@@ -15,8 +15,10 @@ public class TestTalkAction : ActionScript
     
     void TestTalk(MJStateManager stateManager)
     {
-        if (!stateManager.soundCommunication.sourceNear.isPlaying && UnityEngine.Random.Range(0,100)<1)
+        if (!stateManager.soundCommunication.sourceNear.isPlaying && UnityEngine.Random.Range(0, 100) < 10)
+        {
             stateManager.AudioAction("smalltalk");
+        }
         stateManager.StartInteractiontimer();
     }
 }
