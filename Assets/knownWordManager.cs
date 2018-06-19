@@ -45,7 +45,7 @@ public class knownWordManager : MonoBehaviour {
 		o.GetComponent<speechBalloon>().initWord(word);
         o.transform.parent = null;
 		setGlobScale(o.transform,Vector3.one);
-		Vector3 r = Random.insideUnitSphere/5;
+		Vector3 r = Random.insideUnitSphere/8;
 		r.y = Mathf.Abs(r.y) + .1f;
 		o.transform.position += r;
 	}

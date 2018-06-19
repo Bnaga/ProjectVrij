@@ -677,13 +677,44 @@ public class AQUAS_LensEffects : MonoBehaviour {
             bubbleBehaviour.averageUpdrift = bubbleSpawnCriteria.averageUpdrift + Random.Range(-bubbleSpawnCriteria.averageUpdrift * 0.75f, bubbleSpawnCriteria.averageUpdrift * 0.75f);
             
             gameObjects.bubble.transform.localScale += new Vector3(bubbleScaleFactor, bubbleScaleFactor, bubbleScaleFactor);
+
+            Vector3 pos;
+            int i = 0;
+            do
+            {
+                pos = new Vector3(transform.position.x + Random.Range(-bubbleSpawnCriteria.maxSpawnDistance, bubbleSpawnCriteria.maxSpawnDistance), transform.position.y - 0.0f, transform.position.z + Random.Range(-bubbleSpawnCriteria.maxSpawnDistance, bubbleSpawnCriteria.maxSpawnDistance));
+                i++;
+                if (i > 100) break;
+            } while (inside_view(pos));
             
-            Instantiate(gameObjects.bubble, new Vector3(transform.position.x + Random.Range(-bubbleSpawnCriteria.maxSpawnDistance, bubbleSpawnCriteria.maxSpawnDistance), transform.position.y - 0.4f, transform.position.z + Random.Range(-bubbleSpawnCriteria.maxSpawnDistance, bubbleSpawnCriteria.maxSpawnDistance)), Quaternion.identity);
+
+            Instantiate(gameObjects.bubble, pos, Quaternion.identity);
             
             bubbleSpawnTimer += Random.Range(bubbleSpawnCriteria.minSpawnTimerL, bubbleSpawnCriteria.maxSpawnTimerL);
             
             gameObjects.bubble.transform.localScale = new Vector3(bubbleSpawnCriteria.baseScale, bubbleSpawnCriteria.baseScale, bubbleSpawnCriteria.baseScale);
         }
 #endregion
+    }
+
+    bool inside_view(Vector3 s)
+    {
+        float w = 3;
+        Vector3 a = transform.position - transform.forward/2;
+        Vector3 b = transform.position + 5*transform.forward + transform.right *w;
+        Vector3 c = transform.position + 5*transform.forward - transform.right * w;
+        b.y = transform.position.y;
+        c.y = transform.position.y;
+
+        float as_x = s.x - a.x;
+        float as_y = s.z - a.z;
+
+        bool s_ab = (b.x - a.x) * as_y - (b.z - a.z) * as_x > 0;
+
+        if ((c.x - a.x) * as_y - (c.z - a.z) * as_x > 0 == s_ab) return false;
+
+        if ((c.x - b.x) * (s.z - b.z) - (c.z - b.z) * (s.x - b.x) > 0 != s_ab) return false;
+
+        return true;
     }
 }
