@@ -25,11 +25,11 @@ public class knownWordManager : MonoBehaviour {
 	}
 
 	public static void checkRecording(fishDictionary.word word){
-		o = Instantiate(self.speechBalloon,self.transform);
 		if (!word.known){
-			o.GetComponent<speechBalloon>().init("NEW SOUND DISCOVERED!");
+            textBalloon(self.transform, "NEW SOUND DISCOVERED");
+            word.known = true;
 		} else{
-			o.GetComponent<speechBalloon>().initWord(word);
+            wordBalloon(self.transform, word);
 		}
 	}
 	
@@ -43,15 +43,15 @@ public class knownWordManager : MonoBehaviour {
 		if (!word.known) return;
 		o = Instantiate(self.speechBalloon, t);
 		o.GetComponent<speechBalloon>().initWord(word);
+        o.transform.parent = null;
 		setGlobScale(o.transform,Vector3.one);
-		Vector3 r = Random.insideUnitSphere/5;
+		Vector3 r = Random.insideUnitSphere/8;
 		r.y = Mathf.Abs(r.y) + .1f;
 		o.transform.position += r;
 	}
 
 	public static void textBalloon(Transform t, string text){
-		Instantiate(self.speechParticles,t);
-		o = Instantiate(self.speechBalloon, t);
+		o = Instantiate(self.speechBalloon, t.position, Quaternion.identity);
 		o.GetComponent<speechBalloon>().init(text);
 		setGlobScale(o.transform,Vector3.one);
 		Vector3 r = Random.insideUnitSphere/5;
@@ -70,6 +70,11 @@ public class knownWordManager : MonoBehaviour {
      transform.localScale = Vector3.one;
      transform.localScale = new Vector3 (globalScale.x/transform.lossyScale.x, globalScale.y/transform.lossyScale.y, globalScale.z/transform.lossyScale.z);
  }
+
+    public static void particles(Transform t)
+    {
+        Instantiate(self.speechParticles, t);
+    }
 
 	
 }

@@ -62,6 +62,7 @@ GameObject:
   - component: {fileID: 65201000531588214}
   - component: {fileID: 114858732085928136}
   - component: {fileID: 114805293908939388}
+  - component: {fileID: 114360444867022312}
   m_Layer: 0
   m_Name: Fish_Small
   m_TagString: Untagged
@@ -260,13 +261,28 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.15152334, y: 0.19774798, z: 0.39373827}
   m_Center: {x: 0, y: -0.0000000037252903, z: -0.000000007450581}
---- !u!114 &114805293908939388
+--- !u!114 &114360444867022312
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1989941529895064}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 581533424208b3c4a884e23e4cffaa98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.1
+  rotationSpeed: 2
+  speedscale: 0
+  nullPos: {x: 0, y: 0, z: 0}
+--- !u!114 &114805293908939388
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1989941529895064}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 884e719ec15ea294e8b6e1a1f4bb4e3d, type: 3}
   m_Name: 

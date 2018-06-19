@@ -24,7 +24,7 @@ public class IdleAction : ActionScript
             stateManager.RandomState();
         }
 
-        if (rand <= 10 && (role.GetCurrentRole() == 1 || role.GetCurrentRole() == 2))
+        if (rand <= 10 && role.GetCurrentRole() == 2)
         {
             stateManager.RandomSoldierState();
         }
