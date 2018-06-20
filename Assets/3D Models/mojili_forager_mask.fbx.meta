@@ -1,24 +1,19 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 13eed2092cf050d45b87377ec00ca2ac
-timeCreated: 1529500138
-=======
-guid: 18fc8a0a42024c343b0aafbc448ab0b5
-timeCreated: 1529502607
->>>>>>> master
+guid: 5716a9d7a45cccb45b5e0b70d5c6a49c
+timeCreated: 1529502608
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: lambert7
-    2100002: pasted__lambert7
-    2100004: lambert5
-    2100006: lambert6
+    2100000: pasted__lambert7
+    2100002: lambert5
+    2100004: lambert4
+    2100006: lambert7
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Spear_handle1
+    4300000: pasted__Shell
   externalObjects: {}
   materials:
     importMaterials: 1
