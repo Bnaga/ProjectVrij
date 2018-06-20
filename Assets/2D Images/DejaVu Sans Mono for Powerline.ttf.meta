@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: ff070553c1b578d4a9a786247c68917d
+timeCreated: 1529497310
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: DejaVu Sans Mono for Powerline
+  fontNames:
+  - DejaVu Sans Mono for Powerline
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
