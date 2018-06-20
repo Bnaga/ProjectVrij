@@ -38,7 +38,8 @@ private fishDictionary.word playbackWord;
 
 	public GameObject Menu;
 	private bool menuActive;
-	public VRTK.VRTK_Pointer PointerScript;
+	public Transform speaker;
+	//public VRTK.VRTK_Pointer PointerScript;
 
 	void Start(){
 		leftHand = GetComponent<SteamVR_TrackedController>();
@@ -65,7 +66,7 @@ private fishDictionary.word playbackWord;
 			if (playbackWord != null){ 
 				knownWordManager.checkRecording(playbackWord);
 			}else{
-				knownWordManager.textBalloon(transform,"Nothing recorded");
+				knownWordManager.textBalloon(speaker,"Nothing recorded");
 			}
 		}
 		holdingRecording = audioRecorder.recording != null;
@@ -103,8 +104,8 @@ private fishDictionary.word playbackWord;
 			barProgress=0;
 			playbackDevice.playbackWord = playbackWord;
 			playbackDevice.PlaySound(audioRecording);
-			if (playbackWord != null) knownWordManager.wordBalloon(transform,playbackWord);
-            knownWordManager.particles(transform);
+			if (playbackWord != null) knownWordManager.wordBalloon(speaker,playbackWord);
+            knownWordManager.particles(speaker);
 		}
 	}
 	

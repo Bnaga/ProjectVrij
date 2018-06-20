@@ -72,7 +72,7 @@ public partial class AreaLight : MonoBehaviour
 			m_ShadowmapCameraTransform.localPosition = -near * Vector3.forward;
 			m_ShadowmapCamera.nearClipPlane = near;
 			m_ShadowmapCamera.farClipPlane = near + m_Size.z;
-			m_ShadowmapCamera.fieldOfView = m_Angle;
+			//m_ShadowmapCamera.fieldOfView = m_Angle;
 			m_ShadowmapCamera.aspect = m_Size.x / m_Size.y;
 		}
 
