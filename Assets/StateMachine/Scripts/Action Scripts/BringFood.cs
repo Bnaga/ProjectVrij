@@ -34,6 +34,7 @@ public class BringFood : ActionScript
             stateManager.onDestination = true;
             Destroy(stateManager.food.gameObject);
             stateManager.hasFood = false;
+            stateManager.animator.SetBool("holding", false);
         }
     }
 
@@ -66,6 +67,7 @@ public class BringFood : ActionScript
             stateManager.food.transform.position = targetPos;
             stateManager.food.GetComponent<Rigidbody>().isKinematic = true;
             stateManager.food.GetComponent<FoodDecay>().pickedUp = true;
+            stateManager.animator.SetBool("holding", true);
         }
 
     }
