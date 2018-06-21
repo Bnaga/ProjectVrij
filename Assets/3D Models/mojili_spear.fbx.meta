@@ -1,12 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 13eed2092cf050d45b87377ec00ca2ac
-timeCreated: 1529500138
-=======
-guid: 18fc8a0a42024c343b0aafbc448ab0b5
-timeCreated: 1529502607
->>>>>>> master
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -19,6 +12,7 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Spear_handle1
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -93,7 +87,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
