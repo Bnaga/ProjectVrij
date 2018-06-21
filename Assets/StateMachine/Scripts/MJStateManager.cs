@@ -38,7 +38,7 @@ public class MJStateManager : MonoBehaviour {
     public GameObject food;
 
     public Animator animator;
-    float interactionTimer = 0;
+    public float interactionTimer = 0;
     float interactionCoolDown = 0;
 
     public bool isInteractor = false;
@@ -58,7 +58,7 @@ public class MJStateManager : MonoBehaviour {
         soundCommunication = GetComponent<soundCommunication>();
         food = null;
         //navMeshAgent.destination = Vector3.zero;
-        animator = GetComponent<Animator>();
+        animator = this.gameObject.GetComponent<Animator>();
 	}
 
     private void Start()
