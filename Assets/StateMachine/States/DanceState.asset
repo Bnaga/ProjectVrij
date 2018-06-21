@@ -11,9 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06881e62d640cdc459cc9a818d5f19eb, type: 3}
   m_Name: DanceState
   m_EditorClassIdentifier: 
-  actions: []
+  actions:
+  - {fileID: 11400000, guid: c762b94f07cdf464f8314a839957827c, type: 2}
   transistions:
   - decision: {fileID: 11400000, guid: 99b527d8529fcf14b952c76d73432268, type: 2}
     trueState: {fileID: 11400000, guid: b59ffc53f4658bf4095eed75cab3a3fa, type: 2}
     falseState: {fileID: 11400000, guid: 97f34bec1e0bdbf46b75ea64fda90f91, type: 2}
-  sceneGizmoColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  sceneGizmoColor: {r: 1, g: 0.7794118, b: 0.89350915, a: 1}

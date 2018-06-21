@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class lookingAtCHIPS : MonoBehaviour {
 
-	static float length = 3;
+	public float length = 3;
 	// Use this for initialization
 	void Start () {
 		
