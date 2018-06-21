@@ -16,7 +16,6 @@ public class lookingAtCHIPS : MonoBehaviour {
 		if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, length))
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
-            Debug.Log("Did Hit");
 			CHIPS chips = hit.transform.GetComponent<CHIPS>();
 			if (chips){
 				chips.NextScreen();
