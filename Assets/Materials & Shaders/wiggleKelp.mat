@@ -112,7 +112,7 @@ Material:
     - _FogFade: 1
     - _Gloss: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0.1
+    - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Intensity: 0
     - _LargeWaveRefraction: 1.5
@@ -124,7 +124,7 @@ Material:
     - _MediumWaveRefraction: 1.8
     - _MediumWavesSpeed: 40
     - _MediumWavesTiling: 0.5
-    - _Metallic: 0.255
+    - _Metallic: 0.5
     - _Mode: 0
     - _Occlusion: 3
     - _OcclusionStrength: 1

@@ -1,50 +1,59 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 
 public class GlobalFlock : MonoBehaviour {
 
-    public GameObject[] fishObjs;
-    public static int tankSize = 3;
-    public static int tankMin = 0;
+	public GameObject defaultFish;
+	public GameObject[] fishPrefabs;
+	public GameObject fishSchool;
+	public static int tankSize = 4;
+    public static Vector3 defaultPos;
 
-    static int numFish = 30;
-    public static GameObject[] allFIsh = new GameObject[numFish];
-
-    public static Vector3 goalPos = Vector3.zero;
+static int numFish = 50;
+	public static GameObject[] allFish = new GameObject[numFish];
+	public static Vector3 goalPos = Vector3.zero;
 
 	// Use this for initialization
-	void Start ()
-    {
-        //tankMin = -tankSize;
-		for(int i = 0; i < numFish; i++)
-        {
-            Vector3 pos = new Vector3(Random.Range(-tankSize, tankSize),
-                                      Random.Range(tankMin, tankSize*2),
-                                      Random.Range(-tankSize, tankSize));
-            GameObject fish = fishObjs[Random.RandomRange(0,fishObjs.Length)];
-            allFIsh[i] = (GameObject) Instantiate(fish, pos, Quaternion.identity);
-        }
+	void Start () {
+        defaultPos = transform.position;
+		for (int i = 0; i < numFish; i++) {
+			Vector3 pos;
+            do{
+            pos= new Vector3 (
+				Random.Range(-tankSize, tankSize),
+				Random.Range(1, tankSize),
+				Random.Range(-tankSize, tankSize)
+			);
+            }while(pos != checkPos(pos));
+			GameObject fish = (GameObject)Instantiate (
+				fishPrefabs[Random.Range (0, fishPrefabs.Length)], pos, Quaternion.identity);
+			fish.transform.parent = fishSchool.transform;
+			allFish [i] = fish;
+		}
 	}
 	
 	// Update is called once per frame
-	void Update ()
-    {
-		if(Random.Range(0,10000) < 50) newGoal(transform.position);
-
-		
-          
+	void Update () {
+		HandleGoalPos ();
 	}
 
-	public static void newGoal(Vector3 origin){
-		  goalPos = new Vector3(Random.Range(-tankSize, tankSize),
-                                  Random.Range(tankMin, tankSize * 2),
-                                  Random.Range(-tankSize, tankSize));
-								   RaycastHit hit;
-        if (Physics.Raycast(origin,goalPos, out hit)){
-            goalPos = (goalPos + hit.point*9)/10;
+	void HandleGoalPos() {
+		if (Random.Range(1, 10000) < 50) {
+			goalPos = new Vector3 (
+				Random.Range(-tankSize, tankSize),
+				Random.Range(0, tankSize*2),
+				Random.Range(-tankSize, tankSize)
+			);
+            goalPos = checkPos(goalPos);
+           
+		}
+	}
 
-	    }
-
+    Vector3 checkPos(Vector3 input){
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position,input, out hit)){
+            return(hit.point - (goalPos - hit.point)/10);
+            }
+            return input;
     }
 }

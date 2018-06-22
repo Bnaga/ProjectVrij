@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4819194351763978}
   - component: {fileID: 33716906930769906}
   - component: {fileID: 23390000476153438}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SeparationArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4186366887976668}
   - component: {fileID: 33429138269127512}
   - component: {fileID: 23298329433963986}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: NeighborArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,11 +59,9 @@ GameObject:
   - component: {fileID: 199073876838709466}
   - component: {fileID: 198130434427437560}
   - component: {fileID: 65787109145566102}
-  - component: {fileID: 135145729181174122}
   - component: {fileID: 114023128892508044}
-  - component: {fileID: 114363305026748786}
   - component: {fileID: 114902051149311242}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fish_Big
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77,7 +75,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1989941529895064}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.6267949, y: 1.4443818, z: -0.8654232}
+  m_LocalPosition: {x: 2.3964477, y: 0.787, z: 0.18367508}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:
   - {fileID: 4186366887976668}
@@ -241,8 +239,8 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1989941529895064}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
+  m_Mass: 0.2
+  m_Drag: 1
   m_AngularDrag: 1
   m_UseGravity: 0
   m_IsKinematic: 0
@@ -281,20 +279,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 645c1fdc02f615641a7813c06c37be0f, type: 3}
   - {fileID: 8300000, guid: 137ecdaccae19474fa9b5fa65f2894e0, type: 3}
   soundFrequency: 4
---- !u!114 &114363305026748786
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1989941529895064}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 884e719ec15ea294e8b6e1a1f4bb4e3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  neighborRadius: 10
-  desiredSeparation: 2
-  debug: 0
 --- !u!114 &114902051149311242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -306,22 +290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581533424208b3c4a884e23e4cffaa98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  rotationSpeed: 2
-  speedscale: 2
-  nullPos: {x: 0, y: 1.86, z: 0}
---- !u!135 &135145729181174122
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1989941529895064}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.46997628
-  m_Center: {x: 0.0000000018626451, y: 0.000000007450581, z: 0.000000029802322}
+  maxSpeed: 80
 --- !u!198 &198130434427437560
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -382,7 +351,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: -1432921135
+  randomSeed: -212430810
   InitialModule:
     serializedVersion: 3
     enabled: 1
