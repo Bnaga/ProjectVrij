@@ -45,7 +45,7 @@ public class Flock : MonoBehaviour {
 
         if (turning)
         {
-            Vector3 direction = (goalPos*8+nullPos)/9 - transform.position;
+            Vector3 direction = (goalPos+nullPos)/2 - transform.position;
             Quaternion rot = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), rotationSpeed/(realSpeed) * Time.deltaTime);
             rb.MoveRotation(rot);
             speed = Random.Range(1, 2);
@@ -54,7 +54,7 @@ public class Flock : MonoBehaviour {
         {
              Quaternion rot = Quaternion.Slerp(transform.rotation, turnRot, rotationSpeed/(realSpeed) * Time.deltaTime);
             rb.MoveRotation(rot);
-            turnRot = Quaternion.Slerp(Quaternion.identity, turnRot, 1-rotationSpeed * Time.deltaTime);
+            turnRot = Quaternion.Slerp(Quaternion.identity, turnRot, 1-rotationSpeed/(realSpeed) * Time.deltaTime);
             applycounter--;
             if (applycounter<0)
             {
@@ -82,7 +82,7 @@ public class Flock : MonoBehaviour {
         Debug.DrawLine(transform.position,goalPos);
 
         if (Vector3.Distance(transform.position,goalPos)<1f){
-            GlobalFlock.newGoal(transform.position);
+            //GlobalFlock.newGoal(transform.position);
         };
         float dist;
 
