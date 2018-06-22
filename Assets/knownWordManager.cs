@@ -11,6 +11,8 @@ public class knownWordManager : MonoBehaviour {
 	public Material alertMaterial;
 	public static knownWordManager self;
 	public fishDictionary[] dictionaries;
+
+
 	private static GameObject o;
 
 
@@ -42,7 +44,7 @@ public class knownWordManager : MonoBehaviour {
 		Instantiate(self.speechParticles,t);
 		if (!word.known) return;
 		o = Instantiate(self.speechBalloon, t);
-		o.GetComponent<speechBalloon>().initWord(word);
+		o.GetComponent<speechBalloon>().initWord(word,true);
         o.transform.parent = null;
 		setGlobScale(o.transform,Vector3.one);
 		Vector3 r = Random.insideUnitSphere/8;

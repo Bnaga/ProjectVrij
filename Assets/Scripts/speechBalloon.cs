@@ -9,11 +9,18 @@ public class speechBalloon : MonoBehaviour {
 	public float lifetime;
 	private float timer;
 	private fishDictionary.word word;
+	private TextMeshPro TextMeshPro;
+
+	public TMP_FontAsset mojili;
 	
+	void Awake(){
+		TextMeshPro = GetComponent<TextMeshPro>();
+	}
+
 	// Update is called once per frame
-	public void initWord(fishDictionary.word initword){
+	public void initWord(fishDictionary.word initword, bool b){
 		word = initword;
-		
+		if (b) TextMeshPro.font = mojili;
 		string text = word.meaning;
 		if (!word.known) text = "???????";
 		init(text);
@@ -23,7 +30,7 @@ public class speechBalloon : MonoBehaviour {
 
 	public void init(string text){
 		transform.rotation = Random.rotation;
-		GetComponent<TextMeshPro>().SetText(text);
+		TextMeshPro.SetText(text);
 	}
 
 
