@@ -130,8 +130,8 @@ Material:
     - _ReflectionIntensity: 0.5
     - _RefractionDistance: 0
     - _RefractionFalloff: 0
-    - _Roll: 1
-    - _Scale: 0.01
+    - _Roll: -5
+    - _Scale: 0.006
     - _ShakeBending: 1
     - _ShakeDisplacement: 1
     - _ShakeTime: 0.314
@@ -153,7 +153,7 @@ Material:
     - _UsingLinearColorSpace: 0
     - _WaveBlend: 0.77
     - _WaveFade: 1.19
-    - _Yaw: 5.97
+    - _Yaw: -4
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
