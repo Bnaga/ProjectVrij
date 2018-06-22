@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a3bdb2cd68f901469e7cc149151eb49, type: 3}
-  m_Name: AQUAS_Underwater Abalone
+  m_Name: AQUAS_Underwater Abalone 1
   m_EditorClassIdentifier: 
   debugViews:
     m_Enabled: 1
@@ -33,7 +33,7 @@ MonoBehaviour:
     m_Settings:
       method: 0
       fxaaSettings:
-        preset: 4
+        preset: 0
       taaSettings:
         jitterSpread: 0.75
         sharpen: 0.3
@@ -71,11 +71,11 @@ MonoBehaviour:
   depthOfField:
     m_Enabled: 0
     m_Settings:
-      focusDistance: 1
-      aperture: 27.8
-      focalLength: 17.8
-      useCameraFov: 1
-      kernelSize: 3
+      focusDistance: 2
+      aperture: 7
+      focalLength: 10
+      useCameraFov: 0
+      kernelSize: 2
   motionBlur:
     m_Enabled: 0
     m_Settings:
@@ -83,7 +83,7 @@ MonoBehaviour:
       sampleCount: 10
       frameBlending: 0
   eyeAdaptation:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
       lowPercent: 45
       highPercent: 95
@@ -100,31 +100,31 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       bloom:
-        intensity: 0.15
-        threshold: 0.2
-        softKnee: 0.849
-        radius: 2
+        intensity: 5.72
+        threshold: 2.19
+        softKnee: 0.96
+        radius: 7
         antiFlicker: 1
       lensDirt:
         texture: {fileID: 0}
         intensity: 0
   colorGrading:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
       tonemapping:
         tonemapper: 2
-        neutralBlackIn: 0.0503
-        neutralWhiteIn: 10.59
-        neutralBlackOut: -0.016
-        neutralWhiteOut: 16.81
+        neutralBlackIn: 0.02
+        neutralWhiteIn: 10
+        neutralBlackOut: 0
+        neutralWhiteOut: 10
         neutralWhiteLevel: 5.3
-        neutralWhiteClip: 8.64
+        neutralWhiteClip: 10
       basic:
-        postExposure: 0.33
-        temperature: -1.1
-        tint: 7.46
+        postExposure: 0
+        temperature: 0
+        tint: 0
         hueShift: 0
-        saturation: 1.22
+        saturation: 1
         contrast: 1
       channelMixer:
         red: {x: 1, y: 0, z: 0}
@@ -284,14 +284,14 @@ MonoBehaviour:
     m_Enabled: 0
     m_Settings:
       spectralTexture: {fileID: 0}
-      intensity: 0.52
+      intensity: 0.2
   grain:
     m_Enabled: 0
     m_Settings:
-      colored: 0
-      intensity: 0.136
-      size: 0.3
-      luminanceContribution: 0.245
+      colored: 1
+      intensity: 0.326
+      size: 0.58
+      luminanceContribution: 0.8
   vignette:
     m_Enabled: 1
     m_Settings:

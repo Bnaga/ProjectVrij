@@ -3,13 +3,14 @@ using System.Collections;
 
 public class GlobalFlock : MonoBehaviour {
 
+
 	public GameObject defaultFish;
 	public GameObject[] fishPrefabs;
 	public GameObject fishSchool;
 	public static int tankSize = 4;
     public static Vector3 defaultPos;
 
-static int numFish = 50;
+static int numFish = 40;
 	public static GameObject[] allFish = new GameObject[numFish];
 	public static Vector3 goalPos = Vector3.zero;
 
@@ -18,12 +19,20 @@ static int numFish = 50;
         defaultPos = transform.position;
 		for (int i = 0; i < numFish; i++) {
 			Vector3 pos;
+            int j = 0;
             do{
-            pos= new Vector3 (
-				Random.Range(-tankSize, tankSize),
-				Random.Range(1, tankSize),
-				Random.Range(-tankSize, tankSize)
-			);
+                
+                pos= new Vector3 (
+                    Random.Range(-tankSize, tankSize),
+                    Random.Range(1, tankSize),
+                    Random.Range(-tankSize, tankSize)
+                );
+                j++;
+                if (j>20){
+                    Debug.Log("could not find place for fish");
+                    break;
+                }
+
             }while(pos != checkPos(pos));
 			GameObject fish = (GameObject)Instantiate (
 				fishPrefabs[Random.Range (0, fishPrefabs.Length)], pos, Quaternion.identity);

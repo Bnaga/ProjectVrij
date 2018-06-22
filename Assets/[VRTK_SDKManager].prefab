@@ -92,7 +92,8 @@ GameObject:
   - component: {fileID: 114953064091401522}
   - component: {fileID: 114197244090125544}
   - component: {fileID: 135029805717328524}
-  - component: {fileID: 114772203030168050}
+  - component: {fileID: 114335527480281594}
+  - component: {fileID: 114940013162293358}
   m_Layer: 0
   m_Name: Camera (eye)
   m_TagString: MainCamera
@@ -3786,7 +3787,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1767925517178468}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -7731,6 +7732,20 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114335527480281594
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1017891631361658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bca9ccf900ccc84c887d783321d27e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _head: {fileID: 4430707041956706}
+  _ears: {fileID: 4498896820087740}
+  wireframe: 0
 --- !u!114 &114336931859112470
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10373,20 +10388,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0893f0c8a7712e8458dc3722eef95aca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114772203030168050
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1017891631361658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bca9ccf900ccc84c887d783321d27e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _head: {fileID: 4430707041956706}
-  _ears: {fileID: 4498896820087740}
-  wireframe: 0
 --- !u!114 &114789731701917608
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11659,6 +11660,18 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114940013162293358
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1017891631361658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 5d26a2f20105ed242bca35935f7d95c9, type: 2}
 --- !u!114 &114941868869456266
 MonoBehaviour:
   m_ObjectHideFlags: 1
