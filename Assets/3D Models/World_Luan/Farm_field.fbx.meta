@@ -1,0 +1,342 @@
+fileFormatVersion: 2
+guid: 7f7e5ff5389402548ac4ab61cf1b9d07
+timeCreated: 1529848966
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: group
+    100004: group 1
+    100006: group1
+    100008: group10
+    100010: group2
+    100012: group3
+    100014: group4
+    100016: group5
+    100018: group6
+    100020: group7
+    100022: group8
+    100024: group9
+    100026: pasted__Bean
+    100028: pasted__Farm_Field
+    100030: pasted__Farm_Field 1
+    100032: pasted__group
+    100034: pasted__group 1
+    100036: pasted__group 2
+    100038: pasted__group 3
+    100040: pasted__group 4
+    100042: pasted__group1
+    100044: pasted__group1 1
+    100046: pasted__group1 2
+    100048: pasted__group2
+    100050: pasted__group2 1
+    100052: pasted__group2 2
+    100054: pasted__group3
+    100056: pasted__group3 1
+    100058: pasted__group3 2
+    100060: pasted__group4
+    100062: pasted__group4 1
+    100064: pasted__group4 2
+    100066: pasted__group5
+    100068: pasted__group5 1
+    100070: pasted__group5 2
+    100072: pasted__group6
+    100074: pasted__group6 1
+    100076: pasted__group6 2
+    100078: pasted__pasted__Bean
+    100080: pasted__pasted__Bean 1
+    100082: pasted__pasted__Bean 10
+    100084: pasted__pasted__Bean 11
+    100086: pasted__pasted__Bean 2
+    100088: pasted__pasted__Bean 3
+    100090: pasted__pasted__Bean 4
+    100092: pasted__pasted__Bean 5
+    100094: pasted__pasted__Bean 6
+    100096: pasted__pasted__Bean 7
+    100098: pasted__pasted__Bean 8
+    100100: pasted__pasted__Bean 9
+    100102: pasted__pasted__pasted__Bean
+    100104: pasted__pasted__pasted__Bean 1
+    100106: pasted__pasted__pasted__Bean 10
+    100108: pasted__pasted__pasted__Bean 11
+    100110: pasted__pasted__pasted__Bean 12
+    100112: pasted__pasted__pasted__Bean 13
+    100114: pasted__pasted__pasted__Bean 14
+    100116: pasted__pasted__pasted__Bean 15
+    100118: pasted__pasted__pasted__Bean 16
+    100120: pasted__pasted__pasted__Bean 17
+    100122: pasted__pasted__pasted__Bean 18
+    100124: pasted__pasted__pasted__Bean 19
+    100126: pasted__pasted__pasted__Bean 2
+    100128: pasted__pasted__pasted__Bean 20
+    100130: pasted__pasted__pasted__Bean 21
+    100132: pasted__pasted__pasted__Bean 22
+    100134: pasted__pasted__pasted__Bean 3
+    100136: pasted__pasted__pasted__Bean 4
+    100138: pasted__pasted__pasted__Bean 5
+    100140: pasted__pasted__pasted__Bean 6
+    100142: pasted__pasted__pasted__Bean 7
+    100144: pasted__pasted__pasted__Bean 8
+    100146: pasted__pasted__pasted__Bean 9
+    400000: //RootNode
+    400002: group
+    400004: group 1
+    400006: group1
+    400008: group10
+    400010: group2
+    400012: group3
+    400014: group4
+    400016: group5
+    400018: group6
+    400020: group7
+    400022: group8
+    400024: group9
+    400026: pasted__Bean
+    400028: pasted__Farm_Field
+    400030: pasted__Farm_Field 1
+    400032: pasted__group
+    400034: pasted__group 1
+    400036: pasted__group 2
+    400038: pasted__group 3
+    400040: pasted__group 4
+    400042: pasted__group1
+    400044: pasted__group1 1
+    400046: pasted__group1 2
+    400048: pasted__group2
+    400050: pasted__group2 1
+    400052: pasted__group2 2
+    400054: pasted__group3
+    400056: pasted__group3 1
+    400058: pasted__group3 2
+    400060: pasted__group4
+    400062: pasted__group4 1
+    400064: pasted__group4 2
+    400066: pasted__group5
+    400068: pasted__group5 1
+    400070: pasted__group5 2
+    400072: pasted__group6
+    400074: pasted__group6 1
+    400076: pasted__group6 2
+    400078: pasted__pasted__Bean
+    400080: pasted__pasted__Bean 1
+    400082: pasted__pasted__Bean 10
+    400084: pasted__pasted__Bean 11
+    400086: pasted__pasted__Bean 2
+    400088: pasted__pasted__Bean 3
+    400090: pasted__pasted__Bean 4
+    400092: pasted__pasted__Bean 5
+    400094: pasted__pasted__Bean 6
+    400096: pasted__pasted__Bean 7
+    400098: pasted__pasted__Bean 8
+    400100: pasted__pasted__Bean 9
+    400102: pasted__pasted__pasted__Bean
+    400104: pasted__pasted__pasted__Bean 1
+    400106: pasted__pasted__pasted__Bean 10
+    400108: pasted__pasted__pasted__Bean 11
+    400110: pasted__pasted__pasted__Bean 12
+    400112: pasted__pasted__pasted__Bean 13
+    400114: pasted__pasted__pasted__Bean 14
+    400116: pasted__pasted__pasted__Bean 15
+    400118: pasted__pasted__pasted__Bean 16
+    400120: pasted__pasted__pasted__Bean 17
+    400122: pasted__pasted__pasted__Bean 18
+    400124: pasted__pasted__pasted__Bean 19
+    400126: pasted__pasted__pasted__Bean 2
+    400128: pasted__pasted__pasted__Bean 20
+    400130: pasted__pasted__pasted__Bean 21
+    400132: pasted__pasted__pasted__Bean 22
+    400134: pasted__pasted__pasted__Bean 3
+    400136: pasted__pasted__pasted__Bean 4
+    400138: pasted__pasted__pasted__Bean 5
+    400140: pasted__pasted__pasted__Bean 6
+    400142: pasted__pasted__pasted__Bean 7
+    400144: pasted__pasted__pasted__Bean 8
+    400146: pasted__pasted__pasted__Bean 9
+    2100000: lambert1
+    2300000: //RootNode
+    2300002: pasted__Bean
+    2300004: pasted__pasted__Bean
+    2300006: pasted__pasted__Bean 1
+    2300008: pasted__pasted__Bean 2
+    2300010: pasted__pasted__Bean 3
+    2300012: pasted__pasted__Bean 4
+    2300014: pasted__pasted__Bean 5
+    2300016: pasted__pasted__Bean 6
+    2300018: pasted__pasted__Bean 7
+    2300020: pasted__pasted__Bean 8
+    2300022: pasted__pasted__Bean 9
+    2300024: pasted__pasted__pasted__Bean
+    2300026: pasted__pasted__pasted__Bean 1
+    2300028: pasted__pasted__pasted__Bean 10
+    2300030: pasted__pasted__pasted__Bean 11
+    2300032: pasted__pasted__pasted__Bean 12
+    2300034: pasted__pasted__pasted__Bean 13
+    2300036: pasted__pasted__pasted__Bean 14
+    2300038: pasted__pasted__pasted__Bean 15
+    2300040: pasted__pasted__pasted__Bean 16
+    2300042: pasted__pasted__pasted__Bean 17
+    2300044: pasted__pasted__pasted__Bean 18
+    2300046: pasted__pasted__pasted__Bean 19
+    2300048: pasted__pasted__pasted__Bean 2
+    2300050: pasted__pasted__pasted__Bean 20
+    2300052: pasted__pasted__pasted__Bean 21
+    2300054: pasted__pasted__pasted__Bean 22
+    2300056: pasted__pasted__pasted__Bean 3
+    2300058: pasted__pasted__pasted__Bean 4
+    2300060: pasted__pasted__pasted__Bean 5
+    2300062: pasted__pasted__pasted__Bean 6
+    2300064: pasted__pasted__pasted__Bean 7
+    2300066: pasted__pasted__pasted__Bean 8
+    2300068: pasted__pasted__pasted__Bean 9
+    3300000: //RootNode
+    3300002: pasted__Bean
+    3300004: pasted__pasted__Bean
+    3300006: pasted__pasted__Bean 1
+    3300008: pasted__pasted__Bean 2
+    3300010: pasted__pasted__Bean 3
+    3300012: pasted__pasted__Bean 4
+    3300014: pasted__pasted__Bean 5
+    3300016: pasted__pasted__Bean 6
+    3300018: pasted__pasted__Bean 7
+    3300020: pasted__pasted__Bean 8
+    3300022: pasted__pasted__Bean 9
+    3300024: pasted__pasted__pasted__Bean
+    3300026: pasted__pasted__pasted__Bean 1
+    3300028: pasted__pasted__pasted__Bean 10
+    3300030: pasted__pasted__pasted__Bean 11
+    3300032: pasted__pasted__pasted__Bean 12
+    3300034: pasted__pasted__pasted__Bean 13
+    3300036: pasted__pasted__pasted__Bean 14
+    3300038: pasted__pasted__pasted__Bean 15
+    3300040: pasted__pasted__pasted__Bean 16
+    3300042: pasted__pasted__pasted__Bean 17
+    3300044: pasted__pasted__pasted__Bean 18
+    3300046: pasted__pasted__pasted__Bean 19
+    3300048: pasted__pasted__pasted__Bean 2
+    3300050: pasted__pasted__pasted__Bean 20
+    3300052: pasted__pasted__pasted__Bean 21
+    3300054: pasted__pasted__pasted__Bean 22
+    3300056: pasted__pasted__pasted__Bean 3
+    3300058: pasted__pasted__pasted__Bean 4
+    3300060: pasted__pasted__pasted__Bean 5
+    3300062: pasted__pasted__pasted__Bean 6
+    3300064: pasted__pasted__pasted__Bean 7
+    3300066: pasted__pasted__pasted__Bean 8
+    3300068: pasted__pasted__pasted__Bean 9
+    4300000: Farm_Field1
+    4300002: Farm_Field
+    4300004: pasted__Bean
+    4300006: pasted__pasted__Bean
+    4300008: pasted__pasted__Bean
+    4300010: pasted__pasted__Bean
+    4300012: pasted__pasted__Bean
+    4300014: pasted__pasted__Bean
+    4300016: pasted__pasted__Bean
+    4300018: pasted__pasted__Bean
+    4300020: pasted__pasted__pasted__Bean
+    4300022: pasted__pasted__pasted__Bean
+    4300024: pasted__pasted__Bean
+    4300026: pasted__pasted__pasted__Bean
+    4300028: pasted__pasted__pasted__Bean
+    4300030: pasted__pasted__pasted__Bean
+    4300032: pasted__pasted__pasted__Bean
+    4300034: pasted__pasted__pasted__Bean
+    4300036: pasted__pasted__pasted__Bean
+    4300038: pasted__pasted__pasted__Bean
+    4300040: pasted__pasted__Bean
+    4300042: pasted__pasted__pasted__Bean
+    4300044: pasted__pasted__pasted__Bean
+    4300046: pasted__pasted__pasted__Bean
+    4300048: pasted__pasted__pasted__Bean
+    4300050: pasted__pasted__pasted__Bean
+    4300052: pasted__pasted__pasted__Bean
+    4300054: pasted__pasted__pasted__Bean
+    4300056: pasted__pasted__Bean
+    4300058: pasted__pasted__pasted__Bean
+    4300060: pasted__pasted__pasted__Bean
+    4300062: pasted__pasted__pasted__Bean
+    4300064: pasted__pasted__pasted__Bean
+    4300066: pasted__pasted__pasted__Bean
+    4300068: pasted__pasted__pasted__Bean
+    4300070: pasted__pasted__pasted__Bean
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
