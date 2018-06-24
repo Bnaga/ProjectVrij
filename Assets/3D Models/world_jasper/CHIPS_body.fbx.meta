@@ -38,7 +38,9 @@ ModelImporter:
     2100000: textureSheet
     2100002: blinn1
     2300000: CHIPS_body
+    2300002: //RootNode
     3300000: CHIPS_body
+    3300002: //RootNode
     4300000: CHIPS_body
   externalObjects: {}
   materials:

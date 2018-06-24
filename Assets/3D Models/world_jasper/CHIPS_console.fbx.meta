@@ -25,7 +25,9 @@ ModelImporter:
     2100002: glowingScreen
     2100004: glowingscreen2
     2300000: CHIPS_console
+    2300002: //RootNode
     3300000: CHIPS_console
+    3300002: //RootNode
     4300000: CHIPS_console
   externalObjects: {}
   materials:
