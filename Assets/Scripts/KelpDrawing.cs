@@ -295,6 +295,7 @@ class KelpDrawing : MonoBehaviour
 	}
 
 	public void addWaterPhysics(GameObject obj){
+		return;
 		underwaterPhysics phys = obj.AddComponent(typeof(underwaterPhysics)) as underwaterPhysics;
 		phys.alwaysActive=true;
 		phys.UpdateEveryXFrames = 120;
