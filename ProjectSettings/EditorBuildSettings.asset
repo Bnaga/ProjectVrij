@@ -18,11 +18,14 @@ EditorBuildSettings:
     path: Assets/Scenes/world_carl 1.unity
     guid: 8307146447185374781778770dc9c5b5
   - enabled: 1
+    path: Assets/Scenes/world_MENU.unity
+    guid: f674d49e5f6d0c249a0720e91c31ac40
+  - enabled: 1
     path: Assets/Scenes/world_carl_playable.unity
     guid: ea8765a77ce68ca48a2453b88e61f088
   - enabled: 0
-    path: Assets/Scenes/world_MENU.unity
-    guid: f674d49e5f6d0c249a0720e91c31ac40
-  - enabled: 0
     path: Assets/Scenes/world_jasper.unity
     guid: 7e46249610121e1438dea3382a1d9488
+  - enabled: 1
+    path: Assets/Scenes/world_jasper4.unity
+    guid: 2bba7f3fe0b029f41868b62e3ca859d2
