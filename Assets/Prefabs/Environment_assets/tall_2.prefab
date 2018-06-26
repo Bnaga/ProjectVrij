@@ -22,12 +22,9 @@ GameObject:
   - component: {fileID: 33828761733897664}
   - component: {fileID: 183341551754734284}
   - component: {fileID: 137318358114268802}
-  - component: {fileID: 64290663257443718}
   - component: {fileID: 114626752708030490}
   - component: {fileID: 114601178971535306}
-  - component: {fileID: 64945026082277416}
-  - component: {fileID: 64397447264365102}
-  - component: {fileID: 64956195956184944}
+  - component: {fileID: 64814860133753504}
   m_Layer: 0
   m_Name: cloth (1)
   m_TagString: Untagged
@@ -84,51 +81,9 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1027594737771228}
   m_Mesh: {fileID: 4300002, guid: 3ce2b8e35428dee4285f58bd4764d0da, type: 3}
---- !u!64 &64290663257443718
+--- !u!64 &64814860133753504
 MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1027594737771228}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300002, guid: 3ce2b8e35428dee4285f58bd4764d0da, type: 3}
---- !u!64 &64397447264365102
-MeshCollider:
-  m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1027594737771228}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300002, guid: 3ce2b8e35428dee4285f58bd4764d0da, type: 3}
---- !u!64 &64945026082277416
-MeshCollider:
-  m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1027594737771228}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300002, guid: 3ce2b8e35428dee4285f58bd4764d0da, type: 3}
---- !u!64 &64956195956184944
-MeshCollider:
-  m_ObjectHideFlags: 3
+  m_ObjectHideFlags: 15
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1027594737771228}
@@ -222,7 +177,7 @@ Cloth:
   m_BendingStiffness: 0.3
   m_UseTethers: 1
   m_UseGravity: 0
-  m_Damping: 0.1
+  m_Damping: 0.15
   m_ExternalAcceleration: {x: 0, y: 1, z: 0}
   m_RandomAcceleration: {x: 0.05, y: 0, z: 0.05}
   m_WorldVelocityScale: 1

@@ -10,6 +10,7 @@ public class MusicAction : ActionScript
     public override void Act(MJStateManager stateManager)
     {
         PlayMusic(stateManager);
+        stateManager.StartInteractiontimer();
     }
 
     void PlayMusic(MJStateManager stateManager)
