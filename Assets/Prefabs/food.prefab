@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 23900920261340104}
   - component: {fileID: 54799608718176254}
   - component: {fileID: 114564246208745220}
+  - component: {fileID: 114678504496342916}
   m_Layer: 0
   m_Name: food
   m_TagString: Food
@@ -113,6 +114,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodDecay: 10
   pickedUp: 0
+--- !u!114 &114678504496342916
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1482625155695472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3093d63152192a840be42c9865427810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minScale: {x: 0, y: 0, z: 0}
+  speed: 2
+  duration: 2
+  lerped: 0
 --- !u!135 &135388182372492270
 SphereCollider:
   m_ObjectHideFlags: 1
