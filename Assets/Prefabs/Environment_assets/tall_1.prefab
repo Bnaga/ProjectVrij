@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 33357058519584988}
   - component: {fileID: 183327879001389912}
   - component: {fileID: 137808264050205306}
-  - component: {fileID: 64221158880048034}
   - component: {fileID: 114426849586483842}
   - component: {fileID: 114866882281586818}
   m_Layer: 0
@@ -80,20 +79,6 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1081571276511988}
-  m_Mesh: {fileID: 4300000, guid: 3ce2b8e35428dee4285f58bd4764d0da, type: 3}
---- !u!64 &64221158880048034
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1081571276511988}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 3ce2b8e35428dee4285f58bd4764d0da, type: 3}
 --- !u!114 &114426849586483842
 MonoBehaviour:
@@ -177,7 +162,7 @@ Cloth:
   m_BendingStiffness: 0.2
   m_UseTethers: 1
   m_UseGravity: 1
-  m_Damping: 0.1
+  m_Damping: 0.15
   m_ExternalAcceleration: {x: 0, y: 0.99, z: 0}
   m_RandomAcceleration: {x: 0.01, y: 0, z: 0}
   m_WorldVelocityScale: 1
