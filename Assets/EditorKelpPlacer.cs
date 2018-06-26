@@ -12,6 +12,7 @@ public class EditorKelpPlacer : MonoBehaviour {
 	public float innerRadius;
 	public float rayHeight;
 	public int batchSize;
+	public bool facePlayer = true;
 	
 	public GameObject[] kelpPrefabs;
 	public List<GameObject> allPlaced = new List<GameObject>();
@@ -50,8 +51,13 @@ public class EditorKelpPlacer : MonoBehaviour {
         {
             GameObject obj = Instantiate(kelpPrefabs[Random.Range(0,kelpPrefabs.Length)],transform);
 			obj.transform.position=hit.point;
-			Vector3 target = new Vector3(0,obj.transform.position.y,0);
-			obj.transform.LookAt(target);
+			if (facePlayer){
+				Vector3 target = new Vector3(0,obj.transform.position.y,0);
+				obj.transform.LookAt(target);
+			}else{
+				obj.transform.rotation = Quaternion.Euler(0,Random.Range(0,360),0);
+			}
+			
 			allPlaced.Add(obj);
         }
 		
