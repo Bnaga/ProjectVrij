@@ -110,6 +110,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1414185297525074
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4442043150268626}
+  - component: {fileID: 33572064838097818}
+  - component: {fileID: 23701715593074712}
+  m_Layer: 0
+  m_Name: Mask_mojili
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1459622845102904
 GameObject:
   m_ObjectHideFlags: 1
@@ -300,6 +317,19 @@ Transform:
   m_Father: {fileID: 4293874343429946}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4442043150268626
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1414185297525074}
+  m_LocalRotation: {x: -0.19562046, y: -0.00018030405, z: -0.00018545985, w: 0.9806797}
+  m_LocalPosition: {x: -0.0001, y: 0.0631, z: 0.0309}
+  m_LocalScale: {x: 12.166058, y: 12.1660595, z: 12.1660595}
+  m_Children: []
+  m_Father: {fileID: 4533786983600826}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -22.562, y: -0.017, z: -0.018000001}
 --- !u!4 &4455203043682106
 Transform:
   m_ObjectHideFlags: 1
@@ -307,7 +337,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1113621782918260}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.211, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4723873694628086}
@@ -324,7 +354,8 @@ Transform:
   m_LocalRotation: {x: 4.240692e-17, y: 0.962794, z: -4.240692e-17, w: -0.27023643}
   m_LocalPosition: {x: -0, y: 0.036600992, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4442043150268626}
   m_Father: {fileID: 4762345799438884}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -467,6 +498,45 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!23 &23701715593074712
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1414185297525074}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: db1fce023cbefa94bac1dd589ff0450c, type: 3}
+  - {fileID: 2100002, guid: db1fce023cbefa94bac1dd589ff0450c, type: 3}
+  - {fileID: 2100004, guid: db1fce023cbefa94bac1dd589ff0450c, type: 3}
+  - {fileID: 2100006, guid: db1fce023cbefa94bac1dd589ff0450c, type: 3}
+  - {fileID: 2100008, guid: db1fce023cbefa94bac1dd589ff0450c, type: 3}
+  - {fileID: 2100010, guid: db1fce023cbefa94bac1dd589ff0450c, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!33 &33056486220963538
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -481,6 +551,13 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1037085796170752}
   m_Mesh: {fileID: 4300004, guid: a125f9cf766bb774d9c205857c60053d, type: 3}
+--- !u!33 &33572064838097818
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1414185297525074}
+  m_Mesh: {fileID: 4300000, guid: db1fce023cbefa94bac1dd589ff0450c, type: 3}
 --- !u!54 &54123577024576406
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -573,6 +650,7 @@ MonoBehaviour:
   coolDown: 0
   food: {fileID: 0}
   animator: {fileID: 0}
+  interactionTimer: 0
   isInteractor: 0
   isInteractee: 0
   interactionTarget: {fileID: 0}
@@ -665,7 +743,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1113621782918260}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.1
+  m_Radius: 0.04
   m_Speed: 0.1
   m_Acceleration: 4
   avoidancePriority: 50

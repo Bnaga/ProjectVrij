@@ -162,7 +162,7 @@ Cloth:
   m_BendingStiffness: 0.3
   m_UseTethers: 1
   m_UseGravity: 1
-  m_Damping: 0.1
+  m_Damping: 0.15
   m_ExternalAcceleration: {x: 0, y: 0.99, z: 0}
   m_RandomAcceleration: {x: 0.1, y: 0.1, z: 0.1}
   m_WorldVelocityScale: 1

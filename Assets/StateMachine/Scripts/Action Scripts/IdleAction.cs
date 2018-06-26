@@ -16,6 +16,7 @@ public class IdleAction : ActionScript
 
     void RandomState(MJStateManager stateManager)
     {
+        stateManager.animator.SetBool("isDancing", false);
         //stateManager.otherIsLeader = false;
         RoleManager role = stateManager.gameObject.GetComponent<RoleManager>();
         int rand = UnityEngine.Random.Range(0, 100);

@@ -14,8 +14,8 @@ public class FoodGenerator : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        int rand = UnityEngine.Random.Range(0, 500);
-        if (rand <= 10)
+        int rand = UnityEngine.Random.Range(0, 250);
+        if (rand <= 20)
         {
             Instantiate(food, new Vector3(Random.Range(-mapSize,mapSize), Random.Range(0.25f,1),Random.Range(-mapSize, mapSize)), Quaternion.identity);
         }

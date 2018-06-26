@@ -19,6 +19,7 @@ public class BackToIdleDecision : Decision
             stateManager.curState = 0;
             //stateManager.coolDown = true;
             //stateManager.StartCoroutine("CoolDownTimer");
+            stateManager.animator.SetBool("isDancing", false);
             return true;
         }
         if(stateManager.curState == 0)
