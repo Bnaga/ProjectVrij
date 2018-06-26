@@ -11,7 +11,7 @@
         // Update is called once per frame
         private void Update()
         {
-            transform.RotateAround(transform.parent.transform.position, Vector3.up, degPerSec * Time.deltaTime);
+            transform.RotateAround(transform.parent.transform.position, transform.parent.transform.up, degPerSec * Time.deltaTime);
         }
     }
 }

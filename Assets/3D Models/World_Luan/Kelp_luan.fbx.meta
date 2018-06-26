@@ -11,7 +11,9 @@ ModelImporter:
     400002: //RootNode
     2100000: lambert23
     2300000: Kelp
+    2300002: //RootNode
     3300000: Kelp
+    3300002: //RootNode
     4300000: Kelp
   externalObjects: {}
   materials:
