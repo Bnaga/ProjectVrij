@@ -9,10 +9,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52638b90902110d45bd128dbd6fcaa14, type: 3}
-  m_Name: New fishDictionary
+  m_Name: FINAL MOJILI fishDictionary
   m_EditorClassIdentifier: 
   dictionary:
-  - Name: Begroeting
+  - Name: greeting
     meaning: 
     audio:
     - {fileID: 8300000, guid: af40b2a20205c4249a48c837005e6d31, type: 3}
@@ -21,7 +21,7 @@ MonoBehaviour:
     farawaySound: 0
     known: 0
     knownFromStart: 0
-  - Name: Observatie
+  - Name: alert
     meaning: 
     audio:
     - {fileID: 8300000, guid: 8545ddbbf682f6a489b1927edacc4008, type: 3}
@@ -32,7 +32,7 @@ MonoBehaviour:
     farawaySound: 0
     known: 0
     knownFromStart: 0
-  - Name: Ja
+  - Name: yes
     meaning: 
     audio:
     - {fileID: 8300000, guid: 981396135ed0a89429fa6eaede0f7f83, type: 3}
@@ -41,7 +41,7 @@ MonoBehaviour:
     farawaySound: 0
     known: 0
     knownFromStart: 0
-  - Name: Nee
+  - Name: no
     meaning: 
     audio:
     - {fileID: 8300000, guid: 40d765610474931438ab507dfb541568, type: 3}
@@ -50,7 +50,7 @@ MonoBehaviour:
     farawaySound: 0
     known: 0
     knownFromStart: 0
-  - Name: Vraag
+  - Name: question
     meaning: 
     audio:
     - {fileID: 8300000, guid: 9ea2cf282683455468ec083bbebda4ca, type: 3}
@@ -59,7 +59,7 @@ MonoBehaviour:
     farawaySound: 0
     known: 0
     knownFromStart: 0
-  - Name: Small Talk
+  - Name: smalltalk
     meaning: 
     audio:
     - {fileID: 8300000, guid: d7da7f71446c52b468f7f857c33cba08, type: 3}
@@ -69,23 +69,23 @@ MonoBehaviour:
     farawaySound: 0
     known: 0
     knownFromStart: 0
-  - Name: Follow Me
+  - Name: followme
     meaning: 
     audio:
-    - {fileID: 8300000, guid: 93a1aa9b2e7266a459d61b16d1affc23, type: 3}
+    - {fileID: 0}
     - {fileID: 8300000, guid: d718e8dc54d57c14ba434ce48a3f1e94, type: 3}
     - {fileID: 8300000, guid: d61a02bc526c11d41af9c667dc9e2ad1, type: 3}
     farawaySound: 0
     known: 0
     knownFromStart: 0
   far:
-  - {fileID: 8300000, guid: b3a397533d71e934ea3ccf9107cbfd44, type: 3}
-  - {fileID: 8300000, guid: ab55b4935e2f9514bbe37b00dcc74c9d, type: 3}
-  - {fileID: 8300000, guid: 84fde1fcd1e728545a44dbbb0967ec26, type: 3}
-  - {fileID: 8300000, guid: c260fb2689328bd49ae44d534aecf4cb, type: 3}
-  - {fileID: 8300000, guid: 918662b1b2f90f94fb2537fdfc915a18, type: 3}
-  - {fileID: 8300000, guid: 677fe46ba33e37849a8309b6e69516f9, type: 3}
-  - {fileID: 8300000, guid: 42cc883196e0e87478fb3c47df719abd, type: 3}
-  - {fileID: 8300000, guid: 2aa7d67833392754b9f69b1e731a61cf, type: 3}
-  - {fileID: 8300000, guid: aa9d191519317ed4cb34771cdcb4faeb, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   test: []

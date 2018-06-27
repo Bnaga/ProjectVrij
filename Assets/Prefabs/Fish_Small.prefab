@@ -290,7 +290,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6ccf67f16c388084cb03acc3d3fb793b, type: 3}
   - {fileID: 8300000, guid: 645c1fdc02f615641a7813c06c37be0f, type: 3}
   - {fileID: 8300000, guid: 137ecdaccae19474fa9b5fa65f2894e0, type: 3}
-  soundFrequency: 4
+  soundFrequency: 8
 --- !u!198 &198130434427437560
 ParticleSystem:
   m_ObjectHideFlags: 1

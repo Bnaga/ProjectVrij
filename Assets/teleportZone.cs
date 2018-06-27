@@ -7,13 +7,26 @@ public class teleportZone : MonoBehaviour {
 	public string teleportScene;
 	private bool stopTransition = false;
 	private bool stop2 = false;
+	private CapsuleCollider right;
+	private CapsuleCollider left;
+	private int holdingHands = 0;
 
+	void Start(){
+		left = flatKelpCollision.left;
+		right = flatKelpCollision.right;
+	}
 	void OnTriggerEnter(Collider other){
+		if (other.GetComponent<Collider>() == left || other.GetComponent<Collider>() == right){
+			stop2 = true;
+			StartCoroutine(sceneTransition());
+		}
+		
 		if (other.tag == "MainCamera"){
 			stop2 = true;
 			StartCoroutine(sceneTransition());
 		}
 	}
+
 
 	void OnTriggerExit(Collider other){
 		if (other.tag == "MainCamera"){
