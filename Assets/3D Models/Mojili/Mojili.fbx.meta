@@ -34,8 +34,10 @@ ModelImporter:
     2100000: lambert6
     2300000: Left_Leg
     2300002: Right_Leg
+    2300004: Body
     3300000: Left_Leg
     3300002: Right_Leg
+    3300004: Body
     4300000: Body
     4300002: Right_Leg
     4300004: Left_Leg
@@ -132,8 +134,8 @@ ModelImporter:
     - serializedVersion: 16
       name: Dance
       takeName: Take 001
-      firstFrame: 80
-      lastFrame: 115
+      firstFrame: 240
+      lastFrame: 479
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
