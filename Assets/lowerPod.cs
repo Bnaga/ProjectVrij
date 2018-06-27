@@ -23,7 +23,7 @@ public class lowerPod : MonoBehaviour {
 			transform.position = Vector3.MoveTowards(transform.position, Destination, l * speed * Time.deltaTime);
 			if (l<1 && !balloon){
 				balloon = Instantiate(knownWordManager.self.speechBalloon, messageSpot);
-				balloon.GetComponent<speechBalloon>().init("Touch pod to return to the surface");
+				balloon.GetComponent<speechBalloon>().init("It is time to return to the surface");
 			}
 		}
 

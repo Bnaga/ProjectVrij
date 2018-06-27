@@ -13,36 +13,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dictionary:
   - Name: greeting
-    meaning: 
+    meaning: Hello!
     audio:
     - {fileID: 8300000, guid: af40b2a20205c4249a48c837005e6d31, type: 3}
     - {fileID: 8300000, guid: bdaedd5c163231a4486625de46d17219, type: 3}
     - {fileID: 8300000, guid: 06bc41a1470b51f429824958a33be5d2, type: 3}
-    farawaySound: 0
+    farawaySound: 7
     known: 0
     knownFromStart: 0
   - Name: alert
-    meaning: 
+    meaning: Intruder!
     audio:
     - {fileID: 8300000, guid: 8545ddbbf682f6a489b1927edacc4008, type: 3}
     - {fileID: 8300000, guid: 8c86f34e362b4bb47ae315c83a6f8eda, type: 3}
     - {fileID: 8300000, guid: 50a99ce901000d24c9d29a207b5649b3, type: 3}
     - {fileID: 8300000, guid: 62ac5634c94beb640beec38b4f25ea61, type: 3}
     - {fileID: 8300000, guid: fdda74f050b3fad43b266d0d3807dddc, type: 3}
-    farawaySound: 0
+    farawaySound: 3
     known: 0
     knownFromStart: 0
   - Name: yes
-    meaning: 
+    meaning: Yes
     audio:
     - {fileID: 8300000, guid: 981396135ed0a89429fa6eaede0f7f83, type: 3}
     - {fileID: 8300000, guid: 4012c28115312e446873cea426e9cda4, type: 3}
     - {fileID: 8300000, guid: 2caf37b5173dbb440841b200f10eb02f, type: 3}
-    farawaySound: 0
+    farawaySound: 2
     known: 0
     knownFromStart: 0
   - Name: no
-    meaning: 
+    meaning: No
     audio:
     - {fileID: 8300000, guid: 40d765610474931438ab507dfb541568, type: 3}
     - {fileID: 8300000, guid: fc1bbc5eb3064b0409e86965ec13e8a9, type: 3}
@@ -51,16 +51,16 @@ MonoBehaviour:
     known: 0
     knownFromStart: 0
   - Name: question
-    meaning: 
+    meaning: Is that so?
     audio:
     - {fileID: 8300000, guid: 9ea2cf282683455468ec083bbebda4ca, type: 3}
     - {fileID: 8300000, guid: 5e112b67c0fb8e64a8f2354eb4634352, type: 3}
     - {fileID: 8300000, guid: a214e8af00b903c4ca130e340e1f0e98, type: 3}
-    farawaySound: 0
+    farawaySound: 1
     known: 0
     knownFromStart: 0
   - Name: smalltalk
-    meaning: 
+    meaning: Nice weather today
     audio:
     - {fileID: 8300000, guid: d7da7f71446c52b468f7f857c33cba08, type: 3}
     - {fileID: 8300000, guid: fee60530532e4d34081dc169be7e67a3, type: 3}
@@ -70,22 +70,22 @@ MonoBehaviour:
     known: 0
     knownFromStart: 0
   - Name: followme
-    meaning: 
+    meaning: Follow me
     audio:
     - {fileID: 0}
     - {fileID: 8300000, guid: d718e8dc54d57c14ba434ce48a3f1e94, type: 3}
     - {fileID: 8300000, guid: d61a02bc526c11d41af9c667dc9e2ad1, type: 3}
-    farawaySound: 0
+    farawaySound: 4
     known: 0
     knownFromStart: 0
   far:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 4f2d8130e775dd84484db2fccda81c62, type: 3}
+  - {fileID: 8300000, guid: 8b60169e443634a45853f61cf8ee659f, type: 3}
+  - {fileID: 8300000, guid: c0a3ff07ca821064b987d0befd12ab80, type: 3}
+  - {fileID: 8300000, guid: c1a6d5d7eb40bfa49b412afad72098c0, type: 3}
+  - {fileID: 8300000, guid: 40016affa63a35046899e219a08c9b9e, type: 3}
+  - {fileID: 8300000, guid: a314493b98232554ea59f106113c6d88, type: 3}
+  - {fileID: 8300000, guid: 15d081e04e4cb134da838d34a57314e7, type: 3}
+  - {fileID: 8300000, guid: be18b5756e7b3a449bc4f7ed1ccde4cc, type: 3}
+  - {fileID: 8300000, guid: f3b21c2e882be63469ad9d2a438dfeff, type: 3}
   test: []
