@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52638b90902110d45bd128dbd6fcaa14, type: 3}
+  m_Name: FINAL MOJILI fishDictionary
+  m_EditorClassIdentifier: 
+  dictionary:
+  - Name: greeting
+    meaning: 
+    audio:
+    - {fileID: 8300000, guid: af40b2a20205c4249a48c837005e6d31, type: 3}
+    - {fileID: 8300000, guid: bdaedd5c163231a4486625de46d17219, type: 3}
+    - {fileID: 8300000, guid: 06bc41a1470b51f429824958a33be5d2, type: 3}
+    farawaySound: 0
+    known: 0
+    knownFromStart: 0
+  - Name: alert
+    meaning: 
+    audio:
+    - {fileID: 8300000, guid: 8545ddbbf682f6a489b1927edacc4008, type: 3}
+    - {fileID: 8300000, guid: 8c86f34e362b4bb47ae315c83a6f8eda, type: 3}
+    - {fileID: 8300000, guid: 50a99ce901000d24c9d29a207b5649b3, type: 3}
+    - {fileID: 8300000, guid: 62ac5634c94beb640beec38b4f25ea61, type: 3}
+    - {fileID: 8300000, guid: fdda74f050b3fad43b266d0d3807dddc, type: 3}
+    farawaySound: 0
+    known: 0
+    knownFromStart: 0
+  - Name: yes
+    meaning: 
+    audio:
+    - {fileID: 8300000, guid: 981396135ed0a89429fa6eaede0f7f83, type: 3}
+    - {fileID: 8300000, guid: 4012c28115312e446873cea426e9cda4, type: 3}
+    - {fileID: 8300000, guid: 2caf37b5173dbb440841b200f10eb02f, type: 3}
+    farawaySound: 0
+    known: 0
+    knownFromStart: 0
+  - Name: no
+    meaning: 
+    audio:
+    - {fileID: 8300000, guid: 40d765610474931438ab507dfb541568, type: 3}
+    - {fileID: 8300000, guid: fc1bbc5eb3064b0409e86965ec13e8a9, type: 3}
+    - {fileID: 0}
+    farawaySound: 0
+    known: 0
+    knownFromStart: 0
+  - Name: question
+    meaning: 
+    audio:
+    - {fileID: 8300000, guid: 9ea2cf282683455468ec083bbebda4ca, type: 3}
+    - {fileID: 8300000, guid: 5e112b67c0fb8e64a8f2354eb4634352, type: 3}
+    - {fileID: 8300000, guid: a214e8af00b903c4ca130e340e1f0e98, type: 3}
+    farawaySound: 0
+    known: 0
+    knownFromStart: 0
+  - Name: smalltalk
+    meaning: 
+    audio:
+    - {fileID: 8300000, guid: d7da7f71446c52b468f7f857c33cba08, type: 3}
+    - {fileID: 8300000, guid: fee60530532e4d34081dc169be7e67a3, type: 3}
+    - {fileID: 8300000, guid: b7575341fa057d24e9716804da66ed14, type: 3}
+    - {fileID: 8300000, guid: fdb23d8ad3c5b0b448d06ce1ad4f729e, type: 3}
+    farawaySound: 0
+    known: 0
+    knownFromStart: 0
+  - Name: followme
+    meaning: 
+    audio:
+    - {fileID: 0}
+    - {fileID: 8300000, guid: d718e8dc54d57c14ba434ce48a3f1e94, type: 3}
+    - {fileID: 8300000, guid: d61a02bc526c11d41af9c667dc9e2ad1, type: 3}
+    farawaySound: 0
+    known: 0
+    knownFromStart: 0
+  far:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  test: []

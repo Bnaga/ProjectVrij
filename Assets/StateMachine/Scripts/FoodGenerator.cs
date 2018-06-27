@@ -17,11 +17,7 @@ public class FoodGenerator : MonoBehaviour {
         int rand = UnityEngine.Random.Range(0, 250);
         if (rand <= 20)
         {
-            Instantiate(food, new Vector3(Random.Range(-mapSize,mapSize), Random.Range(0.25f,1),Random.Range(-mapSize, mapSize)), Quaternion.identity);
-        }
-        if(Input.GetKeyDown(KeyCode.Z))
-        {
-            Instantiate(food, new Vector3(Random.Range(-mapSize, mapSize), Random.Range(0.25f, 1), Random.Range(-mapSize, mapSize)), Quaternion.identity);
+            Instantiate(food, transform.position + new Vector3(Random.Range(-mapSize,mapSize), Random.Range(0.25f,1),Random.Range(-mapSize, mapSize)), Quaternion.identity);
         }
     }
 }

@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/world_carl_playable.unity
     guid: ea8765a77ce68ca48a2453b88e61f088
   - enabled: 1
+    path: Assets/Scenes/world_luan2.unity
+    guid: 431c9ac4de287a846bddecf1496c1286
+  - enabled: 0
     path: Assets/Scenes/world_luan.unity
     guid: 851f4fed3b6dc4b499426c6ff6fd116a
   - enabled: 1

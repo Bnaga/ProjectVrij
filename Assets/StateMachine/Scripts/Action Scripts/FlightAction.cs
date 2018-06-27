@@ -21,6 +21,8 @@ public class FlightAction : ActionScript
 
     private void Hide(MJStateManager stateManager)
     {
+        Destroy(stateManager.food);
+        stateManager.hasFood = false;
         onDestination = stateManager.onDestination;
         if (onDestination)
         {

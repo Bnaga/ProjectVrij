@@ -37,7 +37,7 @@ public class RandomSoundPlayer : MonoBehaviour {
 			soundTimer= Random.Range(-soundFrequency/8,0);
 			if (Random.value>.5f) return;
 			float d = Vector3.Distance(transform.position,Camera.main.transform.position);
-			if ( d< source.maxDistance/2 && isPlaying <3) 
+			if ( d< source.maxDistance/2 && isPlaying <5) 
 				StartCoroutine( Play());
 		}
 	}
