@@ -35,6 +35,7 @@ public class BringFood : ActionScript
             Destroy(stateManager.food.gameObject);
             stateManager.hasFood = false;
             stateManager.animator.SetBool("holding", false);
+            stateManager.curState = 16;
         }
     }
 
