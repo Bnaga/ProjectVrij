@@ -9,6 +9,7 @@ public class ForageAction : ActionScript
     GameObject[] food;
     float foodDistance = 100;
     private Vector3 target;
+    float timer = 0;
     //bool onDestination = true;
 
     public override void Act(MJStateManager stateManager)
@@ -18,6 +19,16 @@ public class ForageAction : ActionScript
 
     private void GoToFood(MJStateManager stateManager)
     {
+        timer += Time.deltaTime;
+        if(timer >= 10)
+        {
+            if (!stateManager.hasFood)
+            {
+                target = FindFood(stateManager);
+                stateManager.navMeshAgent.SetDestination(target);
+            }
+            timer = 0;
+        }
         //onDestination = stateManager.onDestination;
         if (Vector3.Distance(stateManager.transform.position, target) > .2f)
         {

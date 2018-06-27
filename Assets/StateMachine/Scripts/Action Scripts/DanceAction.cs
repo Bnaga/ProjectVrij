@@ -15,6 +15,9 @@ public class DanceAction : ActionScript
 
     void GoDance(MJStateManager stateManager)
     {
-        stateManager.animator.SetBool("isDancing", true);
+        stateManager.hasFood = false;
+        Destroy(stateManager.food);
+        stateManager.animator.SetBool("isDancing", true);   
+
     }
 }

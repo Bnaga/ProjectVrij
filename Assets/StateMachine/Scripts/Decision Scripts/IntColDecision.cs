@@ -13,7 +13,7 @@ public class IntColDecision : Decision
 
     bool CheckInteraction(MJStateManager stateManager)
     {
-        if(stateManager.isInteracting && !stateManager.coolDown &&stateManager.interactionTarget != null )
+        if(stateManager.isInteracting && !stateManager.coolDown &&stateManager.interactionTarget != null && stateManager.curState != 5)
         {
             //Debug.Log("interaction");
             if (stateManager.interactionTarget.GetComponent<RoleManager>().GetCurrentRole() == 1)
