@@ -8,6 +8,8 @@ public class WanderAction : ActionScript
     float timer = 0;
     bool onDestination = true;
     Vector3 mojiDestination;
+    float wanderTimer = 0;
+    public float limit = 20;
 
     public override void Act(MJStateManager stateManager)
     {
@@ -31,13 +33,22 @@ public class WanderAction : ActionScript
 
     private void Wander(MJStateManager stateManager)
     {
+        wanderTimer += Time.deltaTime;
         onDestination = stateManager.onDestination;
+        if (wanderTimer >= limit && !onDestination)
+        {
+            mojiDestination = RandomNavmeshLocation(0.25f, stateManager);
+            stateManager.navMeshAgent.SetDestination(mojiDestination);
+            wanderTimer = 0;
+        }
+
         if (onDestination)
         {
             mojiDestination = RandomNavmeshLocation(1.25f, stateManager);
             stateManager.navMeshAgent.SetDestination(mojiDestination);
             stateManager.onDestination = false;
         }
+
 
         if (Vector3.Distance(stateManager.transform.position, mojiDestination) < .25f)
         {

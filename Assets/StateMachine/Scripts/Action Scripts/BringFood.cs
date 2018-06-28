@@ -12,6 +12,8 @@ public class BringFood : ActionScript
     private Vector3 target;
     bool onDestination = true;
     Vector3 mojiDestination;
+    float wanderTimer = 0;
+    public float limit = 20;
 
     public override void Act(MJStateManager stateManager)
     {
@@ -21,7 +23,16 @@ public class BringFood : ActionScript
 
     public void BringToHouse(MJStateManager stateManager)
     {
+        wanderTimer += Time.deltaTime;
         onDestination = stateManager.onDestination;
+
+        if (wanderTimer >= limit && !onDestination)
+        {
+            target = GetTarget(stateManager);
+            stateManager.navMeshAgent.SetDestination(target);
+            wanderTimer = 0;
+        }
+
         if (onDestination)
         {
             target = GetTarget(stateManager);
