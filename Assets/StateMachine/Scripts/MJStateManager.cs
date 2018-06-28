@@ -140,11 +140,19 @@ public class MJStateManager : MonoBehaviour {
     public void RandomState()
     {
         tempState = Random.Range(1, 101);
-        if(tempState < 81)
+        if(tempState < 71)
         {
             curState = 1; //wandering state
         }
-        if(tempState >= 81 && tempState <85)
+        if(tempState >= 71 && tempState <75)
+        {
+            curState = 11;
+        }
+        if (tempState >= 75 && tempState < 81)
+        {
+            curState = 14;
+        }
+        if (tempState >= 81 && tempState <85)
         {
             curState = 2; //go home state
         }
