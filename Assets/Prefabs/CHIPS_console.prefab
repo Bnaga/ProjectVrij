@@ -28,7 +28,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &1776191596783938
 GameObject:
@@ -46,7 +46,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &1877899472932514
 GameObject:
@@ -62,13 +62,12 @@ GameObject:
   - component: {fileID: 65919630567724474}
   - component: {fileID: 65693259353713094}
   - component: {fileID: 135155819992689860}
-  - component: {fileID: 54879884019622066}
   m_Layer: 0
   m_Name: CHIPS_console
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4667244462182886
 Transform:
@@ -90,14 +89,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1877899472932514}
-  m_LocalRotation: {x: -0, y: 0.00034162425, z: -0, w: -0.99999994}
-  m_LocalPosition: {x: -0.40303, y: 0.373, z: 1.547}
+  m_LocalRotation: {x: -0, y: -0.39505777, z: -0, w: 0.91865635}
+  m_LocalPosition: {x: -1.116, y: 0.136, z: 0.719}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4667244462182886}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -46.539, z: 0}
 --- !u!23 &23224220015850494
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -222,21 +221,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1776191596783938}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54879884019622066
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1877899472932514}
-  serializedVersion: 2
-  m_Mass: 69
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!65 &65232813620553414
 BoxCollider:
   m_ObjectHideFlags: 1
