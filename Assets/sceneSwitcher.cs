@@ -13,7 +13,7 @@ public class sceneSwitcher : MonoBehaviour {
 		}
 	}
 
-	IEnumerator loadScene(string scene)
+	public static IEnumerator loadScene(string scene)
     {
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(scene);
         while (!asyncLoad.isDone)
