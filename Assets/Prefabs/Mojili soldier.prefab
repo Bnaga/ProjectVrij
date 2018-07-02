@@ -414,8 +414,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1088844668355740}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.2435936, y: -0.0023343172, z: 0.08517212}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: -1.29146, y: -0.018706962, z: 0.91111994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4788828820830926}
@@ -732,7 +732,7 @@ MonoBehaviour:
   eyes: {fileID: 0}
   currentState: {fileID: 11400000, guid: b59ffc53f4658bf4095eed75cab3a3fa, type: 2}
   remainState: {fileID: 11400000, guid: 97f34bec1e0bdbf46b75ea64fda90f91, type: 2}
-  dictionary: {fileID: 11400000, guid: 2c6b674ba0e962b46a695da101a96f7c, type: 2}
+  dictionary: {fileID: 11400000, guid: 4e960cd3c1dec7b4bb1297d473a24f2f, type: 2}
   soundCommunication: {fileID: 0}
   curState: 16
   tempState: 9
